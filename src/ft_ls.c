@@ -12,14 +12,14 @@
 
 
 #include "../includes/ft_ls.h"
-/*
-void		ft_print_rights(t_lstdir *lst)
+
+void		ft_print_rights(struct stat bufstat)
 {
 
 	mode_t val;
 
-	val=((lst->stat)->st_mode & ~S_IFMT);
-	(S_IFDIR & (lst->stat)->st_mode) ? ft_putchar('d') : ft_putchar('-');
+	val=(bufstat.st_mode & ~S_IFMT);
+	(S_IFDIR & (bufstat.st_mode)) ? ft_putchar('d') : ft_putchar('-');
 	(val & S_IRUSR) ? ft_putchar('r') : ft_putchar('-');
 	(val & S_IWUSR) ? ft_putchar('w') : ft_putchar('-');
 	(val & S_IXUSR) ? ft_putchar('x') : ft_putchar('-');
@@ -32,59 +32,67 @@ void		ft_print_rights(t_lstdir *lst)
 	ft_putchar(' ');
 }
 
-void		ft_print_size(t_lstdir *lst)
+void		ft_print_links(struct stat bufstat)
 {
-	if ((lst->stat)->st_size < 100000)
+	if (bufstat.st_nlink < 100)
 		ft_putchar(' ');
-	if ((lst->stat)->st_size < 10000)
+	if (bufstat.st_nlink < 10)
 		ft_putchar(' ');
-	if ((lst->stat)->st_size < 1000)
-		ft_putchar(' ');
-	if ((lst->stat)->st_size < 100)
-		ft_putchar(' ');
-	if ((lst->stat)->st_size < 10)
-		ft_putchar(' ');
-	ft_putnbr((lst->stat)->st_size);
 	ft_putchar(' ');
+	ft_putnbr(bufstat.st_nlink);
 }
 
-void	ft_print_user(t_lstdir *lst)
+void	ft_print_user(struct stat bufstat)
 {
 	struct passwd *user;
-	user = getpwuid((lst->stat)->st_uid);
+	user = getpwuid(bufstat.st_uid);
 	ft_putchar(' ');
 	ft_putstr(user->pw_name);
 	ft_putchar(' ');
 }
 
-void	ft_print_group(t_lstdir *lst)
+void	ft_print_group(struct stat bufstat)
 {
 	struct group *usergroup;
 
-	usergroup = getgrgid((lst->stat)->st_gid);
+	usergroup = getgrgid(bufstat.st_gid);
 	ft_putchar(' ');
 	ft_putstr(usergroup->gr_name);
 	ft_putchar(' ');
 }
 
-void		ft_print_links(t_lstdir *lst)
+void		ft_print_size(struct stat bufstat)
 {
-	if ((lst->stat)->st_nlink < 100)
+	if (bufstat.st_size < 100000)
 		ft_putchar(' ');
-	if ((lst->stat)->st_nlink < 10)
+	if (bufstat.st_size < 10000)
 		ft_putchar(' ');
-	ft_putnbr((lst->stat)->st_nlink);
+	if (bufstat.st_size < 1000)
+		ft_putchar(' ');
+	if (bufstat.st_size < 100)
+		ft_putchar(' ');
+	if (bufstat.st_size < 10)
+		ft_putchar(' ');
+	ft_putnbr(bufstat.st_size);
+	ft_putchar(' ');
 }
-*/
+
 void		ft_ls_l(t_lstdir *lst)
 {
-	//ft_print_rights(lst);
-	//ft_print_links(lst);
-	//ft_print_user(lst);
-	//ft_print_group(lst);
-	//ft_print_size(lst);
-	//ft_print_date(gmtime(&lst->stat->st_mtime));
-	printf("name : %s\n", lst->name);
+	struct stat 	bufstat;
+
+	if (stat(lst->name, &bufstat) == -1)
+	{
+		perror("stat");
+		ft_putstr("ls -r");
+	}
+	ft_print_rights(bufstat);
+	ft_print_links(bufstat);
+	ft_print_user(bufstat);
+	ft_print_group(bufstat);
+	ft_print_size(bufstat);
+	//ft_print_date(gmtime(&bufstat.st_mtime));
+	ft_putendl(lst->name);
 }
 
 void	ft_ls_r(char *dir)

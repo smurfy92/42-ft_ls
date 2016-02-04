@@ -18,9 +18,9 @@ void		ft_error(char *str)
 	exit(0);
 }
 
-void		ft_error_nofile(char *file)
+void		ft_errno(char *file, int errno)
 {
 	ft_putstr("ls: ");
 	ft_putstr(file);
-	ft_putendl(": No such file or directory");
+	ft_putendl(errno);
 }
