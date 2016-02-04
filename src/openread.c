@@ -15,29 +15,14 @@
 void		ft_add_lst(struct dirent *buf, t_lstdir *lst)
 {
 	t_lstdir 		*tmp;
-	t_lstdir		*tmp2;
 
 	tmp = (t_lstdir*)malloc(sizeof(t_lstdir));
-	tmp->name = buf->d_name;
+	tmp->name = ft_strdup(buf->d_name);
 	tmp->next = NULL;
-	tmp2 = lst;
-	/*
-	if (ft_strcmp((tmp->buf)->d_name, (lst->buf)->d_name) < 0)
-	{
-		tmp->next = lst;
-		return (tmp);
-	}
-	while (lst->next && ft_strcmp((tmp->buf)->d_name,((lst->next)->buf)->d_name) > 0)
+	while (lst->next)
 		lst = lst->next;
-	if (lst->next)
-		tmp->next = lst->next;
 	lst->next = tmp;
-	return (tmp2);*/
-	while (tmp2->next)
-		tmp2 = tmp2->next;
-	tmp2->next = tmp;
 }
-
 
 t_lstdir	*ft_create_lst(struct dirent *buf)
 {

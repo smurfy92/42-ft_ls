@@ -146,11 +146,7 @@ int		main(int argc, char **argv)
 	else if (argc == 2)
 	{
 		lst = ft_read_dir(argv[1]);
-		while (lst->next)
-		{
-			printf("name : %s\n",lst->name);
-			lst = lst->next;
-		}
+		process(lst);
 	}
 	return (0);
 }
