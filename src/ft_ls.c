@@ -92,8 +92,8 @@ void	ft_ls_r(char *dir)
 	DIR				*dirp;
 	struct dirent	*buf;
 	struct stat 	bufstat;
-	mode_t val;
-	char *tmp;
+	mode_t 			val;
+	char 			*tmp;
 
 	if ((dir[1] && dir[1] !='.') || ft_strlen(dir) > 2)
 	{
@@ -134,19 +134,45 @@ void	process(t_lstdir *lst)
 	}
 }
 
+void	ft_parse_options(int argc, char **argv)
+{
+	int i;
+	int	files;
+
+	i = 0;
+	files = 0;
+	while (++i < argc)
+	{
+		if (argv[i][0] != '-' && files == 0)
+		{
+			files = 1;
+			printf("file %s \n", argv[i]);
+		}
+		else if (argv[i][0] == '-' && files == 0)
+		{
+			int j = 0;
+			while (argv[i][++j])
+			{
+				ft_putstr("options : ");
+				ft_putchar(argv[i][j]);
+				ft_putchar('\n');
+			}
+		}
+		else
+			printf("file %s \n", argv[i]);
+	}
+}
+
 int		main(int argc, char **argv)
 {
-	struct s_lstdir *lst;
+	t_lstdir *lst;
 
 	if (argc == 1)
 	{
 		lst = ft_read_dir(".");
 		process(lst);
 	}
-	else if (argc == 2)
-	{
-		lst = ft_read_dir(argv[1]);
-		process(lst);
-	}
+	else
+		ft_parse_options(argc, argv);
 	return (0);
 }
