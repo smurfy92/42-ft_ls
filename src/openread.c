@@ -42,7 +42,7 @@ t_lstdir	*ft_read_dir(char *dir)
 
 	dirp = opendir(dir);
 	if (!dirp)
-		ft_error_nofile(dir);
+		ft_error(dir);
 	buf = readdir(dirp);
 	lst = ft_create_lst(buf);
 	while ((buf = readdir(dirp)))

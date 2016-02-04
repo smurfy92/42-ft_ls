@@ -38,4 +38,6 @@ typedef struct			s_lstdir
 
 void					ft_error(char *str);
 void					ft_error_nofile(char *file);
+void					ft_ls_l(t_lstdir *lst);
 t_lstdir				*ft_read_dir(char *dir);
+

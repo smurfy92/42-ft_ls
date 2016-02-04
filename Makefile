@@ -14,7 +14,8 @@ NAME = ft_ls
 LIB = libft/libft.a
 SRC =	src/ft_ls.c \
 		src/errors.c \
-		src/openread.c
+		src/openread.c\
+		src/ls-l.c
 OBJ = $(SRC:.c=.o)
 FLAG = -Wall -Werror -Wextra
 CG = \033[92m
