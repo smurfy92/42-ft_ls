@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ls-l.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jtranchi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/02/05 03:55:50 by jtranchi          #+#    #+#             */
+/*   Updated: 2016/02/05 03:55:51 by jtranchi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/ft_ls.h"
 
 void		ft_print_rights(struct stat bufstat)
@@ -72,14 +84,16 @@ void		ft_print_time(char *str)
 	ft_putchar(' ');
 }
 
-void		ft_ls_l(t_lstdir *lst)
+void		ft_ls_l(t_lstdir *lst, t_options *opt)
 {
 	struct stat 	bufstat;
 
+	if (!opt->a && lst->name[0] == '.')
+		return ;
 	if (stat(lst->name, &bufstat) == -1)
 	{
-		perror("stat");
-		ft_putstr("ls -r");
+		//perror("stat");
+		//ft_putstr("ls -r");
 	}
 	ft_print_rights(bufstat);
 	ft_print_links_usr_grp(bufstat);

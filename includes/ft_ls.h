@@ -28,6 +28,8 @@ typedef struct			s_options
 	int					a;
 	int					R;
 	int					t;
+	char				**files;
+	int					nbfile;
 }						t_options;
 
 typedef struct			s_lstdir
@@ -38,6 +40,6 @@ typedef struct			s_lstdir
 
 void					ft_error(char *str);
 void					ft_error_nofile(char *file);
-void					ft_ls_l(t_lstdir *lst);
+void					ft_ls_l(t_lstdir *lst, t_options *opt);
 t_lstdir				*ft_read_dir(char *dir);
-
+t_options				*ft_parse_options(int argc, char **argv, t_options *opt);

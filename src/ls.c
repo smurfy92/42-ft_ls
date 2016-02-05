@@ -1,18 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ls.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jtranchi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/28 17:17:49 by jtranchi          #+#    #+#             */
-/*   Updated: 2016/02/03 22:14:55 by jtranchi         ###   ########.fr       */
+/*   Created: 2016/02/05 03:55:31 by jtranchi          #+#    #+#             */
+/*   Updated: 2016/02/05 03:55:33 by jtranchi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../includes/ft_ls.h"
-
 
 void	ft_ls_r(char *dir)
 {
@@ -52,54 +50,53 @@ void	ft_ls_r(char *dir)
 	closedir(dirp);
 }
 
-void	process(t_lstdir *lst)
+void	ft_process(char *dir, t_options *opt)
 {
-	while (lst->next)
+	t_lstdir *lst;
+
+	lst = ft_read_dir(dir);
+	while (lst != NULL)
 	{
-		ft_ls_l(lst);
+		if (opt->l)
+			ft_ls_l(lst, opt);
+		else if(opt->R)
+			ft_ls_r(lst->name);
+		else
+		{
+			if (!(!opt->a && lst->name[0] == '.'))
+				ft_putendl(lst->name);
+		}
 		lst = lst->next;
 	}
 }
-
-void	ft_parse_options(int argc, char **argv)
+t_options	*ft_init_opt(t_options *opt)
 {
-	int i;
-	int	files;
-
-	i = 0;
-	files = 0;
-	while (++i < argc)
-	{
-		if (argv[i][0] != '-' && files == 0)
-		{
-			files = 1;
-			printf("file %s \n", argv[i]);
-		}
-		else if (argv[i][0] == '-' && files == 0)
-		{
-			int j = 0;
-			while (argv[i][++j])
-			{
-				ft_putstr("options : ");
-				ft_putchar(argv[i][j]);
-				ft_putchar('\n');
-			}
-		}
-		else
-			printf("file %s \n", argv[i]);
-	}
+	opt = (t_options*)malloc(sizeof(t_options));
+	opt->l = 0;
+	opt->r = 0;
+	opt->a = 0;
+	opt->R = 0;
+	opt->t = 0;
+	opt->nbfile = 0;
+	return (opt);
 }
 
 int		main(int argc, char **argv)
 {
-	t_lstdir *lst;
+	t_options *opt = NULL;
+	int i;
 
+	i = -1;
+	opt = ft_init_opt(opt);
 	if (argc == 1)
-	{
-		lst = ft_read_dir(".");
-		process(lst);
-	}
+		ft_process(".", opt);
 	else
-		ft_parse_options(argc, argv);
+	{
+		opt = ft_parse_options(argc, argv, opt);
+		if (opt->nbfile == 0)
+			ft_process(".", opt);
+		while (++i < opt->nbfile)
+			ft_process(opt->files[i], opt);
+	}
 	return (0);
 }

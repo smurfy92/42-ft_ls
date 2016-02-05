@@ -12,10 +12,11 @@
 
 NAME = ft_ls
 LIB = libft/libft.a
-SRC =	src/ft_ls.c \
+SRC =	src/ls.c \
 		src/errors.c \
-		src/openread.c\
-		src/ls-l.c
+		src/openread.c \
+		src/ls-l.c \
+		src/options.c
 OBJ = $(SRC:.c=.o)
 FLAG = -Wall -Werror -Wextra
 CG = \033[92m
@@ -29,7 +30,7 @@ $(NAME): $(OBJ)
 	@echo "$(CY)[FT_LS] :$(CE) $(CG)Creating Library$(CE)";
 	-@make -C libft nohd
 	@echo "$(CY)[FT_LS] :$(CE) $(CG)Compiling ft_ls ...$(CE)";
-	@gcc -o $(NAME) $(FLAG) $(SRC) $(LIB)
+	@gcc -g -o $(NAME) $(FLAG) $(SRC) $(LIB)
 
 %.o: %.c
 	@echo "$(CY)[FT_LS] :$(CE) $(CG)Compiling $<$(CE)";
