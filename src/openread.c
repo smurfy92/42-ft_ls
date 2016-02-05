@@ -50,8 +50,9 @@ t_lstdir	*ft_read_dir(char *dir)
 
 	dirp = opendir(dir);
 	if (!dirp)
-		ft_error(dir);
+		return (NULL);
 	while ((buf = readdir(dirp)))
 		lst = ft_add_lst(ft_create_lst(buf), lst);
+	closedir(dirp);
 	return (lst);
 }

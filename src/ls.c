@@ -50,24 +50,53 @@ void	ft_ls_r(char *dir)
 	closedir(dirp);
 }
 
+void	ft_print_dir(char *dir, t_options *opt)
+{
+	struct stat 	bufstat;
+
+	if (!opt->a && dir[0] == '.')
+		return ;
+	if (stat(dir, &bufstat) == -1)
+	{
+		//perror("stat");
+		//ft_putstr("ls -r");
+	}
+	if (opt->l)
+	{
+		ft_print_rights(bufstat);
+		ft_print_links_usr_grp(bufstat);
+		ft_print_size(bufstat);
+		ft_print_time(ctime(&bufstat.st_mtime));
+		ft_putendl(dir);
+	}
+	else
+		ft_putendl(dir);
+}
+
 void	ft_process(char *dir, t_options *opt)
 {
 	t_lstdir *lst;
 
-	lst = ft_read_dir(dir);
-	while (lst != NULL)
+	if ((lst = ft_read_dir(dir)) != NULL)
 	{
-		if (opt->l)
-			ft_ls_l(lst, opt);
-		else if(opt->R)
-			ft_ls_r(lst->name);
-		else
+		while (lst != NULL)
 		{
-			if (!(!opt->a && lst->name[0] == '.'))
-				ft_putendl(lst->name);
+			if (opt->l)
+			{
+				ft_ls_l(lst, opt);
+			}
+			else if(opt->R)
+				ft_ls_r(lst->name);
+			else
+			{
+				if (!(!opt->a && lst->name[0] == '.'))
+					ft_putendl(lst->name);
+			}
+			lst = lst->next;
 		}
-		lst = lst->next;
 	}
+	else
+		ft_print_dir(dir, opt);
 }
 
 int		main(int argc, char **argv)
@@ -85,7 +114,9 @@ int		main(int argc, char **argv)
 		if (opt->nbfile == 0)
 			ft_process(".", opt);
 		while (++i < opt->nbfile)
+		{
 			ft_process(opt->files[i], opt);
+		}
 	}
 	return (0);
 }
