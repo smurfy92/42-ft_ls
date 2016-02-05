@@ -69,17 +69,6 @@ void	ft_process(char *dir, t_options *opt)
 		lst = lst->next;
 	}
 }
-t_options	*ft_init_opt(t_options *opt)
-{
-	opt = (t_options*)malloc(sizeof(t_options));
-	opt->l = 0;
-	opt->r = 0;
-	opt->a = 0;
-	opt->R = 0;
-	opt->t = 0;
-	opt->nbfile = 0;
-	return (opt);
-}
 
 int		main(int argc, char **argv)
 {

@@ -12,6 +12,18 @@
 
 #include "../includes/ft_ls.h"
 
+t_options	*ft_init_opt(t_options *opt)
+{
+	opt = (t_options*)malloc(sizeof(t_options));
+	opt->l = 0;
+	opt->r = 0;
+	opt->a = 0;
+	opt->R = 0;
+	opt->t = 0;
+	opt->nbfile = 0;
+	return (opt);
+}
+
 t_options	*ft_add_option(char c, t_options *opt)
 {
 	if (c == 'a')
@@ -39,8 +51,12 @@ t_options	*ft_parse_options(int argc, char **argv, t_options *opt)
 	{
 		j = 0;
 		if (argv[i][0] == '-' && files == 0)
+		{
+			if (!argv[i][1])
+				ft_error("error");
 			while (argv[i][++j])
 				opt = ft_add_option(argv[i][j], opt);
+		}
 		else
 		{
 			opt->files = (char**)malloc(sizeof(char*) * 1000);
