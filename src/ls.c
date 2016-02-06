@@ -119,10 +119,7 @@ int		main(int argc, char **argv)
 	{
 		opt = ft_parse_options(argc, argv, opt);
 		if (opt->nbfile == 0)
-		{
-			ft_putendl("ici");
 			ft_process(".", opt);
-		}
 		while (++i < opt->nbfile)
 		{
 			if (i != 0)
