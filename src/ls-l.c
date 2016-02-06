@@ -33,22 +33,17 @@ void		ft_print_rights(struct stat bufstat)
 
 void		ft_print_links_usr_grp(struct stat bufstat)
 {
-	struct passwd *user;
-	struct group *usergroup;
-
 	if (bufstat.st_nlink < 100)
 		ft_putchar(' ');
 	if (bufstat.st_nlink < 10)
 		ft_putchar(' ');
 	ft_putchar(' ');
 	ft_putnbr(bufstat.st_nlink);
-	user = getpwuid(bufstat.st_uid);
 	ft_putchar(' ');
-	ft_putstr(user->pw_name);
+	ft_putstr(getpwuid(bufstat.st_uid)->pw_name);
 	ft_putchar(' ');
-	usergroup = getgrgid(bufstat.st_gid);
 	ft_putchar(' ');
-	ft_putstr(usergroup->gr_name);
+	ft_putstr(getgrgid(bufstat.st_gid)->gr_name);
 	ft_putchar(' ');
 }
 
@@ -71,15 +66,21 @@ void		ft_print_size(struct stat bufstat)
 void		ft_print_time(char *str)
 {
 	int i;
+	int space;
 
 	i = 0;
+	space = 0;
 	while (42)
 	{
 		if (*str == ':' && i == 1)
 			break;
 		else if(*str == ':' && i == 0)
 			i++;
-		ft_putchar(*str++);
+		if (space != 0)
+			ft_putchar(*str);
+		if (*str == ' ')
+			space++;
+		str++;
 	}
 	ft_putchar(' ');
 }
@@ -92,12 +93,15 @@ void		ft_ls_l(t_lstdir *lst, t_options *opt)
 		return ;
 	if (stat(lst->name, &bufstat) == -1)
 	{
-		//perror("stat");
+		//ft_putendl("ls -l error");
 		//ft_putstr("ls -r");
 	}
-	ft_print_rights(bufstat);
-	ft_print_links_usr_grp(bufstat);
-	ft_print_size(bufstat);
-	ft_print_time(ctime(&bufstat.st_mtime));
+	else
+	{
+		ft_print_rights(bufstat);
+		ft_print_links_usr_grp(bufstat);
+		ft_print_size(bufstat);
+		ft_print_time(ctime(&bufstat.st_mtime));
+	}
 	ft_putendl(lst->name);
 }

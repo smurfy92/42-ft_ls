@@ -11,7 +11,37 @@
 /* ************************************************************************** */
 
 #include "../includes/ft_ls.h"
+/*
+t_lstdir		*ft_ls_t(t_lstdir *lst, t_options *opt)
+{
+	t_lstdir *tmp;
+	t_lstdir *tmp2;
 
+	tmp = lst;
+	while (tmp)
+	{
+		if (ft_s)
+		{
+			
+		}
+		else
+			tmp = tmp->next
+	}
+}
+
+t_lstdir		*ft_ls_r(t_lstdir *lst, t_options *opt)
+{
+	t_lstdir *tmp;
+	t_lstdir *tmp2;
+
+	tmp = lst;
+	while (tmp)
+	{
+		tmp
+		tmp = tmp->next;
+	}
+}
+*/
 t_lstdir		*ft_add_lst(t_lstdir *tmp, t_lstdir *lst)
 {
 	t_lstdir		*tmp2;

@@ -41,6 +41,7 @@ typedef struct			s_lstdir
 
 void					ft_error(char *str, int error);
 void					ft_error_nofile(char *file);
+void					ft_error_message(char *str);
 void					ft_ls_l(t_lstdir *lst, t_options *opt);
 void					ft_print_rights(struct stat bufstat);
 void					ft_print_links_usr_grp(struct stat bufstat);

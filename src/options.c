@@ -37,6 +37,8 @@ t_options	*ft_add_option(char c, t_options *opt)
 		opt->R = 1;
 	else if (c == 't')
 		opt->t = 1;
+	else
+		ft_error_message("./ft_ls: illegal option");
 	return (opt);
 }
 
@@ -54,7 +56,10 @@ t_options	*ft_parse_options(int argc, char **argv, t_options *opt)
 		if (argv[i][0] == '-' && files == 0)
 		{
 			if (!argv[i][1])
-				ft_error(argv[i], 0);
+			{
+				ft_error_nofile(argv[i]);
+				exit(0);
+			}
 			while (argv[i][++j])
 				opt = ft_add_option(argv[i][j], opt);
 		}

@@ -124,7 +124,7 @@ int		main(int argc, char **argv)
 		{
 			if (i != 0)
 				ft_putchar('\n');
-			if (ft_is_dir(opt->files[i]))
+			if (ft_is_dir(opt->files[i]) && opt->nbfile > 1)
 			{
 				ft_putstr(opt->files[i]);
 				ft_putstr(" : \n");

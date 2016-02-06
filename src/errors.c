@@ -12,14 +12,14 @@
 
 #include "../includes/ft_ls.h"
 
-void		ft_errno_nofile(char *file)
+void		ft_error_nofile(char *file)
 {
 	ft_putstr("ls: ");
 	ft_putstr(file);
 	ft_putendl(": No such file or directory");
 }
 
-static void		ft_error_message(char *str)
+void		ft_error_message(char *str)
 {
 	ft_putendl(str);
 	exit(0);
