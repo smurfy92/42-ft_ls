@@ -16,6 +16,7 @@
 #include <stdio.h>
 #include <sys/stat.h>
 #include <sys/types.h>
+#include <errno.h>
 #include <unistd.h>
 #include <pwd.h>
 #include <grp.h>
@@ -38,7 +39,7 @@ typedef struct			s_lstdir
 	struct s_lstdir		*next;
 }						t_lstdir;
 
-void					ft_error(char *str);
+void					ft_error(char *str, int error);
 void					ft_error_nofile(char *file);
 void					ft_ls_l(t_lstdir *lst, t_options *opt);
 void					ft_print_rights(struct stat bufstat);

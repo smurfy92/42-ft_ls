@@ -44,10 +44,11 @@ t_lstdir	*ft_create_lst(struct dirent *buf)
 
 t_lstdir	*ft_read_dir(char *dir)
 {
-	DIR				*dirp;
+	DIR				*dirp = NULL;
 	struct dirent	*buf;
 	t_lstdir		*lst = NULL;
 
+	dirp = (DIR*)malloc(sizeof(DIR));
 	dirp = opendir(dir);
 	if (!dirp)
 		return (NULL);

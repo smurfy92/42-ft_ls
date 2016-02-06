@@ -21,6 +21,7 @@ t_options	*ft_init_opt(t_options *opt)
 	opt->R = 0;
 	opt->t = 0;
 	opt->nbfile = 0;
+	opt->files = NULL;
 	return (opt);
 }
 
@@ -53,13 +54,14 @@ t_options	*ft_parse_options(int argc, char **argv, t_options *opt)
 		if (argv[i][0] == '-' && files == 0)
 		{
 			if (!argv[i][1])
-				ft_error("error");
+				ft_error(argv[i], 0);
 			while (argv[i][++j])
 				opt = ft_add_option(argv[i][j], opt);
 		}
 		else
 		{
-			opt->files = (char**)malloc(sizeof(char*) * 1000);
+			if (!opt->files)
+				opt->files = (char**)malloc(sizeof(char*) * 1000);
 			opt->files[files] = ft_strdup(argv[i]);
 			opt->nbfile = files + 1;
 			files++;

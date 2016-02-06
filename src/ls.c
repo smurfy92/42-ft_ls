@@ -17,7 +17,6 @@ void	ft_ls_r(char *dir)
 	DIR				*dirp;
 	struct dirent	*buf;
 	struct stat 	bufstat;
-	mode_t 			val;
 	char 			*tmp;
 
 	if ((dir[1] && dir[1] !='.') || ft_strlen(dir) > 2)
@@ -27,17 +26,15 @@ void	ft_ls_r(char *dir)
 	}
 	dirp = opendir(dir);
 	if (!dirp)
-		ft_error(dir);
+		ft_error(dir, 0);
 	while ((buf = readdir(dirp)))
 	{
 		if (stat(buf->d_name, &bufstat) == -1)
 		{
-			perror("stat");
-			ft_putstr("ls -r");
+			ft_error(buf->d_name, 0);
 		}
 		else
 		{
-			val=(bufstat.st_mode & ~S_IFMT);
 			if (S_IFDIR & bufstat.st_mode && buf->d_name[0] != '.')
 			{
 				printf("%s is a directory\n", buf->d_name);
@@ -54,7 +51,9 @@ void	ft_print_dir(char *dir, t_options *opt)
 {
 	struct stat 	bufstat;
 
-	if (!opt->a && dir[0] == '.')
+	if (!dir)
+		return ;
+	if (opt->a == 0 && dir[0] == '.')
 		return ;
 	if (stat(dir, &bufstat) == -1)
 	{
@@ -82,21 +81,29 @@ void	ft_process(char *dir, t_options *opt)
 		while (lst != NULL)
 		{
 			if (opt->l)
-			{
 				ft_ls_l(lst, opt);
-			}
 			else if(opt->R)
 				ft_ls_r(lst->name);
 			else
-			{
 				if (!(!opt->a && lst->name[0] == '.'))
 					ft_putendl(lst->name);
-			}
 			lst = lst->next;
 		}
 	}
 	else
 		ft_print_dir(dir, opt);
+}
+
+int 	ft_is_dir(char *dir)
+{
+	struct stat 	bufstat;
+
+	if (stat(dir, &bufstat) == -1)
+		return (0);
+	else
+		if (S_IFDIR & bufstat.st_mode)
+			return (1);
+	return (0);
 }
 
 int		main(int argc, char **argv)
@@ -112,9 +119,19 @@ int		main(int argc, char **argv)
 	{
 		opt = ft_parse_options(argc, argv, opt);
 		if (opt->nbfile == 0)
+		{
+			ft_putendl("ici");
 			ft_process(".", opt);
+		}
 		while (++i < opt->nbfile)
 		{
+			if (i != 0)
+				ft_putchar('\n');
+			if (ft_is_dir(opt->files[i]))
+			{
+				ft_putstr(opt->files[i]);
+				ft_putstr(" : \n");
+			}
 			ft_process(opt->files[i], opt);
 		}
 	}
