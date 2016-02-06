@@ -88,20 +88,24 @@ void		ft_print_time(char *str)
 void		ft_ls_l(t_lstdir *lst, t_options *opt)
 {
 	struct stat 	bufstat;
+	char 			*tmp;
 
 	if (!opt->a && lst->name[0] == '.')
 		return ;
-	if (stat(lst->name, &bufstat) == -1)
+	if (opt->files[opt->actual][0] == '.' && opt->files[opt->actual][1] == '.')
 	{
-		//ft_putendl("ls -l error");
-		//ft_putstr("ls -r");
+		tmp = ft_strjoin(opt->files[opt->actual], "/");
+		stat(ft_strjoin(tmp,lst->name), &bufstat);
 	}
 	else
 	{
-		ft_print_rights(bufstat);
-		ft_print_links_usr_grp(bufstat);
-		ft_print_size(bufstat);
-		ft_print_time(ctime(&bufstat.st_mtime));
+		stat(lst->name, &bufstat);
+		//ft_putendl("ls -l error");
+		//ft_putstr("ls -r");
 	}
+	ft_print_rights(bufstat);
+	ft_print_links_usr_grp(bufstat);
+	ft_print_size(bufstat);
+	ft_print_time(ctime(&bufstat.st_mtime));
 	ft_putendl(lst->name);
 }

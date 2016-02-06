@@ -129,6 +129,7 @@ int		main(int argc, char **argv)
 				ft_putstr(opt->files[i]);
 				ft_putstr(" : \n");
 			}
+			opt->actual = i;
 			ft_process(opt->files[i], opt);
 		}
 	}

@@ -68,6 +68,7 @@ t_options	*ft_parse_options(int argc, char **argv, t_options *opt)
 			if (!opt->files)
 				opt->files = (char**)malloc(sizeof(char*) * 1000);
 			opt->files[files] = ft_strdup(argv[i]);
+			printf("opt->filename : %s\n", opt->files[files]);
 			opt->nbfile = files + 1;
 			files++;
 		}

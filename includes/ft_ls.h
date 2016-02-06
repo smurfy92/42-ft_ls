@@ -31,6 +31,7 @@ typedef struct			s_options
 	int					t;
 	char				**files;
 	int					nbfile;
+	int					actual;
 }						t_options;
 
 typedef struct			s_lstdir
