@@ -6,7 +6,7 @@
 #    By: jtranchi <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/01/28 14:03:26 by jtranchi          #+#    #+#              #
-#    Updated: 2016/02/03 00:09:48 by jtranchi         ###   ########.fr        #
+#    Updated: 2016/02/06 05:11:48 by jtranchi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ $(NAME): $(OBJ)
 	@echo "$(CY)[FT_LS] :$(CE) $(CG)Creating Library$(CE)";
 	-@make -C libft nohd
 	@echo "$(CY)[FT_LS] :$(CE) $(CG)Compiling ft_ls ...$(CE)";
-	@gcc -g -o $(NAME) $(FLAG) $(SRC) $(LIB)
+	@gcc -o $(NAME) $(FLAG) $(SRC) $(LIB)
 
 %.o: %.c
 	@echo "$(CY)[FT_LS] :$(CE) $(CG)Compiling $<$(CE)";
