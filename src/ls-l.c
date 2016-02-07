@@ -92,17 +92,13 @@ void		ft_ls_l(t_lstdir *lst, t_options *opt)
 
 	if (!opt->a && lst->name[0] == '.')
 		return ;
-	if (opt->files[opt->actual][0] == '.' && opt->files[opt->actual][1] == '.')
+	if (opt->nbfile > 0 && opt->files[opt->actual][0] == '.' && opt->files[opt->actual][1] == '.')
 	{
 		tmp = ft_strjoin(opt->files[opt->actual], "/");
 		stat(ft_strjoin(tmp,lst->name), &bufstat);
 	}
 	else
-	{
 		stat(lst->name, &bufstat);
-		//ft_putendl("ls -l error");
-		//ft_putstr("ls -r");
-	}
 	ft_print_rights(bufstat);
 	ft_print_links_usr_grp(bufstat);
 	ft_print_size(bufstat);

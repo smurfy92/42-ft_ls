@@ -12,7 +12,7 @@
 
 #include "../includes/ft_ls.h"
 
-void	ft_ls_r(char *dir)
+void	ft_ls_R(char *dir)
 {
 	DIR				*dirp;
 	struct dirent	*buf;
@@ -40,7 +40,7 @@ void	ft_ls_r(char *dir)
 				printf("%s is a directory\n", buf->d_name);
 				tmp = ft_strjoin(dir, "/");
 				tmp = ft_strjoin(tmp, buf->d_name);
-				ft_ls_r(tmp);
+				ft_ls_R(tmp);
 			}
 		}
 	}
@@ -78,12 +78,14 @@ void	ft_process(char *dir, t_options *opt)
 
 	if ((lst = ft_read_dir(dir)) != NULL)
 	{
-		while (lst != NULL)
+		if (opt->r)
+			lst = ft_ls_r(lst);
+		while (lst)
 		{
 			if (opt->l)
 				ft_ls_l(lst, opt);
 			else if(opt->R)
-				ft_ls_r(lst->name);
+				ft_ls_R(lst->name);
 			else
 				if (!(!opt->a && lst->name[0] == '.'))
 					ft_putendl(lst->name);

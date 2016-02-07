@@ -48,6 +48,7 @@ void					ft_print_rights(struct stat bufstat);
 void					ft_print_links_usr_grp(struct stat bufstat);
 void					ft_print_size(struct stat bufstat);
 void					ft_print_time(char *str);
+t_lstdir				*ft_ls_r(t_lstdir *lst);
 t_lstdir				*ft_read_dir(char *dir);
 t_options				*ft_parse_options(int argc, char **argv, t_options *opt);
 t_options				*ft_init_opt(t_options *opt);

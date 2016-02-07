@@ -28,20 +28,23 @@ t_lstdir		*ft_ls_t(t_lstdir *lst, t_options *opt)
 			tmp = tmp->next
 	}
 }
-
-t_lstdir		*ft_ls_r(t_lstdir *lst, t_options *opt)
+*/
+t_lstdir		*ft_ls_r(t_lstdir *lst)
 {
 	t_lstdir *tmp;
 	t_lstdir *tmp2;
 
-	tmp = lst;
-	while (tmp)
+ 	tmp = NULL;
+	while (lst)
 	{
-		tmp
-		tmp = tmp->next;
+			tmp2 = lst->next;
+			lst->next = tmp;
+			tmp = lst;
+			lst = tmp2;
 	}
+	return (tmp);
 }
-*/
+
 t_lstdir		*ft_add_lst(t_lstdir *tmp, t_lstdir *lst)
 {
 	t_lstdir		*tmp2;
