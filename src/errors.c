@@ -12,13 +12,6 @@
 
 #include "../includes/ft_ls.h"
 
-void		ft_error_nofile(char *file)
-{
-	ft_putstr("ls: ");
-	ft_putstr(file);
-	ft_putendl(": No such file or directory");
-}
-
 void		ft_error_message(char *str)
 {
 	ft_putendl(str);
@@ -34,6 +27,6 @@ void		ft_error(char *str, int error)
 		ft_putstr("ls: ");
 		ft_putstr(str);
 		ft_putstr(": ");
-		ft_error_message(strerror(errno));
+		ft_error_message(strerror(error));
 	}
 }

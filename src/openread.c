@@ -14,19 +14,7 @@
 /*
 t_lstdir		*ft_ls_t(t_lstdir *lst, t_options *opt)
 {
-	t_lstdir *tmp;
-	t_lstdir *tmp2;
 
-	tmp = lst;
-	while (tmp)
-	{
-		if (ft_s)
-		{
-			
-		}
-		else
-			tmp = tmp->next
-	}
 }
 */
 t_lstdir		*ft_ls_r(t_lstdir *lst)
@@ -71,6 +59,7 @@ t_lstdir	*ft_create_lst(struct dirent *buf)
 
 	lst = (t_lstdir*)malloc(sizeof(t_lstdir));
 	lst->name = ft_strdup(buf->d_name);
+	lst->mdate = NULL;
 	lst->next = NULL;
 	return (lst);
 }

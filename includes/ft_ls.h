@@ -37,6 +37,7 @@ typedef struct			s_options
 typedef struct			s_lstdir
 {
 	char 				*name;
+	char				*mdate;
 	struct s_lstdir		*next;
 }						t_lstdir;
 
