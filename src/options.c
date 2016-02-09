@@ -21,6 +21,7 @@ t_options	*ft_init_opt(t_options *opt)
 	opt->R = 0;
 	opt->t = 0;
 	opt->nbfile = 0;
+	opt->tmp = NULL;
 	opt->files = NULL;
 	return (opt);
 }

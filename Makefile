@@ -30,7 +30,7 @@ $(NAME): $(OBJ)
 	@echo "$(CY)[FT_LS] :$(CE) $(CG)Creating Library$(CE)";
 	-@make -C libft nohd
 	@echo "$(CY)[FT_LS] :$(CE) $(CG)Compiling ft_ls ...$(CE)";
-	@gcc -o $(NAME) $(FLAG) $(SRC) $(LIB)
+	@gcc -g -o $(NAME) $(FLAG) $(SRC) $(LIB)
 
 %.o: %.c
 	@echo "$(CY)[FT_LS] :$(CE) $(CG)Compiling $<$(CE)";

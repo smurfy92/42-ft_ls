@@ -12,39 +12,42 @@
 
 #include "../includes/ft_ls.h"
 
-void	ft_ls_R(char *dir)
+void	ft_ls_R(t_lstdir *lst, t_options *opt, char *dir)
 {
-	DIR				*dirp;
-	struct dirent	*buf;
-	struct stat 	bufstat;
 	char 			*tmp;
+	char			*tmpstat;
+	struct stat 	bufstat;
 
-	if ((dir[1] && dir[1] !='.') || ft_strlen(dir) > 2)
+	while (lst)
 	{
-		ft_putchar('\n');
-		ft_putendl(dir);
-	}
-	dirp = opendir(dir);
-	if (!dirp)
-		ft_error(dir, 0);
-	while ((buf = readdir(dirp)))
-	{
-		if (stat(buf->d_name, &bufstat) == -1)
+		if (opt->tmp)
 		{
-			ft_error(buf->d_name, 0);
+
+			tmpstat = ft_strjoin(opt->tmp, "/");
+			tmpstat = ft_strjoin(tmpstat, lst->name);
+			if (stat(tmpstat, &bufstat) == -1)
+			{
+				//ft_putendl(tmpstat);
+				//ft_error(tmpstat, 2);
+			}
 		}
 		else
 		{
-			if (S_IFDIR & bufstat.st_mode && buf->d_name[0] != '.')
+			if (stat(lst->name, &bufstat) == -1)
 			{
-				printf("%s is a directory\n", buf->d_name);
-				tmp = ft_strjoin(dir, "/");
-				tmp = ft_strjoin(tmp, buf->d_name);
-				ft_ls_R(tmp);
+				//ft_putendl(dir);
+				//ft_error(dir, 2);
 			}
 		}
+		if (S_IFDIR & bufstat.st_mode && lst->name[0] != '.')
+		{
+			tmp = ft_strjoin(dir, "/");
+			tmp = ft_strjoin(tmp, lst->name);
+			opt->tmp = ft_strdup(tmp);
+			ft_process(tmp, opt);
+		}
+		lst = lst->next;
 	}
-	closedir(dirp);
 }
 
 void	ft_print_dir(char *dir, t_options *opt)
@@ -75,24 +78,31 @@ void	ft_print_dir(char *dir, t_options *opt)
 void	ft_process(char *dir, t_options *opt)
 {
 	t_lstdir *lst;
+	t_lstdir *tmp;
 
+	if (opt->R && opt->tmp)
+	{
+		ft_putchar('\n');
+		ft_putendl(opt->tmp);
+	}
 	if ((lst = ft_read_dir(dir, opt)) != NULL)
 	{
 		if (opt->t)
 			lst = ft_ls_t(lst);
 		if (opt->r)
 			lst = ft_ls_r(lst);
+		tmp = lst;
 		while (lst)
 		{
 			if (opt->l)
 				ft_ls_l(lst, opt);
-			else if(opt->R)
-				ft_ls_R(lst->name);
 			else
 				if (!(!opt->a && lst->name[0] == '.'))
 					ft_putendl(lst->name);
 			lst = lst->next;
 		}
+		if (opt->R)
+			ft_ls_R(tmp, opt, dir);
 	}
 	else
 		ft_print_dir(dir, opt);
