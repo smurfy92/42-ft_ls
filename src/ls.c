@@ -76,8 +76,10 @@ void	ft_process(char *dir, t_options *opt)
 {
 	t_lstdir *lst;
 
-	if ((lst = ft_read_dir(dir)) != NULL)
+	if ((lst = ft_read_dir(dir, opt)) != NULL)
 	{
+		if (opt->t)
+			lst = ft_ls_t(lst);
 		if (opt->r)
 			lst = ft_ls_r(lst);
 		while (lst)

@@ -57,9 +57,7 @@ t_options	*ft_parse_options(int argc, char **argv, t_options *opt)
 		if (argv[i][0] == '-' && files == 0)
 		{
 			if (!argv[i][1])
-			{
 				ft_error(argv[i], 2);
-			}
 			while (argv[i][++j])
 				opt = ft_add_option(argv[i][j], opt);
 		}

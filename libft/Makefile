@@ -6,7 +6,7 @@
 #    By: jtranchi <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/01/28 18:42:36 by jtranchi          #+#    #+#              #
-#    Updated: 2016/02/01 06:44:14 by jtranchi         ###   ########.fr        #
+#    Updated: 2016/01/29 10:39:48 by jtranchi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,7 +68,8 @@ SRC= ft_memset.c\
 	 ft_lstdelone.c\
 	 ft_lstdel.c\
 	 ft_lstadd.c\
-	 ft_lstiter.c
+	 ft_lstiter.c\
+	 ft_lstmap.c
 	 
 LIB = libft.a
 CC = gcc
@@ -88,14 +89,12 @@ $(LIB): start $(OBJ)
 	@echo "$(CY)[LIBFT] :$(CE) $(CG)Creating Library$(CE)";
 	@$(AR) $(LIB) $(OBJ)
 	@echo "$(CY)[LIBFT] :$(CE) $(CG)Indexing Library$(CE)";
-	@$(AR) $(LIB) $(OBJ)
 	@$(RANLIB) $(LIB)
 
 nohd: $(OBJ)
 	@echo "$(CY)[LIBFT] :$(CE) $(CG)Creating Library$(CE)";
 	@$(AR) $(LIB) $(OBJ)
 	@echo "$(CY)[LIBFT] :$(CE) $(CG)Indexing Library$(CE)";
-	@$(AR) $(LIB) $(OBJ)
 	@$(RANLIB) $(LIB)
 
 nohdclean:
