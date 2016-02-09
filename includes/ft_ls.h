@@ -6,11 +6,11 @@
 /*   By: jtranchi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/01 05:03:01 by jtranchi          #+#    #+#             */
-/*   Updated: 2016/02/03 22:11:20 by jtranchi         ###   ########.fr       */
+/*   Updated: 2016/02/09 18:12:25 by jtranchi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/libft.h"
+#include "../libft/includes/libft.h"
 #include <dirent.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -39,6 +39,13 @@ typedef struct			s_lstdir
 {
 	char 				*name;
 	char				*mdate;
+	nlink_t				links;
+	mode_t				mode;
+	char				*pwname;
+	char				*grpname;
+	off_t				size;
+	char				*mtime;
+	int					isdir;
 	struct s_lstdir		*next;
 }						t_lstdir;
 
@@ -47,11 +54,13 @@ void					ft_error_nofile(char *file);
 void					ft_process(char *dir, t_options *opt);
 void					ft_error_message(char *str);
 void					ft_ls_l(t_lstdir *lst, t_options *opt);
-void					ft_print_rights(struct stat bufstat);
-void					ft_print_links_usr_grp(struct stat bufstat);
-void					ft_print_size(struct stat bufstat);
+void					ft_print_rights(t_lstdir *lst);
+void					ft_print_links_usr_grp(t_lstdir *lst);
+void					ft_print_size(t_lstdir *lst);
 void					ft_print_time(char *str);
+int						ft_compare_date(char *s1, char *s2);
 t_lstdir				*ft_add_lst(t_lstdir *tmp, t_lstdir *lst);
+t_lstdir				*ft_add_lst_by_date(t_lstdir *tmp, t_lstdir *lst);
 t_lstdir				*ft_ls_t(t_lstdir *lst);
 t_lstdir				*ft_ls_r(t_lstdir *lst);
 t_lstdir				*ft_read_dir(char *dir, t_options *opt);

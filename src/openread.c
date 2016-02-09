@@ -41,40 +41,6 @@ t_lstdir		*ft_add_lst_by_date(t_lstdir *tmp, t_lstdir *lst)
 	return (tmp2);
 }
 
-t_lstdir		*ft_ls_t(t_lstdir *lst)
-{
-	t_lstdir *tmp;
-	t_lstdir *tmp2;
-
-	tmp = NULL;
-	while (lst)
-	{
-		tmp2 = (t_lstdir*)malloc(sizeof(t_lstdir));
-		tmp2->name = ft_strdup(lst->name);
-		tmp2->mdate = ft_strdup(lst->mdate);
-		tmp2->next = NULL;
-		tmp = ft_add_lst_by_date(tmp2, tmp);
-		lst = lst->next;
-	}
-	return (tmp);
-}
-
-t_lstdir		*ft_ls_r(t_lstdir *lst)
-{
-	t_lstdir *tmp;
-	t_lstdir *tmp2;
-
- 	tmp = NULL;
-	while (lst)
-	{
-			tmp2 = lst->next;
-			lst->next = tmp;
-			tmp = lst;
-			lst = tmp2;
-	} 
-	return (tmp);
-}
-
 t_lstdir		*ft_add_lst(t_lstdir *tmp, t_lstdir *lst)
 {
 	t_lstdir		*tmp2;
@@ -95,32 +61,48 @@ t_lstdir		*ft_add_lst(t_lstdir *tmp, t_lstdir *lst)
 	return (tmp2);
 }
 
-t_lstdir	*ft_create_lst(struct dirent *buf, t_options *opt)
+t_lstdir		*ft_add_stats(t_lstdir *lst, struct stat bufstat)
 {
-	t_lstdir		*lst = NULL;;
-	char 			*tmp;
-	struct stat 	bufstat;
+	lst->mdate = ft_strdup(ctime(&bufstat.st_mtime));
+	lst->links = bufstat.st_nlink;
+	lst->mode = bufstat.st_mode;
+	lst->pwname = getpwuid(bufstat.st_uid)->pw_name;
+	lst->grpname = getgrgid(bufstat.st_gid)->gr_name;
+	lst->size = bufstat.st_size;
+	lst->mtime = ctime(&bufstat.st_mtime);
+	lst->isdir = (S_IFDIR & bufstat.st_mode);
+	return (lst);
+}
 
-	if (opt->nbfile > 0 && opt->files[opt->actual][0] == '.' && opt->files[opt->actual][1] == '.')
+t_lstdir		*ft_create_lst(struct dirent *buf, t_options *opt)
+{
+	t_lstdir		*lst;
+	char			*tmp;
+	struct stat		bufstat;
+
+	lst = NULL;
+	if (opt->nbfile > 0 && opt->files[opt->actual][0] == '.'
+	&& opt->files[opt->actual][1] == '.')
 	{
 		tmp = ft_strjoin(opt->files[opt->actual], "/");
-		stat(ft_strjoin(tmp,buf->d_name), &bufstat);
+		stat(ft_strjoin(tmp, buf->d_name), &bufstat);
 	}
 	else
 		stat(buf->d_name, &bufstat);
 	lst = (t_lstdir*)malloc(sizeof(t_lstdir));
 	lst->name = ft_strdup(buf->d_name);
-	lst->mdate = ft_strdup(ctime(&bufstat.st_mtime));
+	lst = ft_add_stats(lst, bufstat);
 	lst->next = NULL;
 	return (lst);
 }
 
-t_lstdir	*ft_read_dir(char *dir, t_options *opt)
+t_lstdir		*ft_read_dir(char *dir, t_options *opt)
 {
-	DIR				*dirp = NULL;
+	DIR				*dirp;
 	struct dirent	*buf;
-	t_lstdir		*lst = NULL;
+	t_lstdir		*lst;
 
+	lst = NULL;
 	dirp = (DIR*)malloc(sizeof(DIR));
 	dirp = opendir(dir);
 	if (!dirp)

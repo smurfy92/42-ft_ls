@@ -12,7 +12,41 @@
 
 #include "../includes/ft_ls.h"
 
-t_options	*ft_init_opt(t_options *opt)
+t_lstdir		*ft_ls_t(t_lstdir *lst)
+{
+	t_lstdir *tmp;
+	t_lstdir *tmp2;
+
+	tmp = NULL;
+	while (lst)
+	{
+		tmp2 = (t_lstdir*)malloc(sizeof(t_lstdir));
+		tmp2->name = ft_strdup(lst->name);
+		tmp2->mdate = ft_strdup(lst->mdate);
+		tmp2->next = NULL;
+		tmp = ft_add_lst_by_date(tmp2, tmp);
+		lst = lst->next;
+	}
+	return (tmp);
+}
+
+t_lstdir		*ft_ls_r(t_lstdir *lst)
+{
+	t_lstdir *tmp;
+	t_lstdir *tmp2;
+
+	tmp = NULL;
+	while (lst)
+	{
+		tmp2 = lst->next;
+		lst->next = tmp;
+		tmp = lst;
+		lst = tmp2;
+	}
+	return (tmp);
+}
+
+t_options		*ft_init_opt(t_options *opt)
 {
 	opt = (t_options*)malloc(sizeof(t_options));
 	opt->l = 0;
@@ -26,7 +60,7 @@ t_options	*ft_init_opt(t_options *opt)
 	return (opt);
 }
 
-t_options	*ft_add_option(char c, t_options *opt)
+t_options		*ft_add_option(char c, t_options *opt)
 {
 	if (c == 'a')
 		opt->a = 1;
@@ -43,7 +77,7 @@ t_options	*ft_add_option(char c, t_options *opt)
 	return (opt);
 }
 
-t_options	*ft_parse_options(int argc, char **argv, t_options *opt)
+t_options		*ft_parse_options(int argc, char **argv, t_options *opt)
 {
 	int i;
 	int j;

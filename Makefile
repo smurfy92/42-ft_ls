@@ -15,7 +15,7 @@ LIB = libft/libft.a
 SRC =	src/ls.c \
 		src/errors.c \
 		src/openread.c \
-		src/ls-l.c \
+		src/ls_l.c \
 		src/options.c
 OBJ = $(SRC:.c=.o)
 FLAG = -Wall -Werror -Wextra
