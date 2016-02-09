@@ -40,8 +40,7 @@ void		ft_print_links_usr_grp(t_lstdir *lst)
 	ft_putnbr(lst->links);
 	ft_putchar(' ');
 	ft_putstr(lst->pwname);
-	ft_putchar(' ');
-	ft_putchar(' ');
+	ft_putstr('  ');
 	ft_putstr(lst->grpname);
 	ft_putchar(' ');
 }

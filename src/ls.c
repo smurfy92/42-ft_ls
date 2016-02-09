@@ -64,14 +64,18 @@ void	ft_print_dir(char *dir, t_options *opt)
 		//perror("stat");
 		//ft_putstr("ls -r");
 	}
-	if (opt->l && ((lst = ft_read_dir(dir, opt)) != NULL))
+	if (opt->l)
 	{
+		lst = (t_lstdir*)malloc(sizeof(t_lstdir));
+		lst->name = ft_strdup(dir);
+		lst->next = NULL;
+		lst = ft_add_stats(lst, bufstat);
 		ft_print_rights(lst);
 		ft_print_links_usr_grp(lst);
 		ft_print_size(lst);
 		ft_print_time(lst->mtime);
 	}
-		ft_putendl(dir);
+	ft_putendl(dir);
 }
 
 void	ft_process(char *dir, t_options *opt)
@@ -79,13 +83,13 @@ void	ft_process(char *dir, t_options *opt)
 	t_lstdir *lst;
 	t_lstdir *tmp;
 
-	if (opt->R && opt->tmp)
-	{
-		ft_putchar('\n');
-		ft_putendl(opt->tmp);
-	}
 	if ((lst = ft_read_dir(dir, opt)) != NULL)
 	{
+		if (opt->R && opt->tmp)
+		{
+			ft_putchar('\n');
+			ft_putendl(opt->tmp);
+		}
 		if (opt->t)
 			lst = ft_ls_t(lst);
 		if (opt->r)
@@ -104,7 +108,8 @@ void	ft_process(char *dir, t_options *opt)
 			ft_ls_rec(tmp, opt, dir);
 	}
 	else
-		ft_print_dir(dir, opt);
+		if (!opt->R)
+			ft_print_dir(dir, opt);
 }
 
 int		ft_is_dir(char *dir)
@@ -121,10 +126,11 @@ int		ft_is_dir(char *dir)
 
 int		main(int argc, char **argv)
 {
-	t_options *opt = NULL;
-	int 	i;
+	t_options	*opt;
+	int			i;
 
 	i = -1;
+	opt = NULL;
 	opt = ft_init_opt(opt);
 	if (argc == 1)
 		ft_process(".", opt);
