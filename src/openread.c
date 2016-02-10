@@ -59,7 +59,7 @@ t_lstdir		*ft_add_stats(t_lstdir *lst, struct stat bufstat)
 	lst->links = bufstat.st_nlink;
 	lst->mode = bufstat.st_mode;
 	lst->pwname = getpwuid(bufstat.st_uid)->pw_name;
-	lst->grpname = getgrgid(bufstat.st_gid)->gr_name;
+	(getgrgid(bufstat.st_gid)) ? (lst->grpname = getgrgid(bufstat.st_gid)->gr_name) : (lst->grpname = ft_strdup("101"));
 	lst->size = (int)bufstat.st_size;
 	lst->mtime = ft_strdup(ctime(&bufstat.st_mtime));
 	lst->isdir = (S_IFDIR & bufstat.st_mode);
@@ -74,9 +74,7 @@ t_lstdir		*ft_create_lst(struct dirent *buf, t_options *opt)
 
 	lst = NULL;
 	if (opt->tmp[ft_strlen(opt->tmp) - 1] == '/')
-	{
 		tmpstat = ft_strdup(ft_strjoin(opt->tmp, buf->d_name));
-	}
 	else
 	{
 		tmpstat = ft_strdup(ft_strjoin(opt->tmp, "/"));
