@@ -12,6 +12,7 @@
 
 #include "../includes/ft_ls.h"
 
+
 t_lstdir		*ft_add_lst_by_date(t_lstdir *tmp, t_lstdir *lst)
 {
 	t_lstdir		*tmp2;
@@ -68,18 +69,24 @@ t_lstdir		*ft_add_stats(t_lstdir *lst, struct stat bufstat)
 t_lstdir		*ft_create_lst(struct dirent *buf, t_options *opt)
 {
 	t_lstdir		*lst;
-	char			*tmp;
+	char			*tmpstat;
 	struct stat		bufstat;
 
 	lst = NULL;
-	if (opt->nbfile > 0 && ((opt->files[opt->actual][0] == '.'
-	&& opt->files[opt->actual][1] == '.') || opt->files[opt->actual][0] == '/'))
+	if (opt->tmp[ft_strlen(opt->tmp) - 1] == '/')
 	{
-		tmp = ft_strjoin(opt->files[opt->actual], "/");
-		lstat(ft_strjoin(tmp, buf->d_name), &bufstat);
+		tmpstat = ft_strdup(ft_strjoin(opt->tmp, buf->d_name));
 	}
 	else
-		lstat(buf->d_name, &bufstat);
+	{
+		tmpstat = ft_strdup(ft_strjoin(opt->tmp, "/"));
+		tmpstat = ft_strdup(ft_strjoin(tmpstat, buf->d_name));
+	}
+	if (lstat(tmpstat, &bufstat) == -1)
+	{
+		//ft_putendl(tmpstat);
+		//ft_error(tmpstat, 2);
+	}
 	lst = (t_lstdir*)malloc(sizeof(t_lstdir));
 	lst->name = ft_strdup(buf->d_name);
 	lst = ft_add_stats(lst, bufstat);

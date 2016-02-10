@@ -16,8 +16,20 @@ void		ft_print_rights(t_lstdir *lst)
 {
 	mode_t val;
 
+	if ((lst->mode & S_IFCHR))
+		ft_putchar('l');
+	else
+	{
+		(S_ISDIR(lst->mode)) ? ft_putchar('d') : 0;
+		((lst->mode & S_IFREG)) ? ft_putchar('-') : 0;
+	}
+	((lst->mode & S_IFIFO)) ? ft_putchar('f') : 0;
+	//((lst->mode & S_IFLNK)) ? ft_putchar('t') : 0;
+	//((lst->mode & S_IFBLK)) ? ft_putchar('b') : 0;
+	//((lst->mode & S_IFSOCK)) ? ft_putchar('e') : 0;
+	//((lst->mode & S_IFWHT)) ? ft_putchar('f') : 0;
+
 	val = (lst->mode & ~S_IFMT);
-	(S_IFDIR & (lst->mode)) ? ft_putchar('d') : ft_putchar('-');
 	(val & S_IRUSR) ? ft_putchar('r') : ft_putchar('-');
 	(val & S_IWUSR) ? ft_putchar('w') : ft_putchar('-');
 	(val & S_IXUSR) ? ft_putchar('x') : ft_putchar('-');
@@ -40,7 +52,7 @@ void		ft_print_links_usr_grp(t_lstdir *lst)
 	ft_putnbr(lst->links);
 	ft_putchar(' ');
 	ft_putstr(lst->pwname);
-	ft_putstr('  ');
+	ft_putstr("  ");
 	ft_putstr(lst->grpname);
 	ft_putchar(' ');
 }

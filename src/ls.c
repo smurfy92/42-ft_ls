@@ -15,34 +15,18 @@
 void	ft_ls_rec(t_lstdir *lst, t_options *opt, char *dir)
 {
 	char 			*tmp;
-	char			*tmpstat;
-	struct stat 	bufstat;
 
 	while (lst)
 	{
-		if (opt->tmp)
-		{
-
-			tmpstat = ft_strjoin(opt->tmp, "/");
-			tmpstat = ft_strjoin(tmpstat, lst->name);
-			if (stat(tmpstat, &bufstat) == -1)
-			{
-				//ft_putendl(tmpstat);
-				//ft_error(tmpstat, 2);
-			}
-		}
-		else
-		{
-			if (stat(lst->name, &bufstat) == -1)
-			{
-				//ft_putendl(dir);
-				//ft_error(dir, 2);
-			}
-		}
-		if ((S_IFDIR & bufstat.st_mode) && lst->name[0] != '.')
+		if (lst->isdir && lst->name[0] != '.')
 		{
 			tmp = ft_strjoin(dir, "/");
 			tmp = ft_strjoin(tmp, lst->name);
+			ft_putchar('\n');
+			ft_putstr(tmp);
+			ft_putendl(":");
+			if (tmp[1] == '/')
+				tmp = (tmp + 1);
 			opt->tmp = ft_strdup(tmp);
 			ft_process(tmp, opt);
 		}
@@ -85,11 +69,6 @@ void	ft_process(char *dir, t_options *opt)
 
 	if ((lst = ft_read_dir(dir, opt)) != NULL)
 	{
-		if (opt->R && opt->tmp)
-		{
-			ft_putchar('\n');
-			ft_putendl(opt->tmp);
-		}
 		if (opt->t)
 			lst = ft_ls_t(lst);
 		if (opt->r)
@@ -127,9 +106,7 @@ int		ft_is_dir(char *dir)
 int		main(int argc, char **argv)
 {
 	t_options	*opt;
-	int			i;
 
-	i = -1;
 	opt = NULL;
 	opt = ft_init_opt(opt);
 	if (argc == 1)
@@ -138,18 +115,21 @@ int		main(int argc, char **argv)
 	{
 		opt = ft_parse_options(argc, argv, opt);
 		if (opt->nbfile == 0)
-			ft_process(".", opt);
-		while (++i < opt->nbfile)
 		{
-			if (i != 0)
+			opt->tmp = ft_strdup(".");
+			ft_process(".", opt);
+		}
+		while (++opt->actual < opt->nbfile)
+		{
+			opt->tmp = ft_strdup(opt->files[opt->actual]);
+			if (opt->actual != 0)
 				ft_putchar('\n');
-			if (ft_is_dir(opt->files[i]) && opt->nbfile > 1)
+			if (ft_is_dir(opt->files[opt->actual]) && opt->nbfile > 1)
 			{
-				ft_putstr(opt->files[i]);
+				ft_putstr(opt->files[opt->actual]);
 				ft_putstr(" : \n");
 			}
-			opt->actual = i;
-			ft_process(opt->files[i], opt);
+			ft_process(opt->files[opt->actual], opt);
 		}
 	}
 	return (0);

@@ -1,0 +1,1492 @@
+drwxr-xr-x   13 jtranchi  2015_paris      -630193951 Feb  9 18:26 2048
+drwxr-xr-x   13 jtranchi  2015_paris      -630193792 Feb  9 18:26 42FileChecker
+drwxr-xr-x  122 jtranchi  2015_paris      -630192576 Feb 10 16:00 README.md
+drwxr-xr-x   13 jtranchi  2015_paris      -630192224 Feb  9 18:26 alertkill.sh
+drwxr-xr-x   13 jtranchi  2015_paris      -630192064 Feb  9 18:26 bugdelamortquitue
+drwxr-xr-x   13 jtranchi  2015_paris      -630193312 Feb  9 18:26 fillit
+-rwxr-xr-x    1 jtranchi  2015_paris  21408 Feb 10 16:00 ft_ls
+-rwxr-xr-x    1 jtranchi  2015_paris      -630192975 Feb 10 16:00 get_next_line
+-rwxr-xr-x    1 jtranchi  2015_paris      -630192816 Feb 10 16:00 jtranchi
+drwxr-xr-x  122 jtranchi  2015_paris   4148 Feb 10 16:00 libft
+
+../2048
+-rw-r--r--    1 jtranchi  2015_paris   4058 Feb  2 17:45 Makefile
+-rw-r--r--    1 jtranchi  2015_paris     18 Feb  2 17:45 auteur
+drwxr-xr-x    3 jtranchi  2015_paris    102 Feb  2 17:45 inc
+drwxr-xr-x   63 jtranchi  2015_paris   2142 Feb  2 17:45 libft
+drwxr-xr-x   16 jtranchi  2015_paris    544 Feb  2 17:45 src
+
+../2048/inc
+-rw-r--r--    1 jtranchi  2015_paris   1541 Feb  2 17:45 game_2048.h
+
+../2048/libft
+-rw-r--r--    1 jtranchi  2015_paris   5422 Feb  2 17:45 Makefile
+-rw-r--r--    1 jtranchi  2015_paris      9 Feb  2 17:45 auteur
+-rw-r--r--    1 jtranchi  2015_paris   1658 Feb  2 17:45 ft_atoi.c
+-rw-r--r--    1 jtranchi  2015_paris   1021 Feb  2 17:45 ft_bzero.c
+-rw-r--r--    1 jtranchi  2015_paris   1048 Feb  2 17:45 ft_isalnum.c
+-rw-r--r--    1 jtranchi  2015_paris   1017 Feb  2 17:45 ft_isalpha.c
+-rw-r--r--    1 jtranchi  2015_paris    990 Feb  2 17:45 ft_isascii.c
+-rw-r--r--    1 jtranchi  2015_paris    990 Feb  2 17:45 ft_isdigit.c
+-rw-r--r--    1 jtranchi  2015_paris    998 Feb  2 17:45 ft_isprint.c
+-rw-r--r--    1 jtranchi  2015_paris   1488 Feb  2 17:45 ft_itoa.c
+-rw-r--r--    1 jtranchi  2015_paris    993 Feb  2 17:45 ft_lstadd.c
+-rw-r--r--    1 jtranchi  2015_paris   1146 Feb  2 17:45 ft_lstdel.c
+-rw-r--r--    1 jtranchi  2015_paris   1053 Feb  2 17:45 ft_lstdelone.c
+-rw-r--r--    1 jtranchi  2015_paris   1058 Feb  2 17:45 ft_lstiter.c
+-rw-r--r--    1 jtranchi  2015_paris   1355 Feb  2 17:45 ft_lstmap.c
+-rw-r--r--    1 jtranchi  2015_paris   1413 Feb  2 17:45 ft_lstnew.c
+-rw-r--r--    1 jtranchi  2015_paris   1062 Feb  2 17:45 ft_memalloc.c
+-rw-r--r--    1 jtranchi  2015_paris   1245 Feb  2 17:45 ft_memccpy.c
+-rw-r--r--    1 jtranchi  2015_paris   1111 Feb  2 17:45 ft_memchr.c
+-rw-r--r--    1 jtranchi  2015_paris   1227 Feb  2 17:45 ft_memcmp.c
+-rw-r--r--    1 jtranchi  2015_paris   1098 Feb  2 17:45 ft_memcpy.c
+-rw-r--r--    1 jtranchi  2015_paris    993 Feb  2 17:45 ft_memdel.c
+-rw-r--r--    1 jtranchi  2015_paris   1163 Feb  2 17:45 ft_memmove.c
+-rw-r--r--    1 jtranchi  2015_paris   1062 Feb  2 17:45 ft_memset.c
+-rw-r--r--    1 jtranchi  2015_paris    958 Feb  2 17:45 ft_putchar.c
+-rw-r--r--    1 jtranchi  2015_paris    970 Feb  2 17:45 ft_putchar_fd.c
+-rw-r--r--    1 jtranchi  2015_paris    980 Feb  2 17:45 ft_putendl.c
+-rw-r--r--    1 jtranchi  2015_paris   1006 Feb  2 17:45 ft_putendl_fd.c
+-rw-r--r--    1 jtranchi  2015_paris   1125 Feb  2 17:45 ft_putnbr.c
+-rw-r--r--    1 jtranchi  2015_paris   1164 Feb  2 17:45 ft_putnbr_fd.c
+-rw-r--r--    1 jtranchi  2015_paris    974 Feb  2 17:45 ft_putstr.c
+-rw-r--r--    1 jtranchi  2015_paris    986 Feb  2 17:45 ft_putstr_fd.c
+-rw-r--r--    1 jtranchi  2015_paris   1068 Feb  2 17:45 ft_strcat.c
+-rw-r--r--    1 jtranchi  2015_paris   1120 Feb  2 17:45 ft_strchr.c
+-rw-r--r--    1 jtranchi  2015_paris   1016 Feb  2 17:45 ft_strclr.c
+-rw-r--r--    1 jtranchi  2015_paris   1136 Feb  2 17:45 ft_strcmp.c
+-rw-r--r--    1 jtranchi  2015_paris   1043 Feb  2 17:45 ft_strcpy.c
+-rw-r--r--    1 jtranchi  2015_paris    992 Feb  2 17:45 ft_strdel.c
+-rw-r--r--    1 jtranchi  2015_paris   1151 Feb  2 17:45 ft_strdup.c
+-rw-r--r--    1 jtranchi  2015_paris   1116 Feb  2 17:45 ft_strequ.c
+-rw-r--r--    1 jtranchi  2015_paris   1045 Feb  2 17:45 ft_striter.c
+-rw-r--r--    1 jtranchi  2015_paris   1064 Feb  2 17:45 ft_striteri.c
+-rw-r--r--    1 jtranchi  2015_paris   1182 Feb  2 17:45 ft_strjoin.c
+-rw-r--r--    1 jtranchi  2015_paris   1231 Feb  2 17:45 ft_strlcat.c
+-rw-r--r--    1 jtranchi  2015_paris   1040 Feb  2 17:45 ft_strlen.c
+-rw-r--r--    1 jtranchi  2015_paris   1114 Feb  2 17:45 ft_strmap.c
+-rw-r--r--    1 jtranchi  2015_paris   1143 Feb  2 17:45 ft_strmapi.c
+-rw-r--r--    1 jtranchi  2015_paris   1121 Feb  2 17:45 ft_strncat.c
+-rw-r--r--    1 jtranchi  2015_paris   1168 Feb  2 17:45 ft_strncmp.c
+-rw-r--r--    1 jtranchi  2015_paris   1099 Feb  2 17:45 ft_strncpy.c
+-rw-r--r--    1 jtranchi  2015_paris   1148 Feb  2 17:45 ft_strnequ.c
+-rw-r--r--    1 jtranchi  2015_paris   1106 Feb  2 17:45 ft_strnew.c
+-rw-r--r--    1 jtranchi  2015_paris   1194 Feb  2 17:45 ft_strnstr.c
+-rw-r--r--    1 jtranchi  2015_paris   1191 Feb  2 17:45 ft_strrchr.c
+-rw-r--r--    1 jtranchi  2015_paris   1772 Feb  2 17:45 ft_strsplit.c
+-rw-r--r--    1 jtranchi  2015_paris   1333 Feb  2 17:45 ft_strstr.c
+-rw-r--r--    1 jtranchi  2015_paris   1231 Feb  2 17:45 ft_strsub.c
+-rw-r--r--    1 jtranchi  2015_paris   1336 Feb  2 17:45 ft_strtrim.c
+-rw-r--r--    1 jtranchi  2015_paris    987 Feb  2 17:45 ft_tolower.c
+-rw-r--r--    1 jtranchi  2015_paris    988 Feb  2 17:45 ft_toupper.c
+-rw-r--r--    1 jtranchi  2015_paris   3870 Feb  2 17:45 libft.h
+
+../2048/src
+-rw-r--r--    1 jtranchi  2015_paris   1736 Feb  2 17:45 algo.c
+-rw-r--r--    1 jtranchi  2015_paris   1442 Feb  2 17:45 check.c
+-rw-r--r--    1 jtranchi  2015_paris   1106 Feb  2 17:45 diff_save.c
+-rw-r--r--    1 jtranchi  2015_paris   1521 Feb  2 17:45 down.c
+-rw-r--r--    1 jtranchi  2015_paris   2031 Feb  2 17:45 game_2048.c
+-rw-r--r--    1 jtranchi  2015_paris      0 Feb  2 17:45 game_2048.h
+-rw-r--r--    1 jtranchi  2015_paris   1077 Feb  2 17:45 init_map.c
+-rw-r--r--    1 jtranchi  2015_paris   1544 Feb  2 17:45 left.c
+-rw-r--r--    1 jtranchi  2015_paris   2979 Feb  2 17:45 print_map.c
+-rw-r--r--    1 jtranchi  2015_paris   1527 Feb  2 17:45 right.c
+-rw-r--r--    1 jtranchi  2015_paris   1067 Feb  2 17:45 save.c
+-rw-r--r--    1 jtranchi  2015_paris   1486 Feb  2 17:45 test_errors.c
+-rw-r--r--    1 jtranchi  2015_paris   1512 Feb  2 17:45 up.c
+
+../42FileChecker
+-rw-r--r--    1 jtranchi  2015_paris   4604 Feb  9 17:54 42FileChecker.sh
+-rw-r--r--    1 jtranchi  2015_paris  12182 Feb  9 17:54 README.md
+drwxr-xr-x   21 jtranchi  2015_paris    714 Feb  9 17:54 includes
+drwxr-xr-x   10 jtranchi  2015_paris    340 Feb  9 17:54 libft-unit-test
+drwxr-xr-x   16 jtranchi  2015_paris    544 Feb  9 17:54 moulitest_42projects
+drwxr-xr-x    5 jtranchi  2015_paris    170 Feb  9 17:54 srcs
+drwxr-xr-x    4 jtranchi  2015_paris    136 Feb  9 18:25 tmp
+
+../42FileChecker/includes
+-rw-r--r--    1 jtranchi  2015_paris   3047 Feb  9 17:54 configure.sh
+-rw-r--r--    1 jtranchi  2015_paris   1022 Feb  9 17:54 credits.sh
+-rw-r--r--    1 jtranchi  2015_paris   3119 Feb  9 17:54 fdf.sh
+-rw-r--r--    1 jtranchi  2015_paris   2360 Feb  9 17:54 forbidden.sh
+-rw-r--r--    1 jtranchi  2015_paris   3821 Feb  9 17:54 ft_ls.sh
+-rw-r--r--    1 jtranchi  2015_paris  11339 Feb  9 17:54 ft_printf.sh
+-rw-r--r--    1 jtranchi  2015_paris  10566 Feb  9 17:54 ft_printf_list.sh
+-rw-r--r--    1 jtranchi  2015_paris  13497 Feb  9 17:54 get_next_line.sh
+-rw-r--r--    1 jtranchi  2015_paris   2017 Feb  9 17:54 leaks.sh
+-rw-r--r--    1 jtranchi  2015_paris   9810 Feb  9 17:54 libft.sh
+-rwxr-xr-x    1 jtranchi  2015_paris   9761 Feb  9 17:54 libftasm.sh
+-rwxr-xr-x    1 jtranchi  2015_paris   8637 Feb  9 17:54 libftasm_list.sh
+-rw-r--r--    1 jtranchi  2015_paris   1745 Feb  9 17:54 libftunittest.sh
+-rw-r--r--    1 jtranchi  2015_paris   3237 Feb  9 17:54 makefile.sh
+-rw-r--r--    1 jtranchi  2015_paris   1839 Feb  9 17:54 moulitest.sh
+-rw-r--r--    1 jtranchi  2015_paris   3744 Feb  9 17:54 speedtest.sh
+-rw-r--r--    1 jtranchi  2015_paris  11150 Feb  9 17:54 transition.sh
+-rw-r--r--    1 jtranchi  2015_paris   7132 Feb  9 17:54 update.sh
+-rw-r--r--    1 jtranchi  2015_paris  13246 Feb  9 17:54 utils.sh
+
+../42FileChecker/libft-unit-test
+-rw-r--r--    1 jtranchi  2015_paris  10505 Feb  9 17:54 Makefile
+-rw-r--r--    1 jtranchi  2015_paris    827 Feb  9 17:54 README.md
+drwxr-xr-x    9 jtranchi  2015_paris    306 Feb  9 17:54 assets
+drwxr-xr-x    3 jtranchi  2015_paris    102 Feb  9 17:54 include
+-rwxr-xr-x    1 jtranchi  2015_paris   8884 Feb  9 17:54 run_test
+drwxr-xr-x    8 jtranchi  2015_paris    272 Feb  9 17:54 src
+
+../42FileChecker/libft-unit-test/assets
+-rwxr-xr-x    1 jtranchi  2015_paris 385132 Feb  9 17:54 libtests
+-rw-r--r--    1 jtranchi  2015_paris   1539 Feb  9 17:54 malloc.c
+-rwxr-xr-x    1 jtranchi  2015_paris   8956 Feb  9 17:54 malloc.dylib
+-rwxr-xr-x    1 jtranchi  2015_paris   8884 Feb  9 17:54 run_test
+drwxr-xr-x    3 jtranchi  2015_paris    102 Feb  9 17:54 tmp
+-rw-r--r--    1 jtranchi  2015_paris   3113 Feb  9 17:54 wrapper.c
+
+../42FileChecker/libft-unit-test/assets/tmp
+-rw-r--r--    1 jtranchi  2015_paris   3688 Feb  9 17:54 __.SYMDEF SORTED
+
+../42FileChecker/libft-unit-test/include
+-rw-r--r--    1 jtranchi  2015_paris  10053 Feb  9 17:54 libft_test.h
+
+../42FileChecker/libft-unit-test/src
+-rw-r--r--    1 jtranchi  2015_paris   6983 Feb  9 17:54 display_test_result.c
+-rw-r--r--    1 jtranchi  2015_paris   3745 Feb  9 17:54 init.c
+-rw-r--r--    1 jtranchi  2015_paris   3994 Feb  9 17:54 main.c
+-rw-r--r--    1 jtranchi  2015_paris   1230 Feb  9 17:54 sandbox.c
+-rw-r--r--    1 jtranchi  2015_paris   1516 Feb  9 17:54 signal.c
+-rw-r--r--    1 jtranchi  2015_paris 161911 Feb  9 17:54 test_functions.c
+
+../42FileChecker/moulitest_42projects
+-rw-r--r--    1 jtranchi  2015_paris   2723 Feb  9 17:54 Makefile
+-rw-r--r--    1 jtranchi  2015_paris    980 Feb  9 17:54 README.md
+-rw-r--r--    1 jtranchi  2015_paris     77 Feb  9 18:25 config.ini
+-rw-r--r--    1 jtranchi  2015_paris    393 Feb  9 17:54 config.ini.template
+drwxr-xr-x    8 jtranchi  2015_paris    272 Feb  9 17:54 ft_ls_tests
+drwxr-xr-x    8 jtranchi  2015_paris    272 Feb  9 17:54 ft_printf_tests
+drwxr-xr-x   11 jtranchi  2015_paris    374 Feb  9 18:25 get_next_line_tests
+drwxr-xr-x    8 jtranchi  2015_paris    272 Feb  9 17:54 libft_tests
+drwxr-xr-x    8 jtranchi  2015_paris    272 Feb  9 17:54 libftasm_tests
+drwxr-xr-x    8 jtranchi  2015_paris    272 Feb  9 17:54 template_tests
+drwxr-xr-x    6 jtranchi  2015_paris    204 Feb  9 17:54 testframework
+
+../42FileChecker/moulitest_42projects/ft_ls_tests
+-rwxr-xr-x    1 jtranchi  2015_paris     50 Feb  9 17:54 Makefile
+-rwxr-xr-x    1 jtranchi  2015_paris     46 Feb  9 17:54 Makefile_cfg.mk
+-rwxr-xr-x    1 jtranchi  2015_paris    488 Feb  9 17:54 main.c
+-rwxr-xr-x    1 jtranchi  2015_paris    436 Feb  9 17:54 project.h
+drwxr-xr-x   53 jtranchi  2015_paris   1802 Feb  9 17:54 tests
+-rwxr-xr-x    1 jtranchi  2015_paris   3172 Feb  9 17:54 utils.c
+
+../42FileChecker/moulitest_42projects/ft_ls_tests/tests
+-rwxr-xr-x    1 jtranchi  2015_paris    793 Feb  9 17:54 00_test_without_opt.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1871 Feb  9 17:54 01_test_opt_R.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris    927 Feb  9 17:54 02_test_sorted.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1455 Feb  9 17:54 03_test_multiple_dir.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris    574 Feb  9 17:54 04_test_opt_a.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris    796 Feb  9 17:54 05_test_opt_r.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1093 Feb  9 17:54 06_test_opt_rR.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris   2540 Feb  9 17:54 07_test_opt_t.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris    681 Feb  9 17:54 07_test_opt_tR_bis.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris   2393 Feb  9 17:54 08_test_opt_l.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris    552 Feb  9 17:54 09_test_opt_aR.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris    299 Feb  9 17:54 10_test_opt_aRl.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris    494 Feb  9 17:54 11_test_single_file.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris    704 Feb  9 17:54 12_test_permissions.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris   2869 Feb  9 17:54 13_test_hyphen_hard.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1921 Feb  9 17:54 14_test_hyphen_harder.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris   7079 Feb  9 17:54 20_test_error_handling.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1117 Feb  9 17:54 21_test_symlink.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris    289 Feb  9 17:54 22_test_no_username.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris    285 Feb  9 17:54 23_test_no_groupname.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris    814 Feb  9 17:54 24_test_multiple_files.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris   3622 Feb  9 17:54 25_perm_special_bits.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris   3606 Feb  9 17:54 26_perm_special_bits_dir.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris    549 Feb  9 17:54 30_test_opt_mix.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris   2113 Feb  9 17:54 bonus_01_test_opt_d.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1292 Feb  9 17:54 bonus_02_test_opt_p.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris    606 Feb  9 17:54 bonus_03_test_opt_U.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1361 Feb  9 17:54 bonus_04_test_opt_c.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris    883 Feb  9 17:54 bonus_05_test_opt_S.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris   4107 Feb  9 17:54 bonus_06_test_opt_u.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris    731 Feb  9 17:54 bonus_07_test_opt_A.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris    421 Feb  9 17:54 bonus_08_test_opt_1.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris    419 Feb  9 17:54 bonus_09_test_opt_f.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris    273 Feb  9 17:54 bonus_10_test_opt_T.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris    560 Feb  9 17:54 bonus_11_test_opt_g.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris    704 Feb  9 17:54 bonus_12_test_opt_o_og.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1397 Feb  9 17:54 bonus_13_test_opt_F_Fp.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris    517 Feb  9 17:54 bonus_20_test_opt_comb_aA.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris    423 Feb  9 17:54 bonus_21_test_opt_mix_sort.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1867 Feb  9 17:54 bonus_22_test_sort_comb.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris    316 Feb  9 17:54 bonus_30_test_xattr.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris    412 Feb  9 17:54 bonus_31_test_usr_xattr.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris    219 Feb  9 17:54 bonus_32_test_ACL.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris    281 Feb  9 17:54 bonus_34_test_redis.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris    246 Feb  9 17:54 bonus_40_dir_root.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1028 Feb  9 17:54 buggy_ls_behaviors.c
+-rwxr-xr-x    1 jtranchi  2015_paris    802 Feb  9 17:54 sys_00_test_user_bin.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris    663 Feb  9 17:54 sys_01_test_dev.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris    244 Feb  9 17:54 sys_02_test_etc.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris    284 Feb  9 17:54 sys_03_test_many_files.spec.c
+-rwxr-xr-x    1 jtranchi  2015_paris    252 Feb  9 17:54 sys_04_test_var_run.spec.c
+
+../42FileChecker/moulitest_42projects/ft_printf_tests
+-rwxr-xr-x    1 jtranchi  2015_paris     50 Feb  9 17:54 Makefile
+-rwxr-xr-x    1 jtranchi  2015_paris    160 Feb  9 17:54 Makefile_cfg.mk
+-rw-r--r--    1 jtranchi  2015_paris    313 Feb  9 17:54 main.c
+-rw-r--r--    1 jtranchi  2015_paris   2224 Feb  9 17:54 project.h
+drwxr-xr-x   50 jtranchi  2015_paris   1700 Feb  9 17:54 tests
+-rw-r--r--    1 jtranchi  2015_paris     80 Feb  9 17:54 utils.c
+
+../42FileChecker/moulitest_42projects/ft_printf_tests/tests
+-rw-r--r--    1 jtranchi  2015_paris    656 Feb  9 17:54 00_no_conv.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    917 Feb  9 17:54 01_conv_s_simple.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    590 Feb  9 17:54 02_conv_s_multiple.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   1125 Feb  9 17:54 03_conv_d.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    812 Feb  9 17:54 04_conv_p.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   1239 Feb  9 17:54 05_percent_escape.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    477 Feb  9 17:54 06_mix_sdp_percent.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   1126 Feb  9 17:54 07_conv_S.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    715 Feb  9 17:54 08_conv_D.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    837 Feb  9 17:54 09_conv_i.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    712 Feb  9 17:54 10_conv_o.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    911 Feb  9 17:54 11_conv_O.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    865 Feb  9 17:54 12_conv_u.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    504 Feb  9 17:54 13_conv_U.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    864 Feb  9 17:54 14_conv_x.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    864 Feb  9 17:54 15_conv_X.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   1279 Feb  9 17:54 16_conv_c.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   1949 Feb  9 17:54 17_conv_C.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    538 Feb  9 17:54 18_mix_all_previous.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   3086 Feb  9 17:54 40_length_modif_l.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   2213 Feb  9 17:54 41_length_modif_ll.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   1994 Feb  9 17:54 42_length_modif_h.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   3601 Feb  9 17:54 43_length_modif_hh.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   2164 Feb  9 17:54 43_length_modif_j.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   1870 Feb  9 17:54 44_length_modif_z.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    296 Feb  9 17:54 45_length_modif_edge_cases.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   1934 Feb  9 17:54 50_min_width.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    604 Feb  9 17:54 51_min_width_flag_minus.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   1982 Feb  9 17:54 52_min_width_flag_zero.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    290 Feb  9 17:54 53_min_width_non_valid_conv.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   1671 Feb  9 17:54 60_flag_sharp.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   1976 Feb  9 17:54 61_flag_plus.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   2382 Feb  9 17:54 62_flag_space.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   1607 Feb  9 17:54 69_flag_mix.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   5831 Feb  9 17:54 70_precision_for_diu.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   5983 Feb  9 17:54 71_precision_for_oOxX.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   2831 Feb  9 17:54 72_precision_for_sS.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   1051 Feb  9 17:54 73_precision_for_cC.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   1234 Feb  9 17:54 74_precision_for_p.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    267 Feb  9 17:54 75_precision_for_percent.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   1903 Feb  9 17:54 79_precision_mixed_with_flags.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    675 Feb  9 17:54 90_incomptbl_values_sdpi.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   1041 Feb  9 17:54 91_incomptbl_values_uUSDcC.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   1205 Feb  9 17:54 92_incomptbl_values_oOxX.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   2372 Feb  9 17:54 bonus_01_wildcard.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    292 Feb  9 17:54 bonus_02_wildcard_multi.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    842 Feb  9 17:54 bonus_03_wildcard_flag_mix.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    858 Feb  9 17:54 bonus_10_conv_fF.spec.c
+
+../42FileChecker/moulitest_42projects/get_next_line_tests
+-rwxr-xr-x    1 jtranchi  2015_paris     50 Feb  9 17:54 Makefile
+-rwxr-xr-x    1 jtranchi  2015_paris    203 Feb  9 17:54 Makefile_cfg.mk
+-rwxr-xr-x    1 jtranchi  2015_paris  64800 Feb  9 18:25 get_next_line_tests
+drwxr-xr-x    3 jtranchi  2015_paris    102 Feb  9 18:25 get_next_line_tests.dSYM
+-rw-r--r--    1 jtranchi  2015_paris    284 Feb  9 17:54 main.c
+-rw-r--r--    1 jtranchi  2015_paris    613 Feb  9 17:54 project.h
+drwxr-xr-x    8 jtranchi  2015_paris    272 Feb  9 18:06 sandbox
+drwxr-xr-x   23 jtranchi  2015_paris    782 Feb  9 17:54 tests
+-rw-r--r--    1 jtranchi  2015_paris      0 Feb  9 17:54 utils.c
+
+../42FileChecker/moulitest_42projects/get_next_line_tests/get_next_line_tests.dSYM
+drwxr-xr-x    4 jtranchi  2015_paris    136 Feb  9 18:06 Contents
+
+../42FileChecker/moulitest_42projects/get_next_line_tests/get_next_line_tests.dSYM/Contents
+-rw-r--r--    1 jtranchi  2015_paris    648 Feb  9 18:25 Info.plist
+drwxr-xr-x    3 jtranchi  2015_paris    102 Feb  9 18:06 Resources
+
+../42FileChecker/moulitest_42projects/get_next_line_tests/get_next_line_tests.dSYM/Contents/Resources
+drwxr-xr-x    3 jtranchi  2015_paris    102 Feb  9 18:25 DWARF
+
+../42FileChecker/moulitest_42projects/get_next_line_tests/get_next_line_tests.dSYM/Contents/Resources/DWARF
+-rw-r--r--    1 jtranchi  2015_paris  77766 Feb  9 18:25 get_next_line_tests
+
+../42FileChecker/moulitest_42projects/get_next_line_tests/sandbox
+-rw-r--r--    1 jtranchi  2015_paris      0 Feb  9 18:25 large_file.diff
+-rw-r--r--    1 jtranchi  2015_paris  50782 Feb  9 18:25 large_file.txt
+-rwxr-xr-x    1 jtranchi  2015_paris  50782 Feb  9 18:25 large_file.txt.mine
+-rw-r--r--    1 jtranchi  2015_paris      0 Feb  9 18:25 one_big_fat_line.diff
+-rw-r--r--    1 jtranchi  2015_paris  30002 Feb  9 18:25 one_big_fat_line.txt
+-rwxr-xr-x    1 jtranchi  2015_paris  30002 Feb  9 18:25 one_big_fat_line.txt.mine
+
+../42FileChecker/moulitest_42projects/get_next_line_tests/tests
+-rw-r--r--    1 jtranchi  2015_paris    604 Feb  9 17:54 01_test_simple.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    445 Feb  9 17:54 02_test_eof_with_close.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   1197 Feb  9 17:54 03_test_medium_string.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    873 Feb  9 17:54 04_test_return_values.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    517 Feb  9 17:54 05_test_error_handling.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    387 Feb  9 17:54 06_test_line_of_08.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    494 Feb  9 17:54 07_test_two_lines_of_08.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    998 Feb  9 17:54 08_test_few_lines_of_08.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    472 Feb  9 17:54 09_test_line_of_16.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    595 Feb  9 17:54 10_test_two_lines_of_16.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   1185 Feb  9 17:54 11_test_few_lines_of_16.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    446 Feb  9 17:54 12_test_line_of_4.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    544 Feb  9 17:54 13_test_two_lines_of_4.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   1009 Feb  9 17:54 14_test_few_lines_of_4.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    382 Feb  9 17:54 15_test_line_without_nl.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    395 Feb  9 17:54 16_test_line_of_8_without_nl.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    413 Feb  9 17:54 17_test_line_of_16_without_nl.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   1525 Feb  9 17:54 30_bonus_multiple_fd.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    736 Feb  9 17:54 40_hard_test_medium_string.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    857 Feb  9 17:54 41_hard_test_large_file.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   1033 Feb  9 17:54 42_hard_test_one_big_fat_line.spec.c
+
+../42FileChecker/moulitest_42projects/libft_tests
+-rwxr-xr-x    1 jtranchi  2015_paris     50 Feb  9 17:54 Makefile
+-rw-r--r--    1 jtranchi  2015_paris    552 Feb  9 17:54 Makefile_cfg.mk
+-rwxr-xr-x    1 jtranchi  2015_paris    366 Feb  9 17:54 main.c
+-rw-r--r--    1 jtranchi  2015_paris   1312 Feb  9 17:54 project.h
+drwxr-xr-x   60 jtranchi  2015_paris   2040 Feb  9 17:54 tests
+-rw-r--r--    1 jtranchi  2015_paris    357 Feb  9 17:54 utils.c
+
+../42FileChecker/moulitest_42projects/libft_tests/tests
+-rw-r--r--    1 jtranchi  2015_paris   2364 Feb  9 17:54 00_part1_ft_atoi.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    879 Feb  9 17:54 00_part1_ft_bzero.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   1519 Feb  9 17:54 00_part1_ft_isalnum.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   1527 Feb  9 17:54 00_part1_ft_isalpha.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   1592 Feb  9 17:54 00_part1_ft_isascii.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   1528 Feb  9 17:54 00_part1_ft_isdigit.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   1528 Feb  9 17:54 00_part1_ft_isprint.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    836 Feb  9 17:54 00_part1_ft_memccpy.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   1183 Feb  9 17:54 00_part1_ft_memchr.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    808 Feb  9 17:54 00_part1_ft_memcmp.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    321 Feb  9 17:54 00_part1_ft_memcpy.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    779 Feb  9 17:54 00_part1_ft_memmove.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    710 Feb  9 17:54 00_part1_ft_memset.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    373 Feb  9 17:54 00_part1_ft_strcat.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    600 Feb  9 17:54 00_part1_ft_strchr.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    654 Feb  9 17:54 00_part1_ft_strcmp.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    490 Feb  9 17:54 00_part1_ft_strcpy.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    452 Feb  9 17:54 00_part1_ft_strdup.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   1341 Feb  9 17:54 00_part1_ft_strlcat.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    760 Feb  9 17:54 00_part1_ft_strlen.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    582 Feb  9 17:54 00_part1_ft_strncat.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    716 Feb  9 17:54 00_part1_ft_strncmp.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    449 Feb  9 17:54 00_part1_ft_strncpy.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   1311 Feb  9 17:54 00_part1_ft_strnstr.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    623 Feb  9 17:54 00_part1_ft_strrchr.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   1075 Feb  9 17:54 00_part1_ft_strstr.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   1501 Feb  9 17:54 00_part1_ft_tolower.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   1501 Feb  9 17:54 00_part1_ft_toupper.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    586 Feb  9 17:54 01_part2_ft_itoa.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    486 Feb  9 17:54 01_part2_ft_memalloc.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    229 Feb  9 17:54 01_part2_ft_memdel.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    414 Feb  9 17:54 01_part2_ft_putchar.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    345 Feb  9 17:54 01_part2_ft_putchar_fd.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    380 Feb  9 17:54 01_part2_ft_putendl.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    341 Feb  9 17:54 01_part2_ft_putendl_fd.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    543 Feb  9 17:54 01_part2_ft_putnbr.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    546 Feb  9 17:54 01_part2_ft_putnbr_fd.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    377 Feb  9 17:54 01_part2_ft_putstr.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    337 Feb  9 17:54 01_part2_ft_putstr_fd.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    243 Feb  9 17:54 01_part2_ft_strclr.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    228 Feb  9 17:54 01_part2_ft_strdel.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    408 Feb  9 17:54 01_part2_ft_strequ.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    245 Feb  9 17:54 01_part2_ft_striter.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    248 Feb  9 17:54 01_part2_ft_striteri.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    319 Feb  9 17:54 01_part2_ft_strjoin.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    287 Feb  9 17:54 01_part2_ft_strmap.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    291 Feb  9 17:54 01_part2_ft_strmapi.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    541 Feb  9 17:54 01_part2_ft_strnequ.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    491 Feb  9 17:54 01_part2_ft_strnew.spec.c
+-rw-r--r--    1 jtranchi  2015_paris   1104 Feb  9 17:54 01_part2_ft_strsplit.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    502 Feb  9 17:54 01_part2_ft_strsub.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    580 Feb  9 17:54 01_part2_ft_strtrim.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    383 Feb  9 17:54 02_bonus_ft_lstadd.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    579 Feb  9 17:54 02_bonus_ft_lstdel.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    492 Feb  9 17:54 02_bonus_ft_lstdelone.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    455 Feb  9 17:54 02_bonus_ft_lstiter.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    860 Feb  9 17:54 02_bonus_ft_lstmap.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    346 Feb  9 17:54 02_bonus_ft_lstnew.spec.c
+
+../42FileChecker/moulitest_42projects/libftasm_tests
+-rw-r--r--    1 jtranchi  2015_paris   3577 Feb  9 17:54 Makefile
+-rw-r--r--    1 jtranchi  2015_paris    514 Feb  9 17:54 Makefile_cfg.mk
+-rwxr-xr-x    1 jtranchi  2015_paris    366 Feb  9 17:54 main.c
+-rw-r--r--    1 jtranchi  2015_paris   4650 Feb  9 17:54 project.h
+drwxr-xr-x   17 jtranchi  2015_paris    578 Feb  9 17:54 tests
+-rw-r--r--    1 jtranchi  2015_paris      0 Feb  9 17:54 utils.c
+
+../42FileChecker/moulitest_42projects/libftasm_tests/tests
+-rw-r--r--    1 jtranchi  2015_paris    879 Feb  9 17:54 01_part1_ft_bzero.spec.c
+-rw-r--r--    1 jtranchi  2015_paris     53 Feb  9 17:54 01_part1_ft_isalnum.spec.c
+-rw-r--r--    1 jtranchi  2015_paris     53 Feb  9 17:54 01_part1_ft_isalpha.spec.c
+-rw-r--r--    1 jtranchi  2015_paris     53 Feb  9 17:54 01_part1_ft_isascii.spec.c
+-rw-r--r--    1 jtranchi  2015_paris     53 Feb  9 17:54 01_part1_ft_isdigit.spec.c
+-rw-r--r--    1 jtranchi  2015_paris     53 Feb  9 17:54 01_part1_ft_isprint.spec.c
+-rw-r--r--    1 jtranchi  2015_paris     53 Feb  9 17:54 01_part1_ft_tolower.spec.c
+-rw-r--r--    1 jtranchi  2015_paris     53 Feb  9 17:54 01_part1_ft_toupper.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    321 Feb  9 17:54 02_part2_ft_memcpy.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    710 Feb  9 17:54 02_part2_ft_memset.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    538 Feb  9 17:54 02_part2_ft_puts.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    373 Feb  9 17:54 02_part2_ft_strcat.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    477 Feb  9 17:54 02_part2_ft_strdup.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    702 Feb  9 17:54 02_part2_ft_strlen.spec.c
+-rw-r--r--    1 jtranchi  2015_paris    596 Feb  9 17:54 03_part3_ft_cat.spec.c
+
+../42FileChecker/moulitest_42projects/template_tests
+-rw-r--r--    1 jtranchi  2015_paris   3544 Feb  9 17:54 Makefile
+-rwxr-xr-x    1 jtranchi  2015_paris    182 Feb  9 17:54 Makefile_cfg.mk
+-rw-r--r--    1 jtranchi  2015_paris    196 Feb  9 17:54 main.c
+-rw-r--r--    1 jtranchi  2015_paris    981 Feb  9 17:54 project.h
+drwxr-xr-x    3 jtranchi  2015_paris    102 Feb  9 17:54 tests
+-rw-r--r--    1 jtranchi  2015_paris     50 Feb  9 17:54 utils.c
+
+../42FileChecker/moulitest_42projects/template_tests/tests
+-rw-r--r--    1 jtranchi  2015_paris    300 Feb  9 17:54 00_no_conv.spec.c
+
+../42FileChecker/moulitest_42projects/testframework
+drwxr-xr-x   12 jtranchi  2015_paris    408 Feb  9 17:54 fake_rendu
+drwxr-xr-x    5 jtranchi  2015_paris    170 Feb  9 17:54 v2
+drwxr-xr-x   45 jtranchi  2015_paris   1530 Feb  9 18:25 v3
+drwxr-xr-x    3 jtranchi  2015_paris    102 Feb  9 17:54 v3_templates
+
+../42FileChecker/moulitest_42projects/testframework/fake_rendu
+drwxr-xr-x    5 jtranchi  2015_paris    170 Feb  9 17:54 ft_ls
+drwxr-xr-x    5 jtranchi  2015_paris    170 Feb  9 17:54 ft_printf
+drwxr-xr-x    6 jtranchi  2015_paris    204 Feb  9 17:54 ft_printf_with_libft
+drwxr-xr-x    4 jtranchi  2015_paris    136 Feb  9 17:54 get_next_line
+drwxr-xr-x    5 jtranchi  2015_paris    170 Feb  9 17:54 get_next_line_with_libft
+drwxr-xr-x   72 jtranchi  2015_paris   2448 Feb  9 17:54 libft
+drwxr-xr-x   72 jtranchi  2015_paris   2448 Feb  9 17:54 libft_part1
+drwxr-xr-x   72 jtranchi  2015_paris   2448 Feb  9 17:54 libft_part2
+drwxr-xr-x    6 jtranchi  2015_paris    204 Feb  9 17:54 libft_to_be_symliked
+drwxr-xr-x    3 jtranchi  2015_paris    102 Feb  9 17:54 makefile_templates
+
+../42FileChecker/moulitest_42projects/testframework/fake_rendu/ft_ls
+-rwxr-xr-x    1 jtranchi  2015_paris     30 Feb  9 17:54 Makefile
+-rw-r--r--    1 jtranchi  2015_paris    924 Feb  9 17:54 Makefile_cfg.mk
+-rw-r--r--    1 jtranchi  2015_paris    113 Feb  9 17:54 main.c
+
+../42FileChecker/moulitest_42projects/testframework/fake_rendu/ft_printf
+-rwxr-xr-x    1 jtranchi  2015_paris     30 Feb  9 17:54 Makefile
+-rw-r--r--    1 jtranchi  2015_paris    931 Feb  9 17:54 Makefile_cfg.mk
+-rw-r--r--    1 jtranchi  2015_paris    951 Feb  9 17:54 ft_printf.c
+
+../42FileChecker/moulitest_42projects/testframework/fake_rendu/ft_printf_with_libft
+-rwxr-xr-x    1 jtranchi  2015_paris     30 Feb  9 17:54 Makefile
+-rw-r--r--    1 jtranchi  2015_paris    931 Feb  9 17:54 Makefile_cfg.mk
+-rw-r--r--    1 jtranchi  2015_paris    951 Feb  9 17:54 ft_printf.c
+-rwxr-xr-x    1 jtranchi  2015_paris     23 Feb  9 17:54 libft
+
+../42FileChecker/moulitest_42projects/testframework/fake_rendu/ft_printf_with_libft/libft
+-rwxr-xr-x    1 jtranchi  2015_paris     30 Feb  9 17:54 Makefile
+-rw-r--r--    1 jtranchi  2015_paris    924 Feb  9 17:54 Makefile_cfg.mk
+-rw-r--r--    1 jtranchi  2015_paris   1043 Feb  9 17:54 ft_strcat.c
+drwxr-xr-x    3 jtranchi  2015_paris    102 Feb  9 17:54 includes
+
+../42FileChecker/moulitest_42projects/testframework/fake_rendu/ft_printf_with_libft/libft/includes
+-rw-r--r--    1 jtranchi  2015_paris      0 Feb  9 17:54 libft.h
+
+../42FileChecker/moulitest_42projects/testframework/fake_rendu/get_next_line
+-rw-r--r--    1 jtranchi  2015_paris    150 Feb  9 17:54 get_next_line.c
+-rw-r--r--    1 jtranchi  2015_paris    234 Feb  9 17:54 get_next_line.h
+
+../42FileChecker/moulitest_42projects/testframework/fake_rendu/get_next_line_with_libft
+-rwxr-xr-x    1 jtranchi  2015_paris     32 Feb  9 17:54 get_next_line.c
+-rwxr-xr-x    1 jtranchi  2015_paris     32 Feb  9 17:54 get_next_line.h
+-rwxr-xr-x    1 jtranchi  2015_paris     23 Feb  9 17:54 libft
+
+../42FileChecker/moulitest_42projects/testframework/fake_rendu/get_next_line_with_libft/libft
+-rwxr-xr-x    1 jtranchi  2015_paris     30 Feb  9 17:54 Makefile
+-rw-r--r--    1 jtranchi  2015_paris    924 Feb  9 17:54 Makefile_cfg.mk
+-rw-r--r--    1 jtranchi  2015_paris   1043 Feb  9 17:54 ft_strcat.c
+drwxr-xr-x    3 jtranchi  2015_paris    102 Feb  9 17:54 includes
+
+../42FileChecker/moulitest_42projects/testframework/fake_rendu/get_next_line_with_libft/libft/includes
+-rw-r--r--    1 jtranchi  2015_paris      0 Feb  9 17:54 libft.h
+
+../42FileChecker/moulitest_42projects/testframework/fake_rendu/libft
+-rwxr-xr-x    1 jtranchi  2015_paris     30 Feb  9 17:54 Makefile
+-rw-r--r--    1 jtranchi  2015_paris    925 Feb  9 17:54 Makefile_cfg.mk
+-rwxr-xr-x    1 jtranchi  2015_paris     77 Feb  9 17:54 ft_atoi.c
+-rwxr-xr-x    1 jtranchi  2015_paris     80 Feb  9 17:54 ft_bzero.c
+-rwxr-xr-x    1 jtranchi  2015_paris     71 Feb  9 17:54 ft_isalnum.c
+-rwxr-xr-x    1 jtranchi  2015_paris     68 Feb  9 17:54 ft_isalpha.c
+-rwxr-xr-x    1 jtranchi  2015_paris     69 Feb  9 17:54 ft_isascii.c
+-rwxr-xr-x    1 jtranchi  2015_paris     69 Feb  9 17:54 ft_isblank.c
+-rwxr-xr-x    1 jtranchi  2015_paris     69 Feb  9 17:54 ft_isdigit.c
+-rwxr-xr-x    1 jtranchi  2015_paris     69 Feb  9 17:54 ft_islower.c
+-rwxr-xr-x    1 jtranchi  2015_paris     58 Feb  9 17:54 ft_isprint.c
+-rwxr-xr-x    1 jtranchi  2015_paris     59 Feb  9 17:54 ft_isspace.c
+-rwxr-xr-x    1 jtranchi  2015_paris     59 Feb  9 17:54 ft_isupper.c
+-rwxr-xr-x    1 jtranchi  2015_paris     80 Feb  9 17:54 ft_itoa.c
+-rwxr-xr-x    1 jtranchi  2015_paris     91 Feb  9 17:54 ft_lstadd.c
+-rwxr-xr-x    1 jtranchi  2015_paris    107 Feb  9 17:54 ft_lstdel.c
+-rwxr-xr-x    1 jtranchi  2015_paris    110 Feb  9 17:54 ft_lstdelone.c
+-rwxr-xr-x    1 jtranchi  2015_paris     98 Feb  9 17:54 ft_lstiter.c
+-rwxr-xr-x    1 jtranchi  2015_paris    120 Feb  9 17:54 ft_lstmap.c
+-rwxr-xr-x    1 jtranchi  2015_paris    137 Feb  9 17:54 ft_lstnew.c
+-rwxr-xr-x    1 jtranchi  2015_paris     83 Feb  9 17:54 ft_memalloc.c
+-rwxr-xr-x    1 jtranchi  2015_paris    164 Feb  9 17:54 ft_memccpy.c
+-rwxr-xr-x    1 jtranchi  2015_paris    117 Feb  9 17:54 ft_memchr.c
+-rwxr-xr-x    1 jtranchi  2015_paris    125 Feb  9 17:54 ft_memcmp.c
+-rwxr-xr-x    1 jtranchi  2015_paris    114 Feb  9 17:54 ft_memcpy.c
+-rwxr-xr-x    1 jtranchi  2015_paris     60 Feb  9 17:54 ft_memdel.c
+-rwxr-xr-x    1 jtranchi  2015_paris    121 Feb  9 17:54 ft_memmove.c
+-rwxr-xr-x    1 jtranchi  2015_paris    102 Feb  9 17:54 ft_memset.c
+-rwxr-xr-x    1 jtranchi  2015_paris     66 Feb  9 17:54 ft_putchar.c
+-rwxr-xr-x    1 jtranchi  2015_paris    101 Feb  9 17:54 ft_putchar_fd.c
+-rwxr-xr-x    1 jtranchi  2015_paris     85 Feb  9 17:54 ft_putendl.c
+-rwxr-xr-x    1 jtranchi  2015_paris    108 Feb  9 17:54 ft_putendl_fd.c
+-rwxr-xr-x    1 jtranchi  2015_paris     76 Feb  9 17:54 ft_putnbr.c
+-rwxr-xr-x    1 jtranchi  2015_paris     99 Feb  9 17:54 ft_putnbr_fd.c
+-rwxr-xr-x    1 jtranchi  2015_paris     79 Feb  9 17:54 ft_putnendl.c
+-rwxr-xr-x    1 jtranchi  2015_paris     78 Feb  9 17:54 ft_putnstr.c
+-rwxr-xr-x    1 jtranchi  2015_paris     74 Feb  9 17:54 ft_putstr.c
+-rwxr-xr-x    1 jtranchi  2015_paris    107 Feb  9 17:54 ft_putstr_fd.c
+-rwxr-xr-x    1 jtranchi  2015_paris     98 Feb  9 17:54 ft_strcat.c
+-rwxr-xr-x    1 jtranchi  2015_paris     92 Feb  9 17:54 ft_strchr.c
+-rwxr-xr-x    1 jtranchi  2015_paris     57 Feb  9 17:54 ft_strclr.c
+-rwxr-xr-x    1 jtranchi  2015_paris    105 Feb  9 17:54 ft_strcmp.c
+-rwxr-xr-x    1 jtranchi  2015_paris     94 Feb  9 17:54 ft_strcpy.c
+-rwxr-xr-x    1 jtranchi  2015_paris     60 Feb  9 17:54 ft_strdel.c
+-rwxr-xr-x    1 jtranchi  2015_paris     76 Feb  9 17:54 ft_strdup.c
+-rwxr-xr-x    1 jtranchi  2015_paris    105 Feb  9 17:54 ft_strequ.c
+-rwxr-xr-x    1 jtranchi  2015_paris     87 Feb  9 17:54 ft_striter.c
+-rwxr-xr-x    1 jtranchi  2015_paris    102 Feb  9 17:54 ft_striteri.c
+-rwxr-xr-x    1 jtranchi  2015_paris    105 Feb  9 17:54 ft_strjoin.c
+-rwxr-xr-x    1 jtranchi  2015_paris    122 Feb  9 17:54 ft_strlcat.c
+-rwxr-xr-x    1 jtranchi  2015_paris     78 Feb  9 17:54 ft_strlen.c
+-rwxr-xr-x    1 jtranchi  2015_paris     69 Feb  9 17:54 ft_strlowcase.c
+-rwxr-xr-x    1 jtranchi  2015_paris    122 Feb  9 17:54 ft_strmap.c
+-rwxr-xr-x    1 jtranchi  2015_paris    117 Feb  9 17:54 ft_strmapi.c
+-rwxr-xr-x    1 jtranchi  2015_paris    113 Feb  9 17:54 ft_strncat.c
+-rwxr-xr-x    1 jtranchi  2015_paris    126 Feb  9 17:54 ft_strncmp.c
+-rwxr-xr-x    1 jtranchi  2015_paris    115 Feb  9 17:54 ft_strncpy.c
+-rwxr-xr-x    1 jtranchi  2015_paris    126 Feb  9 17:54 ft_strnequ.c
+-rwxr-xr-x    1 jtranchi  2015_paris     79 Feb  9 17:54 ft_strnew.c
+-rwxr-xr-x    1 jtranchi  2015_paris    148 Feb  9 17:54 ft_strnstr.c
+-rwxr-xr-x    1 jtranchi  2015_paris     93 Feb  9 17:54 ft_strrchr.c
+-rwxr-xr-x    1 jtranchi  2015_paris     65 Feb  9 17:54 ft_strrev.c
+-rwxr-xr-x    1 jtranchi  2015_paris    347 Feb  9 17:54 ft_strsplit.c
+-rwxr-xr-x    1 jtranchi  2015_paris    104 Feb  9 17:54 ft_strstr.c
+-rwxr-xr-x    1 jtranchi  2015_paris    133 Feb  9 17:54 ft_strsub.c
+-rwxr-xr-x    1 jtranchi  2015_paris     76 Feb  9 17:54 ft_strtrim.c
+-rwxr-xr-x    1 jtranchi  2015_paris     68 Feb  9 17:54 ft_strupcase.c
+-rwxr-xr-x    1 jtranchi  2015_paris     58 Feb  9 17:54 ft_tolower.c
+-rwxr-xr-x    1 jtranchi  2015_paris     58 Feb  9 17:54 ft_toupper.c
+-rw-r--r--    1 jtranchi  2015_paris   3740 Feb  9 17:54 libft.h
+
+../42FileChecker/moulitest_42projects/testframework/fake_rendu/libft_part1
+-rwxr-xr-x    1 jtranchi  2015_paris     30 Feb  9 17:54 Makefile
+-rw-r--r--    1 jtranchi  2015_paris    925 Feb  9 17:54 Makefile_cfg.mk
+-rwxr-xr-x    1 jtranchi  2015_paris     77 Feb  9 17:54 ft_atoi.c
+-rwxr-xr-x    1 jtranchi  2015_paris     80 Feb  9 17:54 ft_bzero.c
+-rwxr-xr-x    1 jtranchi  2015_paris     71 Feb  9 17:54 ft_isalnum.c
+-rwxr-xr-x    1 jtranchi  2015_paris     68 Feb  9 17:54 ft_isalpha.c
+-rwxr-xr-x    1 jtranchi  2015_paris     69 Feb  9 17:54 ft_isascii.c
+-rwxr-xr-x    1 jtranchi  2015_paris     69 Feb  9 17:54 ft_isblank.c
+-rwxr-xr-x    1 jtranchi  2015_paris     69 Feb  9 17:54 ft_isdigit.c
+-rwxr-xr-x    1 jtranchi  2015_paris     69 Feb  9 17:54 ft_islower.c
+-rwxr-xr-x    1 jtranchi  2015_paris     58 Feb  9 17:54 ft_isprint.c
+-rwxr-xr-x    1 jtranchi  2015_paris     59 Feb  9 17:54 ft_isspace.c
+-rwxr-xr-x    1 jtranchi  2015_paris     59 Feb  9 17:54 ft_isupper.c
+-rwxr-xr-x    1 jtranchi  2015_paris     80 Feb  9 17:54 ft_itoa.c
+-rwxr-xr-x    1 jtranchi  2015_paris     91 Feb  9 17:54 ft_lstadd.c
+-rwxr-xr-x    1 jtranchi  2015_paris    107 Feb  9 17:54 ft_lstdel.c
+-rwxr-xr-x    1 jtranchi  2015_paris    110 Feb  9 17:54 ft_lstdelone.c
+-rwxr-xr-x    1 jtranchi  2015_paris     98 Feb  9 17:54 ft_lstiter.c
+-rwxr-xr-x    1 jtranchi  2015_paris    120 Feb  9 17:54 ft_lstmap.c
+-rwxr-xr-x    1 jtranchi  2015_paris    137 Feb  9 17:54 ft_lstnew.c
+-rwxr-xr-x    1 jtranchi  2015_paris     83 Feb  9 17:54 ft_memalloc.c
+-rwxr-xr-x    1 jtranchi  2015_paris    164 Feb  9 17:54 ft_memccpy.c
+-rwxr-xr-x    1 jtranchi  2015_paris    117 Feb  9 17:54 ft_memchr.c
+-rwxr-xr-x    1 jtranchi  2015_paris    125 Feb  9 17:54 ft_memcmp.c
+-rwxr-xr-x    1 jtranchi  2015_paris    114 Feb  9 17:54 ft_memcpy.c
+-rwxr-xr-x    1 jtranchi  2015_paris     60 Feb  9 17:54 ft_memdel.c
+-rwxr-xr-x    1 jtranchi  2015_paris    121 Feb  9 17:54 ft_memmove.c
+-rwxr-xr-x    1 jtranchi  2015_paris    102 Feb  9 17:54 ft_memset.c
+-rwxr-xr-x    1 jtranchi  2015_paris     66 Feb  9 17:54 ft_putchar.c
+-rwxr-xr-x    1 jtranchi  2015_paris    101 Feb  9 17:54 ft_putchar_fd.c
+-rwxr-xr-x    1 jtranchi  2015_paris     85 Feb  9 17:54 ft_putendl.c
+-rwxr-xr-x    1 jtranchi  2015_paris    108 Feb  9 17:54 ft_putendl_fd.c
+-rwxr-xr-x    1 jtranchi  2015_paris     76 Feb  9 17:54 ft_putnbr.c
+-rwxr-xr-x    1 jtranchi  2015_paris     99 Feb  9 17:54 ft_putnbr_fd.c
+-rwxr-xr-x    1 jtranchi  2015_paris     79 Feb  9 17:54 ft_putnendl.c
+-rwxr-xr-x    1 jtranchi  2015_paris     78 Feb  9 17:54 ft_putnstr.c
+-rwxr-xr-x    1 jtranchi  2015_paris     74 Feb  9 17:54 ft_putstr.c
+-rwxr-xr-x    1 jtranchi  2015_paris    107 Feb  9 17:54 ft_putstr_fd.c
+-rwxr-xr-x    1 jtranchi  2015_paris     98 Feb  9 17:54 ft_strcat.c
+-rwxr-xr-x    1 jtranchi  2015_paris     92 Feb  9 17:54 ft_strchr.c
+-rwxr-xr-x    1 jtranchi  2015_paris     57 Feb  9 17:54 ft_strclr.c
+-rwxr-xr-x    1 jtranchi  2015_paris    105 Feb  9 17:54 ft_strcmp.c
+-rwxr-xr-x    1 jtranchi  2015_paris     94 Feb  9 17:54 ft_strcpy.c
+-rwxr-xr-x    1 jtranchi  2015_paris     60 Feb  9 17:54 ft_strdel.c
+-rwxr-xr-x    1 jtranchi  2015_paris     76 Feb  9 17:54 ft_strdup.c
+-rwxr-xr-x    1 jtranchi  2015_paris    105 Feb  9 17:54 ft_strequ.c
+-rwxr-xr-x    1 jtranchi  2015_paris     87 Feb  9 17:54 ft_striter.c
+-rwxr-xr-x    1 jtranchi  2015_paris    102 Feb  9 17:54 ft_striteri.c
+-rwxr-xr-x    1 jtranchi  2015_paris    105 Feb  9 17:54 ft_strjoin.c
+-rwxr-xr-x    1 jtranchi  2015_paris    122 Feb  9 17:54 ft_strlcat.c
+-rwxr-xr-x    1 jtranchi  2015_paris     78 Feb  9 17:54 ft_strlen.c
+-rwxr-xr-x    1 jtranchi  2015_paris     69 Feb  9 17:54 ft_strlowcase.c
+-rwxr-xr-x    1 jtranchi  2015_paris    122 Feb  9 17:54 ft_strmap.c
+-rwxr-xr-x    1 jtranchi  2015_paris    117 Feb  9 17:54 ft_strmapi.c
+-rwxr-xr-x    1 jtranchi  2015_paris    113 Feb  9 17:54 ft_strncat.c
+-rwxr-xr-x    1 jtranchi  2015_paris    126 Feb  9 17:54 ft_strncmp.c
+-rwxr-xr-x    1 jtranchi  2015_paris    115 Feb  9 17:54 ft_strncpy.c
+-rwxr-xr-x    1 jtranchi  2015_paris    126 Feb  9 17:54 ft_strnequ.c
+-rwxr-xr-x    1 jtranchi  2015_paris     79 Feb  9 17:54 ft_strnew.c
+-rwxr-xr-x    1 jtranchi  2015_paris    148 Feb  9 17:54 ft_strnstr.c
+-rwxr-xr-x    1 jtranchi  2015_paris     93 Feb  9 17:54 ft_strrchr.c
+-rwxr-xr-x    1 jtranchi  2015_paris     65 Feb  9 17:54 ft_strrev.c
+-rwxr-xr-x    1 jtranchi  2015_paris    347 Feb  9 17:54 ft_strsplit.c
+-rwxr-xr-x    1 jtranchi  2015_paris    104 Feb  9 17:54 ft_strstr.c
+-rwxr-xr-x    1 jtranchi  2015_paris    133 Feb  9 17:54 ft_strsub.c
+-rwxr-xr-x    1 jtranchi  2015_paris     76 Feb  9 17:54 ft_strtrim.c
+-rwxr-xr-x    1 jtranchi  2015_paris     68 Feb  9 17:54 ft_strupcase.c
+-rwxr-xr-x    1 jtranchi  2015_paris     58 Feb  9 17:54 ft_tolower.c
+-rwxr-xr-x    1 jtranchi  2015_paris     58 Feb  9 17:54 ft_toupper.c
+-rw-r--r--    1 jtranchi  2015_paris   2367 Feb  9 17:54 libft.h
+
+../42FileChecker/moulitest_42projects/testframework/fake_rendu/libft_part2
+-rwxr-xr-x    1 jtranchi  2015_paris     30 Feb  9 17:54 Makefile
+-rw-r--r--    1 jtranchi  2015_paris    925 Feb  9 17:54 Makefile_cfg.mk
+-rwxr-xr-x    1 jtranchi  2015_paris     77 Feb  9 17:54 ft_atoi.c
+-rwxr-xr-x    1 jtranchi  2015_paris     80 Feb  9 17:54 ft_bzero.c
+-rwxr-xr-x    1 jtranchi  2015_paris     71 Feb  9 17:54 ft_isalnum.c
+-rwxr-xr-x    1 jtranchi  2015_paris     68 Feb  9 17:54 ft_isalpha.c
+-rwxr-xr-x    1 jtranchi  2015_paris     69 Feb  9 17:54 ft_isascii.c
+-rwxr-xr-x    1 jtranchi  2015_paris     69 Feb  9 17:54 ft_isblank.c
+-rwxr-xr-x    1 jtranchi  2015_paris     69 Feb  9 17:54 ft_isdigit.c
+-rwxr-xr-x    1 jtranchi  2015_paris     69 Feb  9 17:54 ft_islower.c
+-rwxr-xr-x    1 jtranchi  2015_paris     58 Feb  9 17:54 ft_isprint.c
+-rwxr-xr-x    1 jtranchi  2015_paris     59 Feb  9 17:54 ft_isspace.c
+-rwxr-xr-x    1 jtranchi  2015_paris     59 Feb  9 17:54 ft_isupper.c
+-rwxr-xr-x    1 jtranchi  2015_paris     80 Feb  9 17:54 ft_itoa.c
+-rwxr-xr-x    1 jtranchi  2015_paris     91 Feb  9 17:54 ft_lstadd.c
+-rwxr-xr-x    1 jtranchi  2015_paris    107 Feb  9 17:54 ft_lstdel.c
+-rwxr-xr-x    1 jtranchi  2015_paris    110 Feb  9 17:54 ft_lstdelone.c
+-rwxr-xr-x    1 jtranchi  2015_paris     98 Feb  9 17:54 ft_lstiter.c
+-rwxr-xr-x    1 jtranchi  2015_paris    120 Feb  9 17:54 ft_lstmap.c
+-rwxr-xr-x    1 jtranchi  2015_paris    137 Feb  9 17:54 ft_lstnew.c
+-rwxr-xr-x    1 jtranchi  2015_paris     83 Feb  9 17:54 ft_memalloc.c
+-rwxr-xr-x    1 jtranchi  2015_paris    164 Feb  9 17:54 ft_memccpy.c
+-rwxr-xr-x    1 jtranchi  2015_paris    117 Feb  9 17:54 ft_memchr.c
+-rwxr-xr-x    1 jtranchi  2015_paris    125 Feb  9 17:54 ft_memcmp.c
+-rwxr-xr-x    1 jtranchi  2015_paris    114 Feb  9 17:54 ft_memcpy.c
+-rwxr-xr-x    1 jtranchi  2015_paris     60 Feb  9 17:54 ft_memdel.c
+-rwxr-xr-x    1 jtranchi  2015_paris    121 Feb  9 17:54 ft_memmove.c
+-rwxr-xr-x    1 jtranchi  2015_paris    102 Feb  9 17:54 ft_memset.c
+-rwxr-xr-x    1 jtranchi  2015_paris     66 Feb  9 17:54 ft_putchar.c
+-rwxr-xr-x    1 jtranchi  2015_paris    101 Feb  9 17:54 ft_putchar_fd.c
+-rwxr-xr-x    1 jtranchi  2015_paris     85 Feb  9 17:54 ft_putendl.c
+-rwxr-xr-x    1 jtranchi  2015_paris    108 Feb  9 17:54 ft_putendl_fd.c
+-rwxr-xr-x    1 jtranchi  2015_paris     76 Feb  9 17:54 ft_putnbr.c
+-rwxr-xr-x    1 jtranchi  2015_paris     99 Feb  9 17:54 ft_putnbr_fd.c
+-rwxr-xr-x    1 jtranchi  2015_paris     79 Feb  9 17:54 ft_putnendl.c
+-rwxr-xr-x    1 jtranchi  2015_paris     78 Feb  9 17:54 ft_putnstr.c
+-rwxr-xr-x    1 jtranchi  2015_paris     74 Feb  9 17:54 ft_putstr.c
+-rwxr-xr-x    1 jtranchi  2015_paris    107 Feb  9 17:54 ft_putstr_fd.c
+-rwxr-xr-x    1 jtranchi  2015_paris     98 Feb  9 17:54 ft_strcat.c
+-rwxr-xr-x    1 jtranchi  2015_paris     92 Feb  9 17:54 ft_strchr.c
+-rwxr-xr-x    1 jtranchi  2015_paris     57 Feb  9 17:54 ft_strclr.c
+-rwxr-xr-x    1 jtranchi  2015_paris    105 Feb  9 17:54 ft_strcmp.c
+-rwxr-xr-x    1 jtranchi  2015_paris     94 Feb  9 17:54 ft_strcpy.c
+-rwxr-xr-x    1 jtranchi  2015_paris     60 Feb  9 17:54 ft_strdel.c
+-rwxr-xr-x    1 jtranchi  2015_paris     76 Feb  9 17:54 ft_strdup.c
+-rwxr-xr-x    1 jtranchi  2015_paris    105 Feb  9 17:54 ft_strequ.c
+-rwxr-xr-x    1 jtranchi  2015_paris     87 Feb  9 17:54 ft_striter.c
+-rwxr-xr-x    1 jtranchi  2015_paris    102 Feb  9 17:54 ft_striteri.c
+-rwxr-xr-x    1 jtranchi  2015_paris    105 Feb  9 17:54 ft_strjoin.c
+-rwxr-xr-x    1 jtranchi  2015_paris    122 Feb  9 17:54 ft_strlcat.c
+-rwxr-xr-x    1 jtranchi  2015_paris     78 Feb  9 17:54 ft_strlen.c
+-rwxr-xr-x    1 jtranchi  2015_paris     69 Feb  9 17:54 ft_strlowcase.c
+-rwxr-xr-x    1 jtranchi  2015_paris    122 Feb  9 17:54 ft_strmap.c
+-rwxr-xr-x    1 jtranchi  2015_paris    117 Feb  9 17:54 ft_strmapi.c
+-rwxr-xr-x    1 jtranchi  2015_paris    113 Feb  9 17:54 ft_strncat.c
+-rwxr-xr-x    1 jtranchi  2015_paris    126 Feb  9 17:54 ft_strncmp.c
+-rwxr-xr-x    1 jtranchi  2015_paris    115 Feb  9 17:54 ft_strncpy.c
+-rwxr-xr-x    1 jtranchi  2015_paris    126 Feb  9 17:54 ft_strnequ.c
+-rwxr-xr-x    1 jtranchi  2015_paris     79 Feb  9 17:54 ft_strnew.c
+-rwxr-xr-x    1 jtranchi  2015_paris    148 Feb  9 17:54 ft_strnstr.c
+-rwxr-xr-x    1 jtranchi  2015_paris     93 Feb  9 17:54 ft_strrchr.c
+-rwxr-xr-x    1 jtranchi  2015_paris     65 Feb  9 17:54 ft_strrev.c
+-rwxr-xr-x    1 jtranchi  2015_paris    347 Feb  9 17:54 ft_strsplit.c
+-rwxr-xr-x    1 jtranchi  2015_paris    104 Feb  9 17:54 ft_strstr.c
+-rwxr-xr-x    1 jtranchi  2015_paris    133 Feb  9 17:54 ft_strsub.c
+-rwxr-xr-x    1 jtranchi  2015_paris     76 Feb  9 17:54 ft_strtrim.c
+-rwxr-xr-x    1 jtranchi  2015_paris     68 Feb  9 17:54 ft_strupcase.c
+-rwxr-xr-x    1 jtranchi  2015_paris     58 Feb  9 17:54 ft_tolower.c
+-rwxr-xr-x    1 jtranchi  2015_paris     58 Feb  9 17:54 ft_toupper.c
+-rw-r--r--    1 jtranchi  2015_paris   3380 Feb  9 17:54 libft.h
+
+../42FileChecker/moulitest_42projects/testframework/fake_rendu/libft_to_be_symliked
+-rwxr-xr-x    1 jtranchi  2015_paris     30 Feb  9 17:54 Makefile
+-rw-r--r--    1 jtranchi  2015_paris    924 Feb  9 17:54 Makefile_cfg.mk
+-rw-r--r--    1 jtranchi  2015_paris   1043 Feb  9 17:54 ft_strcat.c
+drwxr-xr-x    3 jtranchi  2015_paris    102 Feb  9 17:54 includes
+
+../42FileChecker/moulitest_42projects/testframework/fake_rendu/libft_to_be_symliked/includes
+-rw-r--r--    1 jtranchi  2015_paris      0 Feb  9 17:54 libft.h
+
+../42FileChecker/moulitest_42projects/testframework/fake_rendu/makefile_templates
+-rw-r--r--    1 jtranchi  2015_paris   1233 Feb  9 17:54 Makefile
+
+../42FileChecker/moulitest_42projects/testframework/v2
+-rw-r--r--    1 jtranchi  2015_paris   2666 Feb  9 17:54 testframework.c
+-rw-r--r--    1 jtranchi  2015_paris   1444 Feb  9 17:54 testframework.h
+-rw-r--r--    1 jtranchi  2015_paris    662 Feb  9 17:54 utils.c
+
+../42FileChecker/moulitest_42projects/testframework/v3
+-rw-r--r--    1 jtranchi  2015_paris    491 Feb  9 17:54 Makefile
+-rw-r--r--    1 jtranchi  2015_paris   5320 Feb  9 18:25 capture.o
+drwxr-xr-x   10 jtranchi  2015_paris    340 Feb  9 17:54 includes
+-rw-r--r--    1 jtranchi  2015_paris 140984 Feb  9 18:25 libmt_framework.a
+-rw-r--r--    1 jtranchi  2015_paris   3140 Feb  9 18:25 mt_count_failed_suites.o
+-rw-r--r--    1 jtranchi  2015_paris   3964 Feb  9 18:25 mt_count_failed_tests.o
+-rw-r--r--    1 jtranchi  2015_paris   3936 Feb  9 18:25 mt_count_tests.o
+-rw-r--r--    1 jtranchi  2015_paris   3180 Feb  9 18:25 mt_create.o
+-rw-r--r--    1 jtranchi  2015_paris   3112 Feb  9 18:25 mt_del.o
+-rw-r--r--    1 jtranchi  2015_paris   6168 Feb  9 18:25 mt_exec.o
+-rw-r--r--    1 jtranchi  2015_paris   2936 Feb  9 18:25 mt_lst__link.o
+-rw-r--r--    1 jtranchi  2015_paris   3176 Feb  9 18:25 mt_lst_count.o
+-rw-r--r--    1 jtranchi  2015_paris   3064 Feb  9 18:25 mt_lst_create_elem.o
+-rw-r--r--    1 jtranchi  2015_paris   3180 Feb  9 18:25 mt_lst_del.o
+-rw-r--r--    1 jtranchi  2015_paris   3344 Feb  9 18:25 mt_lst_del_elem.o
+-rw-r--r--    1 jtranchi  2015_paris   3120 Feb  9 18:25 mt_lst_find.o
+-rw-r--r--    1 jtranchi  2015_paris   3240 Feb  9 18:25 mt_lst_find_by_value.o
+-rw-r--r--    1 jtranchi  2015_paris   3136 Feb  9 18:25 mt_lst_get.o
+-rw-r--r--    1 jtranchi  2015_paris   2928 Feb  9 18:25 mt_lst_init.o
+-rw-r--r--    1 jtranchi  2015_paris   3056 Feb  9 18:25 mt_lst_iter.o
+-rw-r--r--    1 jtranchi  2015_paris   3072 Feb  9 18:25 mt_lst_len.o
+-rw-r--r--    1 jtranchi  2015_paris   3216 Feb  9 18:25 mt_lst_map.o
+-rw-r--r--    1 jtranchi  2015_paris   3120 Feb  9 18:25 mt_lst_pop.o
+-rw-r--r--    1 jtranchi  2015_paris   3196 Feb  9 18:25 mt_lst_push.o
+-rw-r--r--    1 jtranchi  2015_paris   3128 Feb  9 18:25 mt_lst_reduce.o
+-rw-r--r--    1 jtranchi  2015_paris   3172 Feb  9 18:25 mt_lst_reducei.o
+-rw-r--r--    1 jtranchi  2015_paris   3144 Feb  9 18:25 mt_lstelem_del.o
+-rw-r--r--    1 jtranchi  2015_paris   4080 Feb  9 18:25 mt_xstdio_isempty.o
+drwxr-xr-x    9 jtranchi  2015_paris    306 Feb  9 17:54 srcs
+-rw-r--r--    1 jtranchi  2015_paris   3352 Feb  9 18:25 suite_count_failed_tests.o
+-rw-r--r--    1 jtranchi  2015_paris   3264 Feb  9 18:25 suite_count_tests.o
+-rw-r--r--    1 jtranchi  2015_paris   3444 Feb  9 18:25 suite_create.o
+-rw-r--r--    1 jtranchi  2015_paris   3352 Feb  9 18:25 suite_del.o
+-rw-r--r--    1 jtranchi  2015_paris   7492 Feb  9 18:25 suite_exec.o
+-rw-r--r--    1 jtranchi  2015_paris   3352 Feb  9 18:25 suite_filter_failed.o
+-rw-r--r--    1 jtranchi  2015_paris   2824 Feb  9 18:25 test_assert.o
+-rw-r--r--    1 jtranchi  2015_paris   2860 Feb  9 18:25 test_assert_prep.o
+-rw-r--r--    1 jtranchi  2015_paris   3008 Feb  9 18:25 test_create.o
+-rw-r--r--    1 jtranchi  2015_paris   2796 Feb  9 18:25 test_del.o
+-rw-r--r--    1 jtranchi  2015_paris   4700 Feb  9 18:25 test_exec.o
+-rw-r--r--    1 jtranchi  2015_paris   2768 Feb  9 18:25 test_filter_failed.o
+-rw-r--r--    1 jtranchi  2015_paris   3304 Feb  9 18:25 test_get_failure_type.o
+-rw-r--r--    1 jtranchi  2015_paris   3920 Feb  9 18:25 test_print.o
+
+../42FileChecker/moulitest_42projects/testframework/v3/includes
+-rw-r--r--    1 jtranchi  2015_paris    367 Feb  9 17:54 capture.h
+-rw-r--r--    1 jtranchi  2015_paris    276 Feb  9 17:54 color.h
+-rw-r--r--    1 jtranchi  2015_paris    885 Feb  9 17:54 fw.h
+-rw-r--r--    1 jtranchi  2015_paris    526 Feb  9 17:54 mt.h
+-rw-r--r--    1 jtranchi  2015_paris   2162 Feb  9 17:54 mt_lst.h
+-rw-r--r--    1 jtranchi  2015_paris    974 Feb  9 17:54 mt_xstdio.h
+-rw-r--r--    1 jtranchi  2015_paris    695 Feb  9 17:54 suite.h
+-rw-r--r--    1 jtranchi  2015_paris    820 Feb  9 17:54 test.h
+
+../42FileChecker/moulitest_42projects/testframework/v3/srcs
+drwxr-xr-x    3 jtranchi  2015_paris    102 Feb  9 17:54 capture
+drwxr-xr-x    8 jtranchi  2015_paris    272 Feb  9 17:54 mt
+drwxr-xr-x   19 jtranchi  2015_paris    646 Feb  9 17:54 mt_lst
+drwxr-xr-x    3 jtranchi  2015_paris    102 Feb  9 17:54 mt_xstdio
+drwxr-xr-x    8 jtranchi  2015_paris    272 Feb  9 17:54 suite
+drwxr-xr-x   10 jtranchi  2015_paris    340 Feb  9 17:54 test
+drwxr-xr-x    3 jtranchi  2015_paris    102 Feb  9 17:54 utils
+
+../42FileChecker/moulitest_42projects/testframework/v3/srcs/capture
+-rw-r--r--    1 jtranchi  2015_paris   1866 Feb  9 17:54 capture.c
+
+../42FileChecker/moulitest_42projects/testframework/v3/srcs/mt
+-rw-r--r--    1 jtranchi  2015_paris    127 Feb  9 17:54 mt_count_failed_suites.c
+-rw-r--r--    1 jtranchi  2015_paris    271 Feb  9 17:54 mt_count_failed_tests.c
+-rw-r--r--    1 jtranchi  2015_paris    277 Feb  9 17:54 mt_count_tests.c
+-rw-r--r--    1 jtranchi  2015_paris    273 Feb  9 17:54 mt_create.c
+-rw-r--r--    1 jtranchi  2015_paris    188 Feb  9 17:54 mt_del.c
+-rw-r--r--    1 jtranchi  2015_paris   1592 Feb  9 17:54 mt_exec.c
+
+../42FileChecker/moulitest_42projects/testframework/v3/srcs/mt_lst
+-rw-r--r--    1 jtranchi  2015_paris   1052 Feb  9 17:54 mt_lst__link.c
+-rw-r--r--    1 jtranchi  2015_paris   1128 Feb  9 17:54 mt_lst_count.c
+-rw-r--r--    1 jtranchi  2015_paris   1165 Feb  9 17:54 mt_lst_create_elem.c
+-rw-r--r--    1 jtranchi  2015_paris   1155 Feb  9 17:54 mt_lst_del.c
+-rw-r--r--    1 jtranchi  2015_paris   1283 Feb  9 17:54 mt_lst_del_elem.c
+-rw-r--r--    1 jtranchi  2015_paris   1122 Feb  9 17:54 mt_lst_find.c
+-rw-r--r--    1 jtranchi  2015_paris   1173 Feb  9 17:54 mt_lst_find_by_value.c
+-rw-r--r--    1 jtranchi  2015_paris   1091 Feb  9 17:54 mt_lst_get.c
+-rw-r--r--    1 jtranchi  2015_paris   1080 Feb  9 17:54 mt_lst_init.c
+-rw-r--r--    1 jtranchi  2015_paris   1076 Feb  9 17:54 mt_lst_iter.c
+-rw-r--r--    1 jtranchi  2015_paris   1083 Feb  9 17:54 mt_lst_len.c
+-rw-r--r--    1 jtranchi  2015_paris   1181 Feb  9 17:54 mt_lst_map.c
+-rw-r--r--    1 jtranchi  2015_paris   1172 Feb  9 17:54 mt_lst_pop.c
+-rw-r--r--    1 jtranchi  2015_paris   1229 Feb  9 17:54 mt_lst_push.c
+-rw-r--r--    1 jtranchi  2015_paris   1161 Feb  9 17:54 mt_lst_reduce.c
+-rw-r--r--    1 jtranchi  2015_paris   1131 Feb  9 17:54 mt_lst_reducei.c
+-rw-r--r--    1 jtranchi  2015_paris   1191 Feb  9 17:54 mt_lstelem_del.c
+
+../42FileChecker/moulitest_42projects/testframework/v3/srcs/mt_xstdio
+-rw-r--r--    1 jtranchi  2015_paris   1143 Feb  9 17:54 mt_xstdio_isempty.c
+
+../42FileChecker/moulitest_42projects/testframework/v3/srcs/suite
+-rw-r--r--    1 jtranchi  2015_paris    139 Feb  9 17:54 suite_count_failed_tests.c
+-rw-r--r--    1 jtranchi  2015_paris    102 Feb  9 17:54 suite_count_tests.c
+-rw-r--r--    1 jtranchi  2015_paris    223 Feb  9 17:54 suite_create.c
+-rw-r--r--    1 jtranchi  2015_paris    129 Feb  9 17:54 suite_del.c
+-rw-r--r--    1 jtranchi  2015_paris   1872 Feb  9 17:54 suite_exec.c
+-rw-r--r--    1 jtranchi  2015_paris    138 Feb  9 17:54 suite_filter_failed.c
+
+../42FileChecker/moulitest_42projects/testframework/v3/srcs/test
+-rw-r--r--    1 jtranchi  2015_paris    174 Feb  9 17:54 test_assert.c
+-rw-r--r--    1 jtranchi  2015_paris    230 Feb  9 17:54 test_assert_prep.c
+-rw-r--r--    1 jtranchi  2015_paris    281 Feb  9 17:54 test_create.c
+-rw-r--r--    1 jtranchi  2015_paris    105 Feb  9 17:54 test_del.c
+-rw-r--r--    1 jtranchi  2015_paris    957 Feb  9 17:54 test_exec.c
+-rw-r--r--    1 jtranchi  2015_paris     86 Feb  9 17:54 test_filter_failed.c
+-rw-r--r--    1 jtranchi  2015_paris    461 Feb  9 17:54 test_get_failure_type.c
+-rw-r--r--    1 jtranchi  2015_paris    544 Feb  9 17:54 test_print.c
+
+../42FileChecker/moulitest_42projects/testframework/v3/srcs/utils
+-rw-r--r--    1 jtranchi  2015_paris     40 Feb  9 17:54 utils.h
+
+../42FileChecker/moulitest_42projects/testframework/v3_templates
+-rw-r--r--    1 jtranchi  2015_paris   4238 Feb  9 17:54 Makefile_template.mk
+
+../42FileChecker/srcs
+drwxr-xr-x   46 jtranchi  2015_paris   1564 Feb  9 17:54 gnl
+drwxr-xr-x   43 jtranchi  2015_paris   1462 Feb  9 17:54 libftasm
+drwxr-xr-x   19 jtranchi  2015_paris    646 Feb  9 17:54 printf
+
+../42FileChecker/srcs/gnl
+-rw-r--r--    1 jtranchi  2015_paris    258 Feb  9 17:54 gnl10.c
+-rw-r--r--    1 jtranchi  2015_paris  11358 Feb  9 17:54 gnl10.txt
+-rw-r--r--    1 jtranchi  2015_paris   6595 Feb  9 17:54 gnl11.c
+-rw-r--r--    1 jtranchi  2015_paris    612 Feb  9 17:54 gnl11_1.txt
+-rw-r--r--    1 jtranchi  2015_paris    597 Feb  9 17:54 gnl11_2.txt
+-rw-r--r--    1 jtranchi  2015_paris    908 Feb  9 17:54 gnl1_1.c
+-rw-r--r--    1 jtranchi  2015_paris      8 Feb  9 17:54 gnl1_1.txt
+-rw-r--r--    1 jtranchi  2015_paris    973 Feb  9 17:54 gnl1_2.c
+-rw-r--r--    1 jtranchi  2015_paris     16 Feb  9 17:54 gnl1_2.txt
+-rw-r--r--    1 jtranchi  2015_paris   1145 Feb  9 17:54 gnl1_3.c
+-rw-r--r--    1 jtranchi  2015_paris     32 Feb  9 17:54 gnl1_3.txt
+-rw-r--r--    1 jtranchi  2015_paris    693 Feb  9 17:54 gnl2_1.c
+-rw-r--r--    1 jtranchi  2015_paris    756 Feb  9 17:54 gnl2_2.c
+-rw-r--r--    1 jtranchi  2015_paris    925 Feb  9 17:54 gnl2_3.c
+-rw-r--r--    1 jtranchi  2015_paris    925 Feb  9 17:54 gnl3_1.c
+-rw-r--r--    1 jtranchi  2015_paris     16 Feb  9 17:54 gnl3_1.txt
+-rw-r--r--    1 jtranchi  2015_paris   1006 Feb  9 17:54 gnl3_2.c
+-rw-r--r--    1 jtranchi  2015_paris     32 Feb  9 17:54 gnl3_2.txt
+-rw-r--r--    1 jtranchi  2015_paris   1211 Feb  9 17:54 gnl3_3.c
+-rw-r--r--    1 jtranchi  2015_paris     64 Feb  9 17:54 gnl3_3.txt
+-rw-r--r--    1 jtranchi  2015_paris    710 Feb  9 17:54 gnl4_1.c
+-rw-r--r--    1 jtranchi  2015_paris    789 Feb  9 17:54 gnl4_2.c
+-rw-r--r--    1 jtranchi  2015_paris    990 Feb  9 17:54 gnl4_3.c
+-rw-r--r--    1 jtranchi  2015_paris    898 Feb  9 17:54 gnl5_1.c
+-rw-r--r--    1 jtranchi  2015_paris      4 Feb  9 17:54 gnl5_1.txt
+-rw-r--r--    1 jtranchi  2015_paris    957 Feb  9 17:54 gnl5_2.c
+-rw-r--r--    1 jtranchi  2015_paris      8 Feb  9 17:54 gnl5_2.txt
+-rw-r--r--    1 jtranchi  2015_paris   1114 Feb  9 17:54 gnl5_3.c
+-rw-r--r--    1 jtranchi  2015_paris     16 Feb  9 17:54 gnl5_3.txt
+-rw-r--r--    1 jtranchi  2015_paris    685 Feb  9 17:54 gnl6_1.c
+-rw-r--r--    1 jtranchi  2015_paris    740 Feb  9 17:54 gnl6_2.c
+-rw-r--r--    1 jtranchi  2015_paris    893 Feb  9 17:54 gnl6_3.c
+-rw-r--r--    1 jtranchi  2015_paris    913 Feb  9 17:54 gnl7_1.c
+-rw-r--r--    1 jtranchi  2015_paris      8 Feb  9 17:54 gnl7_1.txt
+-rw-r--r--    1 jtranchi  2015_paris    978 Feb  9 17:54 gnl7_2.c
+-rw-r--r--    1 jtranchi  2015_paris     16 Feb  9 17:54 gnl7_2.txt
+-rw-r--r--    1 jtranchi  2015_paris   1151 Feb  9 17:54 gnl7_3.c
+-rw-r--r--    1 jtranchi  2015_paris     32 Feb  9 17:54 gnl7_3.txt
+-rw-r--r--    1 jtranchi  2015_paris    698 Feb  9 17:54 gnl8_1.c
+-rw-r--r--    1 jtranchi  2015_paris    759 Feb  9 17:54 gnl8_2.c
+-rw-r--r--    1 jtranchi  2015_paris    930 Feb  9 17:54 gnl8_3.c
+-rw-r--r--    1 jtranchi  2015_paris    387 Feb  9 17:54 gnl9_1.c
+-rw-r--r--    1 jtranchi  2015_paris    709 Feb  9 17:54 gnl9_2.c
+-rw-r--r--    1 jtranchi  2015_paris     24 Feb  9 17:54 gnl9_2.txt
+
+../42FileChecker/srcs/libftasm
+-rwxr-xr-x    1 jtranchi  2015_paris    223 Feb  9 17:54 atoi.c
+-rw-r--r--    1 jtranchi  2015_paris   1477 Feb  9 17:54 bzero.c
+-rw-r--r--    1 jtranchi  2015_paris   1432 Feb  9 17:54 cat.c
+-rwxr-xr-x    1 jtranchi  2015_paris    254 Feb  9 17:54 ft_atoi.c
+-rw-r--r--    1 jtranchi  2015_paris   1503 Feb  9 17:54 ft_bzero.c
+-rw-r--r--    1 jtranchi  2015_paris   1404 Feb  9 17:54 ft_cat.c
+-rw-r--r--    1 jtranchi  2015_paris    322 Feb  9 17:54 ft_cat.txt
+-rw-r--r--    1 jtranchi  2015_paris   1693 Feb  9 17:54 ft_is.c
+-rwxr-xr-x    1 jtranchi  2015_paris    360 Feb  9 17:54 ft_isdigit.c
+-rwxr-xr-x    1 jtranchi  2015_paris    360 Feb  9 17:54 ft_islower.c
+-rwxr-xr-x    1 jtranchi  2015_paris    362 Feb  9 17:54 ft_isnumber.c
+-rwxr-xr-x    1 jtranchi  2015_paris    360 Feb  9 17:54 ft_isspace.c
+-rwxr-xr-x    1 jtranchi  2015_paris    360 Feb  9 17:54 ft_isupper.c
+-rwxr-xr-x    1 jtranchi  2015_paris    414 Feb  9 17:54 ft_memalloc.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1278 Feb  9 17:54 ft_memchr.c
+-rwxr-xr-x    1 jtranchi  2015_paris    425 Feb  9 17:54 ft_memcmp.c
+-rw-r--r--    1 jtranchi  2015_paris   1293 Feb  9 17:54 ft_memcpy.c
+-rw-r--r--    1 jtranchi  2015_paris   1376 Feb  9 17:54 ft_memset.c
+-rw-r--r--    1 jtranchi  2015_paris   1512 Feb  9 17:54 ft_puts.c
+-rw-r--r--    1 jtranchi  2015_paris   1306 Feb  9 17:54 ft_strcat.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1224 Feb  9 17:54 ft_strchr.c
+-rw-r--r--    1 jtranchi  2015_paris   1196 Feb  9 17:54 ft_strdup.c
+-rw-r--r--    1 jtranchi  2015_paris   1143 Feb  9 17:54 ft_strlen.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1226 Feb  9 17:54 ft_strrchr.c
+-rw-r--r--    1 jtranchi  2015_paris   1508 Feb  9 17:54 is.c
+-rwxr-xr-x    1 jtranchi  2015_paris    349 Feb  9 17:54 isdigit.c
+-rwxr-xr-x    1 jtranchi  2015_paris    349 Feb  9 17:54 islower.c
+-rwxr-xr-x    1 jtranchi  2015_paris    350 Feb  9 17:54 isnumber.c
+-rwxr-xr-x    1 jtranchi  2015_paris    349 Feb  9 17:54 isspace.c
+-rwxr-xr-x    1 jtranchi  2015_paris    349 Feb  9 17:54 isupper.c
+-rwxr-xr-x    1 jtranchi  2015_paris    395 Feb  9 17:54 memalloc.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1243 Feb  9 17:54 memchr.c
+-rwxr-xr-x    1 jtranchi  2015_paris    357 Feb  9 17:54 memcmp.c
+-rw-r--r--    1 jtranchi  2015_paris   1234 Feb  9 17:54 memcpy.c
+-rw-r--r--    1 jtranchi  2015_paris   1342 Feb  9 17:54 memset.c
+-rw-r--r--    1 jtranchi  2015_paris   1478 Feb  9 17:54 puts.c
+-rw-r--r--    1 jtranchi  2015_paris   1256 Feb  9 17:54 strcat.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1199 Feb  9 17:54 strchr.c
+-rw-r--r--    1 jtranchi  2015_paris   1177 Feb  9 17:54 strdup.c
+-rw-r--r--    1 jtranchi  2015_paris   1124 Feb  9 17:54 strlen.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1200 Feb  9 17:54 strrchr.c
+
+../42FileChecker/srcs/printf
+-rw-r--r--    1 jtranchi  2015_paris   1201 Feb  9 17:54 ft_printf_0.c
+-rw-r--r--    1 jtranchi  2015_paris   1700 Feb  9 17:54 ft_printf_d.c
+-rw-r--r--    1 jtranchi  2015_paris   1097 Feb  9 17:54 ft_printf_f.c
+-rw-r--r--    1 jtranchi  2015_paris   1013 Feb  9 17:54 ft_printf_leaks.c
+-rw-r--r--    1 jtranchi  2015_paris   1091 Feb  9 17:54 ft_printf_o.c
+-rw-r--r--    1 jtranchi  2015_paris   1507 Feb  9 17:54 ft_printf_s.c
+-rw-r--r--    1 jtranchi  2015_paris   1700 Feb  9 17:54 ft_printf_u.c
+-rw-r--r--    1 jtranchi  2015_paris   1556 Feb  9 17:54 ft_printf_x.c
+-rw-r--r--    1 jtranchi  2015_paris   1252 Feb  9 17:54 printf_0.c
+-rw-r--r--    1 jtranchi  2015_paris   1649 Feb  9 17:54 printf_d.c
+-rw-r--r--    1 jtranchi  2015_paris   1064 Feb  9 17:54 printf_f.c
+-rw-r--r--    1 jtranchi  2015_paris   1058 Feb  9 17:54 printf_o.c
+-rw-r--r--    1 jtranchi  2015_paris   1450 Feb  9 17:54 printf_s.c
+-rw-r--r--    1 jtranchi  2015_paris   1649 Feb  9 17:54 printf_u.c
+-rw-r--r--    1 jtranchi  2015_paris   1511 Feb  9 17:54 printf_x.c
+-rw-r--r--    1 jtranchi  2015_paris    872 Feb  9 17:54 speedtest_ft_printf.c
+-rw-r--r--    1 jtranchi  2015_paris    815 Feb  9 17:54 speedtest_printf.c
+
+../42FileChecker/tmp
+-rw-r--r--    1 jtranchi  2015_paris     81 Feb  9 18:25 gnl.h
+-rwxr-xr-x    1 jtranchi  2015_paris  13312 Feb  9 18:25 gnl10
+
+../fillit
+-rwxr-xr-x    1 jtranchi  2015_paris   4348 Feb  4 02:10 Makefile
+drwxr-xr-x    4 jtranchi  2015_paris    136 Feb  9 18:10 inc
+drwxr-xr-x    7 jtranchi  2015_paris    238 Feb  9 18:10 src
+
+../fillit/inc
+-rwxr-xr-x    1 jtranchi  2015_paris   2355 Feb  9 18:10 fillit.h
+drwxr-xr-x   63 jtranchi  2015_paris   2142 Feb  9 18:10 libft
+
+../fillit/inc/libft
+-rwxr-xr-x    1 jtranchi  2015_paris   5367 Feb  9 18:10 Makefile
+-rwxr-xr-x    1 jtranchi  2015_paris   1667 Feb  9 18:10 ft_atoi.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1030 Feb  9 18:10 ft_bzero.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1057 Feb  9 18:10 ft_isalnum.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1026 Feb  9 18:10 ft_isalpha.c
+-rwxr-xr-x    1 jtranchi  2015_paris    999 Feb  9 18:10 ft_isascii.c
+-rwxr-xr-x    1 jtranchi  2015_paris    999 Feb  9 18:10 ft_isdigit.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1007 Feb  9 18:10 ft_isprint.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1497 Feb  9 18:10 ft_itoa.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1002 Feb  9 18:10 ft_lstadd.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1155 Feb  9 18:10 ft_lstdel.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1062 Feb  9 18:10 ft_lstdelone.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1067 Feb  9 18:10 ft_lstiter.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1364 Feb  9 18:10 ft_lstmap.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1422 Feb  9 18:10 ft_lstnew.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1071 Feb  9 18:10 ft_memalloc.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1254 Feb  9 18:10 ft_memccpy.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1120 Feb  9 18:10 ft_memchr.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1236 Feb  9 18:10 ft_memcmp.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1107 Feb  9 18:10 ft_memcpy.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1002 Feb  9 18:10 ft_memdel.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1172 Feb  9 18:10 ft_memmove.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1071 Feb  9 18:10 ft_memset.c
+-rwxr-xr-x    1 jtranchi  2015_paris    967 Feb  9 18:10 ft_putchar.c
+-rwxr-xr-x    1 jtranchi  2015_paris    979 Feb  9 18:10 ft_putchar_fd.c
+-rwxr-xr-x    1 jtranchi  2015_paris    989 Feb  9 18:10 ft_putendl.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1015 Feb  9 18:10 ft_putendl_fd.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1134 Feb  9 18:10 ft_putnbr.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1173 Feb  9 18:10 ft_putnbr_fd.c
+-rwxr-xr-x    1 jtranchi  2015_paris    983 Feb  9 18:10 ft_putstr.c
+-rwxr-xr-x    1 jtranchi  2015_paris    995 Feb  9 18:10 ft_putstr_fd.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1077 Feb  9 18:10 ft_strcat.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1129 Feb  9 18:10 ft_strchr.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1025 Feb  9 18:10 ft_strclr.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1145 Feb  9 18:10 ft_strcmp.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1052 Feb  9 18:10 ft_strcpy.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1001 Feb  9 18:10 ft_strdel.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1160 Feb  9 18:10 ft_strdup.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1125 Feb  9 18:10 ft_strequ.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1054 Feb  9 18:10 ft_striter.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1073 Feb  9 18:10 ft_striteri.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1191 Feb  9 18:10 ft_strjoin.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1240 Feb  9 18:10 ft_strlcat.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1049 Feb  9 18:10 ft_strlen.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1123 Feb  9 18:10 ft_strmap.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1152 Feb  9 18:10 ft_strmapi.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1130 Feb  9 18:10 ft_strncat.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1177 Feb  9 18:10 ft_strncmp.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1108 Feb  9 18:10 ft_strncpy.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1157 Feb  9 18:10 ft_strnequ.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1115 Feb  9 18:10 ft_strnew.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1203 Feb  9 18:10 ft_strnstr.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1200 Feb  9 18:10 ft_strrchr.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1781 Feb  9 18:10 ft_strsplit.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1342 Feb  9 18:10 ft_strstr.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1240 Feb  9 18:10 ft_strsub.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1345 Feb  9 18:10 ft_strtrim.c
+-rwxr-xr-x    1 jtranchi  2015_paris    996 Feb  9 18:10 ft_tolower.c
+-rwxr-xr-x    1 jtranchi  2015_paris    997 Feb  9 18:10 ft_toupper.c
+drwxr-xr-x    3 jtranchi  2015_paris    102 Feb  9 18:10 includes
+
+../fillit/inc/libft/includes
+-rwxr-xr-x    1 jtranchi  2015_paris   3870 Feb  9 18:10 libft.h
+
+../fillit/src
+-rwxr-xr-x    1 jtranchi  2015_paris   2246 Feb  3 21:44 clean.c
+-rwxr-xr-x    1 jtranchi  2015_paris   2822 Feb  3 21:44 fillit.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1907 Feb  8 12:12 main.c
+-rwxr-xr-x    1 jtranchi  2015_paris   2158 Feb  3 21:44 map.c
+-rwxr-xr-x    1 jtranchi  2015_paris   2750 Feb  3 21:44 read.c
+
+../ft_ls
+-rwxr-xr-x    1 jtranchi  2015_paris   3979 Feb  9 16:46 Makefile
+-rwxr-xr-x    1 jtranchi  2015_paris      9 Feb  2 17:45 auteur
+-rwxr-xr-x    1 jtranchi  2015_paris  21408 Feb 10 16:00 ft_ls
+drwxr-xr-x    3 jtranchi  2015_paris    102 Feb 10 16:00 ft_ls.dSYM
+drwxr-xr-x    3 jtranchi  2015_paris    102 Feb  9 18:12 includes
+drwxr-xr-x  122 jtranchi  2015_paris   4148 Feb 10 16:00 libft
+drwxr-xr-x   14 jtranchi  2015_paris    476 Feb 10 16:00 src
+-rw-r--r--    1 jtranchi  2015_paris  70721 Feb 10 16:01 test1
+
+../ft_ls/ft_ls.dSYM
+drwxr-xr-x    4 jtranchi  2015_paris    136 Feb  9 14:20 Contents
+
+../ft_ls/ft_ls.dSYM/Contents
+-rw-r--r--    1 jtranchi  2015_paris    634 Feb 10 16:00 Info.plist
+drwxr-xr-x    3 jtranchi  2015_paris    102 Feb  9 14:20 Resources
+
+../ft_ls/ft_ls.dSYM/Contents/Resources
+drwxr-xr-x    3 jtranchi  2015_paris    102 Feb 10 16:00 DWARF
+
+../ft_ls/ft_ls.dSYM/Contents/Resources/DWARF
+-rw-r--r--    1 jtranchi  2015_paris  24348 Feb 10 16:00 ft_ls
+
+../ft_ls/includes
+-rw-r--r--    1 jtranchi  2015_paris   2434 Feb  9 22:09 ft_ls.h
+
+../ft_ls/libft
+-rwxr-xr-x    1 jtranchi  2015_paris   5367 Feb  9 18:10 Makefile
+-rwxr-xr-x    1 jtranchi  2015_paris   1667 Feb  9 18:10 ft_atoi.c
+-rw-r--r--    1 jtranchi  2015_paris   1440 Feb 10 14:26 ft_atoi.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1030 Feb  9 18:10 ft_bzero.c
+-rw-r--r--    1 jtranchi  2015_paris    668 Feb 10 14:26 ft_bzero.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1057 Feb  9 18:10 ft_isalnum.c
+-rw-r--r--    1 jtranchi  2015_paris    712 Feb 10 14:26 ft_isalnum.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1026 Feb  9 18:10 ft_isalpha.c
+-rw-r--r--    1 jtranchi  2015_paris    688 Feb 10 14:26 ft_isalpha.o
+-rwxr-xr-x    1 jtranchi  2015_paris    999 Feb  9 18:10 ft_isascii.c
+-rw-r--r--    1 jtranchi  2015_paris    664 Feb 10 14:26 ft_isascii.o
+-rwxr-xr-x    1 jtranchi  2015_paris    999 Feb  9 18:10 ft_isdigit.c
+-rw-r--r--    1 jtranchi  2015_paris    664 Feb 10 14:26 ft_isdigit.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1007 Feb  9 18:10 ft_isprint.c
+-rw-r--r--    1 jtranchi  2015_paris    664 Feb 10 14:26 ft_isprint.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1497 Feb  9 18:10 ft_itoa.c
+-rw-r--r--    1 jtranchi  2015_paris   1156 Feb 10 14:26 ft_itoa.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1002 Feb  9 18:10 ft_lstadd.c
+-rw-r--r--    1 jtranchi  2015_paris    636 Feb 10 14:26 ft_lstadd.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1155 Feb  9 18:10 ft_lstdel.c
+-rw-r--r--    1 jtranchi  2015_paris    748 Feb 10 14:26 ft_lstdel.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1062 Feb  9 18:10 ft_lstdelone.c
+-rw-r--r--    1 jtranchi  2015_paris    720 Feb 10 14:26 ft_lstdelone.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1067 Feb  9 18:10 ft_lstiter.c
+-rw-r--r--    1 jtranchi  2015_paris    672 Feb 10 14:26 ft_lstiter.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1364 Feb  9 18:10 ft_lstmap.c
+-rw-r--r--    1 jtranchi  2015_paris    904 Feb 10 14:26 ft_lstmap.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1422 Feb  9 18:10 ft_lstnew.c
+-rw-r--r--    1 jtranchi  2015_paris    896 Feb 10 14:26 ft_lstnew.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1071 Feb  9 18:10 ft_memalloc.c
+-rw-r--r--    1 jtranchi  2015_paris    764 Feb 10 14:26 ft_memalloc.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1254 Feb  9 18:10 ft_memccpy.c
+-rw-r--r--    1 jtranchi  2015_paris    768 Feb 10 14:26 ft_memccpy.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1120 Feb  9 18:10 ft_memchr.c
+-rw-r--r--    1 jtranchi  2015_paris    716 Feb 10 14:26 ft_memchr.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1236 Feb  9 18:10 ft_memcmp.c
+-rw-r--r--    1 jtranchi  2015_paris    820 Feb 10 14:26 ft_memcmp.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1107 Feb  9 18:10 ft_memcpy.c
+-rw-r--r--    1 jtranchi  2015_paris    684 Feb 10 14:26 ft_memcpy.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1002 Feb  9 18:10 ft_memdel.c
+-rw-r--r--    1 jtranchi  2015_paris    692 Feb 10 14:26 ft_memdel.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1172 Feb  9 18:10 ft_memmove.c
+-rw-r--r--    1 jtranchi  2015_paris    856 Feb 10 14:26 ft_memmove.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1071 Feb  9 18:10 ft_memset.c
+-rw-r--r--    1 jtranchi  2015_paris    676 Feb 10 14:26 ft_memset.o
+-rwxr-xr-x    1 jtranchi  2015_paris    967 Feb  9 18:10 ft_putchar.c
+-rw-r--r--    1 jtranchi  2015_paris    676 Feb 10 14:26 ft_putchar.o
+-rwxr-xr-x    1 jtranchi  2015_paris    979 Feb  9 18:10 ft_putchar_fd.c
+-rw-r--r--    1 jtranchi  2015_paris    688 Feb 10 14:26 ft_putchar_fd.o
+-rwxr-xr-x    1 jtranchi  2015_paris    989 Feb  9 18:10 ft_putendl.c
+-rw-r--r--    1 jtranchi  2015_paris    776 Feb 10 14:26 ft_putendl.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1015 Feb  9 18:10 ft_putendl_fd.c
+-rw-r--r--    1 jtranchi  2015_paris    728 Feb 10 14:26 ft_putendl_fd.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1134 Feb  9 18:10 ft_putnbr.c
+-rw-r--r--    1 jtranchi  2015_paris    816 Feb 10 14:26 ft_putnbr.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1173 Feb  9 18:10 ft_putnbr_fd.c
+-rw-r--r--    1 jtranchi  2015_paris    840 Feb 10 14:26 ft_putnbr_fd.o
+-rwxr-xr-x    1 jtranchi  2015_paris    983 Feb  9 18:10 ft_putstr.c
+-rw-r--r--    1 jtranchi  2015_paris    720 Feb 10 14:26 ft_putstr.o
+-rwxr-xr-x    1 jtranchi  2015_paris    995 Feb  9 18:10 ft_putstr_fd.c
+-rw-r--r--    1 jtranchi  2015_paris    740 Feb 10 14:26 ft_putstr_fd.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1077 Feb  9 18:10 ft_strcat.c
+-rw-r--r--    1 jtranchi  2015_paris    752 Feb 10 14:26 ft_strcat.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1129 Feb  9 18:10 ft_strchr.c
+-rw-r--r--    1 jtranchi  2015_paris    808 Feb 10 14:26 ft_strchr.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1025 Feb  9 18:10 ft_strclr.c
+-rw-r--r--    1 jtranchi  2015_paris    684 Feb 10 14:26 ft_strclr.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1145 Feb  9 18:10 ft_strcmp.c
+-rw-r--r--    1 jtranchi  2015_paris    764 Feb 10 14:26 ft_strcmp.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1052 Feb  9 18:10 ft_strcpy.c
+-rw-r--r--    1 jtranchi  2015_paris    700 Feb 10 14:26 ft_strcpy.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1001 Feb  9 18:10 ft_strdel.c
+-rw-r--r--    1 jtranchi  2015_paris    684 Feb 10 14:26 ft_strdel.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1160 Feb  9 18:10 ft_strdup.c
+-rw-r--r--    1 jtranchi  2015_paris    832 Feb 10 14:26 ft_strdup.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1125 Feb  9 18:10 ft_strequ.c
+-rw-r--r--    1 jtranchi  2015_paris    756 Feb 10 14:26 ft_strequ.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1054 Feb  9 18:10 ft_striter.c
+-rw-r--r--    1 jtranchi  2015_paris    720 Feb 10 14:26 ft_striter.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1073 Feb  9 18:10 ft_striteri.c
+-rw-r--r--    1 jtranchi  2015_paris    720 Feb 10 14:26 ft_striteri.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1191 Feb  9 18:10 ft_strjoin.c
+-rw-r--r--    1 jtranchi  2015_paris    936 Feb 10 14:26 ft_strjoin.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1240 Feb  9 18:10 ft_strlcat.c
+-rw-r--r--    1 jtranchi  2015_paris    928 Feb 10 14:26 ft_strlcat.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1049 Feb  9 18:10 ft_strlen.c
+-rw-r--r--    1 jtranchi  2015_paris    708 Feb 10 14:26 ft_strlen.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1123 Feb  9 18:10 ft_strmap.c
+-rw-r--r--    1 jtranchi  2015_paris    836 Feb 10 14:26 ft_strmap.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1152 Feb  9 18:10 ft_strmapi.c
+-rw-r--r--    1 jtranchi  2015_paris    844 Feb 10 14:26 ft_strmapi.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1130 Feb  9 18:10 ft_strncat.c
+-rw-r--r--    1 jtranchi  2015_paris    816 Feb 10 14:26 ft_strncat.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1177 Feb  9 18:10 ft_strncmp.c
+-rw-r--r--    1 jtranchi  2015_paris    816 Feb 10 14:26 ft_strncmp.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1108 Feb  9 18:10 ft_strncpy.c
+-rw-r--r--    1 jtranchi  2015_paris    752 Feb 10 14:26 ft_strncpy.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1157 Feb  9 18:10 ft_strnequ.c
+-rw-r--r--    1 jtranchi  2015_paris    808 Feb 10 14:26 ft_strnequ.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1115 Feb  9 18:10 ft_strnew.c
+-rw-r--r--    1 jtranchi  2015_paris    764 Feb 10 14:26 ft_strnew.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1203 Feb  9 18:10 ft_strnstr.c
+-rw-r--r--    1 jtranchi  2015_paris    908 Feb 10 14:26 ft_strnstr.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1200 Feb  9 18:10 ft_strrchr.c
+-rw-r--r--    1 jtranchi  2015_paris    832 Feb 10 14:26 ft_strrchr.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1781 Feb  9 18:10 ft_strsplit.c
+-rw-r--r--    1 jtranchi  2015_paris   1608 Feb 10 14:26 ft_strsplit.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1342 Feb  9 18:10 ft_strstr.c
+-rw-r--r--    1 jtranchi  2015_paris   1020 Feb 10 14:26 ft_strstr.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1240 Feb  9 18:10 ft_strsub.c
+-rw-r--r--    1 jtranchi  2015_paris    952 Feb 10 14:26 ft_strsub.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1345 Feb  9 18:10 ft_strtrim.c
+-rw-r--r--    1 jtranchi  2015_paris   1096 Feb 10 14:26 ft_strtrim.o
+-rwxr-xr-x    1 jtranchi  2015_paris    996 Feb  9 18:10 ft_tolower.c
+-rw-r--r--    1 jtranchi  2015_paris    656 Feb 10 14:26 ft_tolower.o
+-rwxr-xr-x    1 jtranchi  2015_paris    997 Feb  9 18:10 ft_toupper.c
+-rw-r--r--    1 jtranchi  2015_paris    656 Feb 10 14:26 ft_toupper.o
+drwxr-xr-x    3 jtranchi  2015_paris    102 Feb  9 18:10 includes
+-rw-r--r--    1 jtranchi  2015_paris  52520 Feb 10 16:00 libft.a
+
+../ft_ls/libft/includes
+-rwxr-xr-x    1 jtranchi  2015_paris   3870 Feb  9 18:10 libft.h
+
+../ft_ls/src
+-rw-r--r--    1 jtranchi  2015_paris   1348 Feb 10 00:01 errors.c
+-rw-r--r--    1 jtranchi  2015_paris   1420 Feb 10 14:25 errors.o
+-rw-r--r--    1 jtranchi  2015_paris   2840 Feb  5 03:40 ft_ls.o
+-rw-r--r--    1 jtranchi  2015_paris   3436 Feb  9 14:45 ls-l.o
+-rwxr-xr-x    1 jtranchi  2015_paris   3378 Feb  9 23:57 ls.c
+-rw-r--r--    1 jtranchi  2015_paris   3492 Feb 10 14:25 ls.o
+-rw-r--r--    1 jtranchi  2015_paris   2643 Feb 10 14:26 ls_l.c
+-rw-r--r--    1 jtranchi  2015_paris   2784 Feb 10 14:26 ls_l.o
+-rw-r--r--    1 jtranchi  2015_paris   3685 Feb 10 16:00 openread.c
+-rw-r--r--    1 jtranchi  2015_paris   2940 Feb 10 16:00 openread.o
+-rw-r--r--    1 jtranchi  2015_paris   2426 Feb  9 16:45 options.c
+-rw-r--r--    1 jtranchi  2015_paris   2332 Feb 10 14:26 options.o
+
+../get_next_line
+-rwxr-xr-x    1 jtranchi  2015_paris      9 Feb  9 18:26 auteur
+-rwxr-xr-x    1 jtranchi  2015_paris   2072 Feb  9 18:26 get_next_line.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1268 Feb  9 18:26 get_next_line.h
+drwxr-xr-x  121 jtranchi  2015_paris   4114 Feb  9 18:26 libft
+
+../get_next_line/libft
+-rwxr-xr-x    1 jtranchi  2015_paris   5367 Feb  9 18:26 Makefile
+-rwxr-xr-x    1 jtranchi  2015_paris   1667 Feb  9 18:26 ft_atoi.c
+-rw-r--r--    1 jtranchi  2015_paris   1440 Feb  9 18:26 ft_atoi.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1030 Feb  9 18:26 ft_bzero.c
+-rw-r--r--    1 jtranchi  2015_paris    668 Feb  9 18:26 ft_bzero.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1057 Feb  9 18:26 ft_isalnum.c
+-rw-r--r--    1 jtranchi  2015_paris    712 Feb  9 18:26 ft_isalnum.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1026 Feb  9 18:26 ft_isalpha.c
+-rw-r--r--    1 jtranchi  2015_paris    688 Feb  9 18:26 ft_isalpha.o
+-rwxr-xr-x    1 jtranchi  2015_paris    999 Feb  9 18:26 ft_isascii.c
+-rw-r--r--    1 jtranchi  2015_paris    664 Feb  9 18:26 ft_isascii.o
+-rwxr-xr-x    1 jtranchi  2015_paris    999 Feb  9 18:26 ft_isdigit.c
+-rw-r--r--    1 jtranchi  2015_paris    664 Feb  9 18:26 ft_isdigit.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1007 Feb  9 18:26 ft_isprint.c
+-rw-r--r--    1 jtranchi  2015_paris    664 Feb  9 18:26 ft_isprint.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1497 Feb  9 18:26 ft_itoa.c
+-rw-r--r--    1 jtranchi  2015_paris   1156 Feb  9 18:26 ft_itoa.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1002 Feb  9 18:26 ft_lstadd.c
+-rw-r--r--    1 jtranchi  2015_paris    636 Feb  9 18:26 ft_lstadd.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1155 Feb  9 18:26 ft_lstdel.c
+-rw-r--r--    1 jtranchi  2015_paris    748 Feb  9 18:26 ft_lstdel.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1062 Feb  9 18:26 ft_lstdelone.c
+-rw-r--r--    1 jtranchi  2015_paris    720 Feb  9 18:26 ft_lstdelone.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1067 Feb  9 18:26 ft_lstiter.c
+-rw-r--r--    1 jtranchi  2015_paris    672 Feb  9 18:26 ft_lstiter.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1364 Feb  9 18:26 ft_lstmap.c
+-rw-r--r--    1 jtranchi  2015_paris    904 Feb  9 18:26 ft_lstmap.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1422 Feb  9 18:26 ft_lstnew.c
+-rw-r--r--    1 jtranchi  2015_paris    896 Feb  9 18:26 ft_lstnew.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1071 Feb  9 18:26 ft_memalloc.c
+-rw-r--r--    1 jtranchi  2015_paris    764 Feb  9 18:26 ft_memalloc.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1254 Feb  9 18:26 ft_memccpy.c
+-rw-r--r--    1 jtranchi  2015_paris    768 Feb  9 18:26 ft_memccpy.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1120 Feb  9 18:26 ft_memchr.c
+-rw-r--r--    1 jtranchi  2015_paris    716 Feb  9 18:26 ft_memchr.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1236 Feb  9 18:26 ft_memcmp.c
+-rw-r--r--    1 jtranchi  2015_paris    820 Feb  9 18:26 ft_memcmp.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1107 Feb  9 18:26 ft_memcpy.c
+-rw-r--r--    1 jtranchi  2015_paris    684 Feb  9 18:26 ft_memcpy.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1002 Feb  9 18:26 ft_memdel.c
+-rw-r--r--    1 jtranchi  2015_paris    692 Feb  9 18:26 ft_memdel.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1172 Feb  9 18:26 ft_memmove.c
+-rw-r--r--    1 jtranchi  2015_paris    856 Feb  9 18:26 ft_memmove.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1071 Feb  9 18:26 ft_memset.c
+-rw-r--r--    1 jtranchi  2015_paris    676 Feb  9 18:26 ft_memset.o
+-rwxr-xr-x    1 jtranchi  2015_paris    967 Feb  9 18:26 ft_putchar.c
+-rw-r--r--    1 jtranchi  2015_paris    676 Feb  9 18:26 ft_putchar.o
+-rwxr-xr-x    1 jtranchi  2015_paris    979 Feb  9 18:26 ft_putchar_fd.c
+-rw-r--r--    1 jtranchi  2015_paris    688 Feb  9 18:26 ft_putchar_fd.o
+-rwxr-xr-x    1 jtranchi  2015_paris    989 Feb  9 18:26 ft_putendl.c
+-rw-r--r--    1 jtranchi  2015_paris    776 Feb  9 18:26 ft_putendl.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1015 Feb  9 18:26 ft_putendl_fd.c
+-rw-r--r--    1 jtranchi  2015_paris    728 Feb  9 18:26 ft_putendl_fd.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1134 Feb  9 18:26 ft_putnbr.c
+-rw-r--r--    1 jtranchi  2015_paris    816 Feb  9 18:26 ft_putnbr.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1173 Feb  9 18:26 ft_putnbr_fd.c
+-rw-r--r--    1 jtranchi  2015_paris    840 Feb  9 18:26 ft_putnbr_fd.o
+-rwxr-xr-x    1 jtranchi  2015_paris    983 Feb  9 18:26 ft_putstr.c
+-rw-r--r--    1 jtranchi  2015_paris    720 Feb  9 18:26 ft_putstr.o
+-rwxr-xr-x    1 jtranchi  2015_paris    995 Feb  9 18:26 ft_putstr_fd.c
+-rw-r--r--    1 jtranchi  2015_paris    740 Feb  9 18:26 ft_putstr_fd.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1077 Feb  9 18:26 ft_strcat.c
+-rw-r--r--    1 jtranchi  2015_paris    752 Feb  9 18:26 ft_strcat.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1129 Feb  9 18:26 ft_strchr.c
+-rw-r--r--    1 jtranchi  2015_paris    808 Feb  9 18:26 ft_strchr.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1025 Feb  9 18:26 ft_strclr.c
+-rw-r--r--    1 jtranchi  2015_paris    684 Feb  9 18:26 ft_strclr.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1145 Feb  9 18:26 ft_strcmp.c
+-rw-r--r--    1 jtranchi  2015_paris    764 Feb  9 18:26 ft_strcmp.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1052 Feb  9 18:26 ft_strcpy.c
+-rw-r--r--    1 jtranchi  2015_paris    700 Feb  9 18:26 ft_strcpy.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1001 Feb  9 18:26 ft_strdel.c
+-rw-r--r--    1 jtranchi  2015_paris    684 Feb  9 18:26 ft_strdel.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1160 Feb  9 18:26 ft_strdup.c
+-rw-r--r--    1 jtranchi  2015_paris    832 Feb  9 18:26 ft_strdup.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1125 Feb  9 18:26 ft_strequ.c
+-rw-r--r--    1 jtranchi  2015_paris    756 Feb  9 18:26 ft_strequ.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1054 Feb  9 18:26 ft_striter.c
+-rw-r--r--    1 jtranchi  2015_paris    720 Feb  9 18:26 ft_striter.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1073 Feb  9 18:26 ft_striteri.c
+-rw-r--r--    1 jtranchi  2015_paris    720 Feb  9 18:26 ft_striteri.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1191 Feb  9 18:26 ft_strjoin.c
+-rw-r--r--    1 jtranchi  2015_paris    936 Feb  9 18:26 ft_strjoin.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1240 Feb  9 18:26 ft_strlcat.c
+-rw-r--r--    1 jtranchi  2015_paris    928 Feb  9 18:26 ft_strlcat.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1049 Feb  9 18:26 ft_strlen.c
+-rw-r--r--    1 jtranchi  2015_paris    708 Feb  9 18:26 ft_strlen.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1123 Feb  9 18:26 ft_strmap.c
+-rw-r--r--    1 jtranchi  2015_paris    836 Feb  9 18:26 ft_strmap.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1152 Feb  9 18:26 ft_strmapi.c
+-rw-r--r--    1 jtranchi  2015_paris    844 Feb  9 18:26 ft_strmapi.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1130 Feb  9 18:26 ft_strncat.c
+-rw-r--r--    1 jtranchi  2015_paris    816 Feb  9 18:26 ft_strncat.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1177 Feb  9 18:26 ft_strncmp.c
+-rw-r--r--    1 jtranchi  2015_paris    816 Feb  9 18:26 ft_strncmp.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1108 Feb  9 18:26 ft_strncpy.c
+-rw-r--r--    1 jtranchi  2015_paris    752 Feb  9 18:26 ft_strncpy.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1157 Feb  9 18:26 ft_strnequ.c
+-rw-r--r--    1 jtranchi  2015_paris    808 Feb  9 18:26 ft_strnequ.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1115 Feb  9 18:26 ft_strnew.c
+-rw-r--r--    1 jtranchi  2015_paris    764 Feb  9 18:26 ft_strnew.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1203 Feb  9 18:26 ft_strnstr.c
+-rw-r--r--    1 jtranchi  2015_paris    908 Feb  9 18:26 ft_strnstr.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1200 Feb  9 18:26 ft_strrchr.c
+-rw-r--r--    1 jtranchi  2015_paris    832 Feb  9 18:26 ft_strrchr.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1781 Feb  9 18:26 ft_strsplit.c
+-rw-r--r--    1 jtranchi  2015_paris   1608 Feb  9 18:26 ft_strsplit.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1342 Feb  9 18:26 ft_strstr.c
+-rw-r--r--    1 jtranchi  2015_paris   1020 Feb  9 18:26 ft_strstr.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1240 Feb  9 18:26 ft_strsub.c
+-rw-r--r--    1 jtranchi  2015_paris    952 Feb  9 18:26 ft_strsub.o
+-rwxr-xr-x    1 jtranchi  2015_paris   1345 Feb  9 18:26 ft_strtrim.c
+-rw-r--r--    1 jtranchi  2015_paris   1096 Feb  9 18:26 ft_strtrim.o
+-rwxr-xr-x    1 jtranchi  2015_paris    996 Feb  9 18:26 ft_tolower.c
+-rw-r--r--    1 jtranchi  2015_paris    656 Feb  9 18:26 ft_tolower.o
+-rwxr-xr-x    1 jtranchi  2015_paris    997 Feb  9 18:26 ft_toupper.c
+-rw-r--r--    1 jtranchi  2015_paris    656 Feb  9 18:26 ft_toupper.o
+drwxr-xr-x    3 jtranchi  2015_paris    102 Feb  9 18:26 includes
+-rw-r--r--    1 jtranchi  2015_paris  52520 Feb  9 18:26 libft.a
+
+../get_next_line/libft/includes
+-rwxr-xr-x    1 jtranchi  2015_paris   3870 Feb  9 18:26 libft.h
+
+../jtranchi
+-rwxr-xr-x    1 jtranchi  2015_paris      9 Feb  9 18:25 auteur
+-rwxr-xr-x    1 jtranchi  2015_paris   2072 Feb  9 18:25 get_next_line.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1248 Feb 10 00:03 get_next_line.h
+drwxr-xr-x   62 jtranchi  2015_paris   2108 Feb  9 22:54 libft
+
+../jtranchi/libft
+-rwxr-xr-x    1 jtranchi  2015_paris   5405 Feb  9 22:53 Makefile
+-rwxr-xr-x    1 jtranchi  2015_paris   1667 Feb  9 18:25 ft_atoi.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1030 Feb  9 18:25 ft_bzero.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1057 Feb  9 18:25 ft_isalnum.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1026 Feb  9 18:25 ft_isalpha.c
+-rwxr-xr-x    1 jtranchi  2015_paris    999 Feb  9 18:25 ft_isascii.c
+-rwxr-xr-x    1 jtranchi  2015_paris    999 Feb  9 18:25 ft_isdigit.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1007 Feb  9 18:25 ft_isprint.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1497 Feb  9 18:25 ft_itoa.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1002 Feb  9 18:25 ft_lstadd.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1155 Feb  9 18:25 ft_lstdel.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1062 Feb  9 18:25 ft_lstdelone.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1067 Feb  9 18:25 ft_lstiter.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1364 Feb  9 18:25 ft_lstmap.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1422 Feb  9 18:25 ft_lstnew.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1071 Feb  9 18:25 ft_memalloc.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1254 Feb  9 18:25 ft_memccpy.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1120 Feb  9 18:25 ft_memchr.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1236 Feb  9 18:25 ft_memcmp.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1107 Feb  9 18:25 ft_memcpy.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1002 Feb  9 18:25 ft_memdel.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1172 Feb  9 18:25 ft_memmove.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1071 Feb  9 18:25 ft_memset.c
+-rwxr-xr-x    1 jtranchi  2015_paris    967 Feb  9 18:25 ft_putchar.c
+-rwxr-xr-x    1 jtranchi  2015_paris    979 Feb  9 18:25 ft_putchar_fd.c
+-rwxr-xr-x    1 jtranchi  2015_paris    989 Feb  9 18:25 ft_putendl.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1015 Feb  9 18:25 ft_putendl_fd.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1134 Feb  9 18:25 ft_putnbr.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1173 Feb  9 18:25 ft_putnbr_fd.c
+-rwxr-xr-x    1 jtranchi  2015_paris    983 Feb  9 18:25 ft_putstr.c
+-rwxr-xr-x    1 jtranchi  2015_paris    995 Feb  9 18:25 ft_putstr_fd.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1077 Feb  9 18:25 ft_strcat.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1129 Feb  9 18:25 ft_strchr.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1025 Feb  9 18:25 ft_strclr.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1145 Feb  9 18:25 ft_strcmp.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1052 Feb  9 18:25 ft_strcpy.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1001 Feb  9 18:25 ft_strdel.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1160 Feb  9 18:25 ft_strdup.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1125 Feb  9 18:25 ft_strequ.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1054 Feb  9 18:25 ft_striter.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1073 Feb  9 18:25 ft_striteri.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1191 Feb  9 18:25 ft_strjoin.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1240 Feb  9 18:25 ft_strlcat.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1049 Feb  9 18:25 ft_strlen.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1123 Feb  9 18:25 ft_strmap.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1152 Feb  9 18:25 ft_strmapi.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1130 Feb  9 18:25 ft_strncat.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1177 Feb  9 18:25 ft_strncmp.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1108 Feb  9 18:25 ft_strncpy.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1157 Feb  9 18:25 ft_strnequ.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1115 Feb  9 18:25 ft_strnew.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1203 Feb  9 18:25 ft_strnstr.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1200 Feb  9 18:25 ft_strrchr.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1781 Feb  9 18:25 ft_strsplit.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1342 Feb  9 18:25 ft_strstr.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1240 Feb  9 18:25 ft_strsub.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1345 Feb  9 18:25 ft_strtrim.c
+-rwxr-xr-x    1 jtranchi  2015_paris    996 Feb  9 18:25 ft_tolower.c
+-rwxr-xr-x    1 jtranchi  2015_paris    997 Feb  9 18:25 ft_toupper.c
+drwxr-xr-x    3 jtranchi  2015_paris    102 Feb 10 00:05 includes
+
+../jtranchi/libft/includes
+-rwxr-xr-x    1 jtranchi  2015_paris   3870 Feb 10 00:05 libft.h
+
+../libft
+-rwxr-xr-x    1 jtranchi  2015_paris   5367 Feb  9 18:09 Makefile
+-rwxr-xr-x    1 jtranchi  2015_paris   1667 Feb  9 18:09 ft_atoi.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1030 Feb  9 18:09 ft_bzero.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1057 Feb  9 18:09 ft_isalnum.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1026 Feb  9 18:09 ft_isalpha.c
+-rwxr-xr-x    1 jtranchi  2015_paris    999 Feb  9 18:09 ft_isascii.c
+-rwxr-xr-x    1 jtranchi  2015_paris    999 Feb  9 18:09 ft_isdigit.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1007 Feb  9 18:09 ft_isprint.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1497 Feb  9 18:09 ft_itoa.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1002 Feb  9 18:09 ft_lstadd.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1155 Feb  9 18:09 ft_lstdel.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1062 Feb  9 18:09 ft_lstdelone.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1067 Feb  9 18:09 ft_lstiter.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1364 Feb  9 18:09 ft_lstmap.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1422 Feb  9 18:09 ft_lstnew.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1071 Feb  9 18:09 ft_memalloc.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1254 Feb  9 18:09 ft_memccpy.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1120 Feb  9 18:09 ft_memchr.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1236 Feb  9 18:09 ft_memcmp.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1107 Feb  9 18:09 ft_memcpy.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1002 Feb  9 18:09 ft_memdel.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1172 Feb  9 18:09 ft_memmove.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1071 Feb  9 18:09 ft_memset.c
+-rwxr-xr-x    1 jtranchi  2015_paris    967 Feb  9 18:09 ft_putchar.c
+-rwxr-xr-x    1 jtranchi  2015_paris    979 Feb  9 18:09 ft_putchar_fd.c
+-rwxr-xr-x    1 jtranchi  2015_paris    989 Feb  9 18:09 ft_putendl.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1015 Feb  9 18:09 ft_putendl_fd.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1134 Feb  9 18:09 ft_putnbr.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1173 Feb  9 18:09 ft_putnbr_fd.c
+-rwxr-xr-x    1 jtranchi  2015_paris    983 Feb  9 18:09 ft_putstr.c
+-rwxr-xr-x    1 jtranchi  2015_paris    995 Feb  9 18:09 ft_putstr_fd.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1077 Feb  9 18:09 ft_strcat.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1129 Feb  9 18:09 ft_strchr.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1025 Feb  9 18:09 ft_strclr.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1145 Feb  9 18:09 ft_strcmp.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1052 Feb  9 18:09 ft_strcpy.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1001 Feb  9 18:09 ft_strdel.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1160 Feb  9 18:09 ft_strdup.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1125 Feb  9 18:09 ft_strequ.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1054 Feb  9 18:09 ft_striter.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1073 Feb  9 18:09 ft_striteri.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1191 Feb  9 18:09 ft_strjoin.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1240 Feb  9 18:09 ft_strlcat.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1049 Feb  9 18:09 ft_strlen.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1123 Feb  9 18:09 ft_strmap.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1152 Feb  9 18:09 ft_strmapi.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1130 Feb  9 18:09 ft_strncat.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1177 Feb  9 18:09 ft_strncmp.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1108 Feb  9 18:09 ft_strncpy.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1157 Feb  9 18:09 ft_strnequ.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1115 Feb  9 18:09 ft_strnew.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1203 Feb  9 18:09 ft_strnstr.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1200 Feb  9 18:09 ft_strrchr.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1781 Feb  9 18:09 ft_strsplit.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1342 Feb  9 18:09 ft_strstr.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1240 Feb  9 18:09 ft_strsub.c
+-rwxr-xr-x    1 jtranchi  2015_paris   1345 Feb  9 18:09 ft_strtrim.c
+-rwxr-xr-x    1 jtranchi  2015_paris    996 Feb  9 18:09 ft_tolower.c
+-rwxr-xr-x    1 jtranchi  2015_paris    997 Feb  9 18:09 ft_toupper.c
+drwxr-xr-x    3 jtranchi  2015_paris    102 Feb  9 18:09 includes
+
+../libft/includes
+-rwxr-xr-x    1 jtranchi  2015_paris   3870 Feb  9 18:09 libft.h
