@@ -74,10 +74,18 @@ void	ft_process(char *dir, t_options *opt)
 		if (opt->r)
 			lst = ft_ls_r(lst);
 		tmp = lst;
+		if (opt->l)
+		{
+			ft_putstr("total ");
+			ft_putnbr(opt->total);
+			ft_putchar('\n');
+		}
 		while (lst)
 		{
 			if (opt->l && (!(!opt->a && lst->name[0] == '.')))
+			{
 				ft_ls_l(lst, opt);
+			}
 			else
 				if (!(!opt->a && lst->name[0] == '.'))
 					ft_putendl(lst->name);

@@ -89,6 +89,8 @@ t_lstdir		*ft_create_lst(struct dirent *buf, t_options *opt)
 	}
 	lst = (t_lstdir*)malloc(sizeof(t_lstdir));
 	lst->name = ft_strdup(buf->d_name);
+	if (!(!opt->a && lst->name[0] == '.'))
+		opt->total += bufstat.st_blocks;
 	lst = ft_add_stats(lst, bufstat);
 	lst->next = NULL;
 	return (lst);
@@ -105,6 +107,7 @@ t_lstdir		*ft_read_dir(char *dir, t_options *opt)
 	dirp = opendir(dir);
 	if (!dirp)
 		return (NULL);
+	opt->total = 0;
 	while ((buf = readdir(dirp)))
 		lst = ft_add_lst(ft_create_lst(buf, opt), lst);
 	closedir(dirp);

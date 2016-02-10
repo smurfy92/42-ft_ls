@@ -31,6 +31,7 @@ typedef struct			s_options
 	int					t;
 	char				**files;
 	char				*tmp;
+	int					total;
 	int					nbfile;
 	int					actual;
 }						t_options;

@@ -16,13 +16,9 @@ void		ft_print_rights(t_lstdir *lst)
 {
 	mode_t val;
 
-	if ((lst->mode & S_IFCHR))
-		ft_putchar('l');
-	else
-	{
-		(S_ISDIR(lst->mode)) ? ft_putchar('d') : 0;
-		((lst->mode & S_IFREG)) ? ft_putchar('-') : 0;
-	}
+	((lst->mode & S_IFCHR)) ? ft_putchar('l') : 0;
+	((lst->mode & S_IFREG)) ? ft_putchar('-') : 0;
+	(S_ISDIR(lst->mode)) ? ft_putchar('d') : 0;
 	((lst->mode & S_IFIFO)) ? ft_putchar('f') : 0;
 	//((lst->mode & S_IFLNK)) ? ft_putchar('t') : 0;
 	//((lst->mode & S_IFBLK)) ? ft_putchar('b') : 0;
