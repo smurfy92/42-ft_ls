@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ls-l.c                                             :+:      :+:    :+:   */
+/*   ls_l.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jtranchi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -96,8 +96,6 @@ void		ft_ls_l(t_lstdir *lst, t_options *opt)
 	if (!opt->a && lst->name[0] == '.')
 		return ;
 	ft_print_rights(lst);
-	if (opt->R)
-		ft_putstr(" ");
 	ft_print_links_usr_grp(lst);
 	ft_print_size(lst);
 	ft_print_time(lst->mtime);

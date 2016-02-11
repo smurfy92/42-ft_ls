@@ -62,7 +62,7 @@ t_lstdir		*ft_add_stats(t_lstdir *lst, struct stat bufstat)
 	(getgrgid(bufstat.st_gid)) ? (lst->grpname = getgrgid(bufstat.st_gid)->gr_name) : (lst->grpname = ft_strdup("101"));
 	lst->size = (int)bufstat.st_size;
 	lst->mtime = ft_strdup(ctime(&bufstat.st_mtime));
-	lst->isdir = (S_IFDIR & bufstat.st_mode);
+	lst->isdir = S_ISDIR(bufstat.st_mode);
 	return (lst);
 }
 

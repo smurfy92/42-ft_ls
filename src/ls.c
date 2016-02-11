@@ -74,12 +74,6 @@ void	ft_process(char *dir, t_options *opt)
 		tmp = lst;
 		if (opt->l)
 		{
-			/*if (!opt->R && opt->nbfile > 1)
-			{
-				ft_putchar('\n');
-				ft_putstr(opt->tmp);
-				ft_putendl(":");
-			}*/
 			ft_putstr("total ");
 			ft_putnbr(opt->total);
 			ft_putchar('\n');
@@ -135,7 +129,7 @@ int		main(int argc, char **argv)
 		while (++opt->actual < opt->nbfile)
 		{
 			opt->tmp = ft_strdup(opt->files[opt->actual]);
-			if (opt->actual != 0)
+			if (opt->actual != 0 && ft_is_dir(opt->files[opt->actual]))
 				ft_putchar('\n');
 			if (ft_is_dir(opt->files[opt->actual]) && opt->nbfile > 1)
 			{
