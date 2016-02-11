@@ -54,6 +54,10 @@ t_options		*ft_init_opt(t_options *opt)
 	opt->a = 0;
 	opt->R = 0;
 	opt->t = 0;
+	opt->max_lnk = 0;
+	opt->max_uid = 0;
+	opt->max_gid = 0;
+	opt->max_size = 0;
 	opt->total = 0;
 	opt->nbfile = 0;
 	opt->actual = -1;

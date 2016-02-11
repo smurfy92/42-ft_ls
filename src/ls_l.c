@@ -16,14 +16,13 @@ void		ft_print_rights(t_lstdir *lst)
 {
 	mode_t val;
 
-	((lst->mode & S_IFCHR)) ? ft_putchar('l') : 0;
-	((lst->mode & S_IFREG)) ? ft_putchar('-') : 0;
+	(S_ISCHR(lst->mode)) ? ft_putchar('c') : 0;
+	(S_ISLNK(lst->mode)) ? ft_putchar('l') : 0;
 	(S_ISDIR(lst->mode)) ? ft_putchar('d') : 0;
-	((lst->mode & S_IFIFO)) ? ft_putchar('f') : 0;
-	//((lst->mode & S_IFLNK)) ? ft_putchar('t') : 0;
-	//((lst->mode & S_IFBLK)) ? ft_putchar('b') : 0;
-	//((lst->mode & S_IFSOCK)) ? ft_putchar('e') : 0;
-	//((lst->mode & S_IFWHT)) ? ft_putchar('f') : 0;
+	(S_ISREG(lst->mode)) ? ft_putchar('-') : 0;
+	(S_ISFIFO(lst->mode)) ? ft_putchar('p') : 0;
+	(S_ISBLK(lst->mode)) ? ft_putchar('b') : 0;
+	(S_ISSOCK(lst->mode)) ? ft_putchar('s') : 0;
 
 	val = (lst->mode & ~S_IFMT);
 	(val & S_IRUSR) ? ft_putchar('r') : ft_putchar('-');
@@ -38,36 +37,31 @@ void		ft_print_rights(t_lstdir *lst)
 	ft_putchar(' ');
 }
 
-void		ft_print_links_usr_grp(t_lstdir *lst)
+void		ft_print_links_usr_grp(t_lstdir *lst, t_options *opt)
 {
-	if (lst->links < 100)
+	int i;
+
+	i = lst->space_lnk;
+	while (i++ <= opt->max_lnk)
 		ft_putchar(' ');
-	if (lst->links < 10)
-		ft_putchar(' ');
-	ft_putchar(' ');
 	ft_putnbr(lst->links);
 	ft_putchar(' ');
 	ft_putstr(lst->pwname);
-	ft_putstr("  ");
-	ft_putstr(lst->grpname);
 	ft_putchar(' ');
-}
-
-void		ft_print_size(t_lstdir *lst)
-{
-	if (lst->size < 100000)
+	i = lst->space_uid;
+	while (i++ <= opt->max_uid)
 		ft_putchar(' ');
-	if (lst->size < 10000)
+	ft_putstr(lst->grpname);
+	i = lst->space_gid;
+	while (i++ <= opt->max_gid)
 		ft_putchar(' ');
-	if (lst->size < 1000)
-		ft_putchar(' ');
-	if (lst->size < 100)
-		ft_putchar(' ');
-	if (lst->size < 10)
+	i = lst->space_size;
+	while (i++ <= opt->max_size)
 		ft_putchar(' ');
 	ft_putnbr(lst->size);
 	ft_putchar(' ');
 }
+
 
 void		ft_print_time(char *str)
 {
@@ -96,8 +90,7 @@ void		ft_ls_l(t_lstdir *lst, t_options *opt)
 	if (!opt->a && lst->name[0] == '.')
 		return ;
 	ft_print_rights(lst);
-	ft_print_links_usr_grp(lst);
-	ft_print_size(lst);
+	ft_print_links_usr_grp(lst, opt);
 	ft_print_time(lst->mtime);
 	ft_putendl(lst->name);
 }

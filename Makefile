@@ -36,8 +36,6 @@ $(NAME): $(OBJ)
 	@if [ "src/ls.o" = "$@" ]; then make start; fi
 	@echo "$(CY)[FT_LS] :$(CE) $(CG)Compiling $<$(CE)";
 	@gcc $(FLAG) -c $< -o $@
-	
-src/ft_ls.c: start
 
 start:
 	@echo "\n\n"
@@ -80,6 +78,6 @@ fclean: start clean
 	@echo "$(CY)[FT_LS] :$(CE) $(CG)Cleaning ft_ls ...$(CE)";
 	@/bin/rm -f $(NAME)
 
-re: fclean all
+re: start fclean all
 
 .PHONY: all clean fclean re

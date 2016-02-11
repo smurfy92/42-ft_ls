@@ -51,10 +51,9 @@ void	ft_print_dir(char *dir, t_options *opt)
 		lst = (t_lstdir*)malloc(sizeof(t_lstdir));
 		lst->name = ft_strdup(dir);
 		lst->next = NULL;
-		lst = ft_add_stats(lst, bufstat);
+		lst = ft_add_stats(lst, bufstat, opt);
 		ft_print_rights(lst);
-		ft_print_links_usr_grp(lst);
-		ft_print_size(lst);
+		ft_print_links_usr_grp(lst, opt);
 		ft_print_time(lst->mtime);
 	}
 	ft_putendl(dir);
@@ -65,6 +64,10 @@ void	ft_process(char *dir, t_options *opt)
 	t_lstdir *lst;
 	t_lstdir *tmp;
 
+	opt->max_lnk = 0;
+	opt->max_uid = 0;
+	opt->max_gid = 0;
+	opt->max_size = 0;
 	if ((lst = ft_read_dir(dir, opt)) != NULL)
 	{
 		if (opt->t)

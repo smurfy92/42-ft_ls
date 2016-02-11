@@ -53,16 +53,39 @@ t_lstdir		*ft_add_lst(t_lstdir *tmp, t_lstdir *lst)
 	return (tmp2);
 }
 
-t_lstdir		*ft_add_stats(t_lstdir *lst, struct stat bufstat)
+int			ft_check_cols(int tmp)
+{
+	int i;
+
+	i = 1;
+	while (tmp > 9)
+	{
+		tmp /= 10;
+		i++;
+	}
+	return (i);
+}
+
+t_lstdir		*ft_add_stats(t_lstdir *lst, struct stat bufstat, t_options *opt)
 {
 	lst->mdate = ft_strdup(ctime(&bufstat.st_mtime));
 	lst->links = bufstat.st_nlink;
 	lst->mode = bufstat.st_mode;
 	lst->pwname = getpwuid(bufstat.st_uid)->pw_name;
-	(getgrgid(bufstat.st_gid)) ? (lst->grpname = getgrgid(bufstat.st_gid)->gr_name) : (lst->grpname = ft_strdup("101"));
+	(getgrgid(bufstat.st_gid)) ?
+	(lst->grpname = getgrgid(bufstat.st_gid)->gr_name) :
+	(lst->grpname = ft_strdup("101"));
 	lst->size = (int)bufstat.st_size;
 	lst->mtime = ft_strdup(ctime(&bufstat.st_mtime));
 	lst->isdir = S_ISDIR(bufstat.st_mode);
+	lst->space_lnk = ft_check_cols(lst->links);
+	(lst->space_lnk > opt->max_lnk && (!(!opt->a && lst->name[0] == '.'))) ? (opt->max_lnk = lst->space_lnk) : 0;
+	lst->space_uid = ft_strlen(lst->pwname);
+	(lst->space_uid > opt->max_uid && (!(!opt->a && lst->name[0] == '.'))) ? (opt->max_uid = lst->space_uid) : 0;
+	lst->space_gid = ft_strlen(lst->grpname);
+	(lst->space_gid > opt->max_gid && (!(!opt->a && lst->name[0] == '.'))) ? (opt->max_gid = lst->space_gid) : 0;
+	lst->space_size = ft_check_cols(lst->size);
+	(lst->space_size > opt->max_size && (!(!opt->a && lst->name[0] == '.'))) ? (opt->max_size = lst->space_size) : 0;
 	return (lst);
 }
 
@@ -89,7 +112,7 @@ t_lstdir		*ft_create_lst(struct dirent *buf, t_options *opt)
 	lst->name = ft_strdup(buf->d_name);
 	if (!(!opt->a && lst->name[0] == '.'))
 		opt->total += bufstat.st_blocks;
-	lst = ft_add_stats(lst, bufstat);
+	lst = ft_add_stats(lst, bufstat, opt);
 	lst->next = NULL;
 	return (lst);
 }
