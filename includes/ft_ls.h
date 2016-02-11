@@ -44,7 +44,7 @@ typedef struct			s_lstdir
 	mode_t				mode;
 	char				*pwname;
 	char				*grpname;
-	int				size;
+	int					size;
 	char				*mtime;
 	int					isdir;
 	struct s_lstdir		*next;

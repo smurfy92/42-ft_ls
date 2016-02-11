@@ -24,7 +24,7 @@ CY =  \033[93m
 CE = \033[0m
 CB = \033[34m
 
-all: start $(NAME)
+all: $(NAME)
 
 $(NAME): $(OBJ)
 	@echo "$(CY)[FT_LS] :$(CE) $(CG)Creating Library$(CE)";
@@ -33,6 +33,7 @@ $(NAME): $(OBJ)
 	@gcc -g -o $(NAME) $(FLAG) $(SRC) $(LIB)
 
 %.o: %.c
+	@if [ "src/ls.o" = "$@" ]; then make start; fi
 	@echo "$(CY)[FT_LS] :$(CE) $(CG)Compiling $<$(CE)";
 	@gcc $(FLAG) -c $< -o $@
 	
