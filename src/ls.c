@@ -22,12 +22,10 @@ void	ft_ls_rec(t_lstdir *lst, t_options *opt, char *dir)
 		{
 			tmp = ft_strjoin(dir, "/");
 			tmp = ft_strjoin(tmp, lst->name);
-			ft_putchar('\n');
-			ft_putstr(tmp);
-			ft_putendl(":");
-			if (tmp[1] == '/')
-				tmp = (tmp + 1);
 			opt->tmp = ft_strdup(tmp);
+			ft_putchar('\n');
+			ft_putstr(opt->tmp);
+			ft_putendl(":");
 			ft_process(tmp, opt);
 		}
 		lst = lst->next;
@@ -76,6 +74,12 @@ void	ft_process(char *dir, t_options *opt)
 		tmp = lst;
 		if (opt->l)
 		{
+			/*if (!opt->R && opt->nbfile > 1)
+			{
+				ft_putchar('\n');
+				ft_putstr(opt->tmp);
+				ft_putendl(":");
+			}*/
 			ft_putstr("total ");
 			ft_putnbr(opt->total);
 			ft_putchar('\n');
@@ -83,9 +87,7 @@ void	ft_process(char *dir, t_options *opt)
 		while (lst)
 		{
 			if (opt->l && (!(!opt->a && lst->name[0] == '.')))
-			{
 				ft_ls_l(lst, opt);
-			}
 			else
 				if (!(!opt->a && lst->name[0] == '.'))
 					ft_putendl(lst->name);
@@ -118,7 +120,10 @@ int		main(int argc, char **argv)
 	opt = NULL;
 	opt = ft_init_opt(opt);
 	if (argc == 1)
+	{
+		opt->tmp = ft_strdup(".");
 		ft_process(".", opt);
+	}
 	else
 	{
 		opt = ft_parse_options(argc, argv, opt);
@@ -135,7 +140,7 @@ int		main(int argc, char **argv)
 			if (ft_is_dir(opt->files[opt->actual]) && opt->nbfile > 1)
 			{
 				ft_putstr(opt->files[opt->actual]);
-				ft_putstr(" : \n");
+				ft_putstr(":\n");
 			}
 			ft_process(opt->files[opt->actual], opt);
 		}
