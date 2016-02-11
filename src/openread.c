@@ -53,19 +53,6 @@ t_lstdir		*ft_add_lst(t_lstdir *tmp, t_lstdir *lst)
 	return (tmp2);
 }
 
-int			ft_check_cols(int tmp)
-{
-	int i;
-
-	i = 1;
-	while (tmp > 9)
-	{
-		tmp /= 10;
-		i++;
-	}
-	return (i);
-}
-
 t_lstdir		*ft_add_stats(t_lstdir *lst, struct stat bufstat, t_options *opt)
 {
 	lst->mdate = ft_strdup(ctime(&bufstat.st_mtime));

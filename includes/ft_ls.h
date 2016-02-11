@@ -67,6 +67,7 @@ void					ft_print_rights(t_lstdir *lst);
 void					ft_print_links_usr_grp(t_lstdir *lst, t_options *opt);
 void					ft_print_size(t_lstdir *lst);
 void					ft_print_time(char *str);
+int						ft_check_cols(int tmp);
 int						ft_compare_date(char *s1, char *s2);
 t_lstdir				*ft_add_stats(t_lstdir *lst, struct stat bufstat, t_options *opt);
 t_lstdir				*ft_add_lst(t_lstdir *tmp, t_lstdir *lst);

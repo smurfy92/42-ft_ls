@@ -31,11 +31,24 @@ void		ft_error(char *str, int error)
 	}
 }
 
-int				ft_compare_date(char *s1, char *s2)
+int			ft_compare_date(char *s1, char *s2)
 {
 	if (ft_strncmp((s1 + 20), (s2 + 20), 4) > 0)
 		return (0);
 	if (ft_strncmp((s1 + 9), (s2 + 9), 10) > 0)
 		return (0);
 	return (1);
+}
+
+int			ft_check_cols(int tmp)
+{
+	int i;
+
+	i = 1;
+	while (tmp > 9)
+	{
+		tmp /= 10;
+		i++;
+	}
+	return (i);
 }
