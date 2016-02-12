@@ -55,13 +55,27 @@ void		ft_print_links_usr_grp(t_lstdir *lst, t_options *opt)
 	i = lst->space_gid;
 	while (i++ <= opt->max_gid)
 		ft_putchar(' ');
-	i = lst->space_size;
-	while (i++ <= opt->max_size)
+	i = lst->space_major;
+	while (i++ <= opt->max_major + 1)
 		ft_putchar(' ');
-	ft_putnbr(lst->size);
+	if (S_ISCHR(lst->mode) || S_ISBLK(lst->mode))
+	{
+		ft_putnbr(lst->major);
+		ft_putstr(",");
+		i = lst->space_minor;
+		while (i++ <= opt->max_minor)
+			ft_putchar(' ');
+		ft_putnbr(lst->minor);
+	}
+	else
+	{
+		i = lst->space_minor;
+		while (i++ <= opt->max_minor + 2)
+			ft_putchar(' ');
+		ft_putnbr(lst->minor);
+	}
 	ft_putchar(' ');
 }
-
 
 void		ft_print_time(char *str)
 {
@@ -87,10 +101,26 @@ void		ft_print_time(char *str)
 
 void		ft_ls_l(t_lstdir *lst, t_options *opt)
 {
+	char		*buf;
+	char 		*tmp;
+
+	buf = (char *)malloc(sizeof(char) * 100);
+
 	if (!opt->a && lst->name[0] == '.')
 		return ;
 	ft_print_rights(lst);
 	ft_print_links_usr_grp(lst, opt);
 	ft_print_time(lst->mtime);
-	ft_putendl(lst->name);
+	ft_putstr(lst->name);
+	if (S_ISLNK(lst->mode))
+	{
+		ft_putstr(" -> ");
+		tmp = ft_strjoin(opt->tmp, "/");
+		tmp = ft_strjoin(tmp, lst->name);
+		readlink(tmp, buf, 100);
+		free(tmp);
+		ft_putstr(buf);
+		free(buf);
+	}
+	ft_putchar('\n');
 }

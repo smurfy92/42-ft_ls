@@ -57,7 +57,8 @@ t_options		*ft_init_opt(t_options *opt)
 	opt->max_lnk = 0;
 	opt->max_uid = 0;
 	opt->max_gid = 0;
-	opt->max_size = 0;
+	opt->max_major = 0;
+	opt->max_minor = 0;
 	opt->total = 0;
 	opt->nbfile = 0;
 	opt->actual = -1;
@@ -79,7 +80,7 @@ t_options		*ft_add_option(char c, t_options *opt)
 	else if (c == 't')
 		opt->t = 1;
 	else
-		ft_error_message("./ft_ls: illegal option");
+		ft_illegal_opt(c);
 	return (opt);
 }
 

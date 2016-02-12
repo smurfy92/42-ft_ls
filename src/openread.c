@@ -62,7 +62,7 @@ t_lstdir		*ft_add_stats(t_lstdir *lst, struct stat bufstat, t_options *opt)
 	(getgrgid(bufstat.st_gid)) ?
 	(lst->grpname = getgrgid(bufstat.st_gid)->gr_name) :
 	(lst->grpname = ft_strdup("101"));
-	lst->size = (int)bufstat.st_size;
+	
 	lst->mtime = ft_strdup(ctime(&bufstat.st_mtime));
 	lst->isdir = S_ISDIR(bufstat.st_mode);
 	lst->space_lnk = ft_check_cols(lst->links);
@@ -71,8 +71,20 @@ t_lstdir		*ft_add_stats(t_lstdir *lst, struct stat bufstat, t_options *opt)
 	(lst->space_uid > opt->max_uid && (!(!opt->a && lst->name[0] == '.'))) ? (opt->max_uid = lst->space_uid) : 0;
 	lst->space_gid = ft_strlen(lst->grpname);
 	(lst->space_gid > opt->max_gid && (!(!opt->a && lst->name[0] == '.'))) ? (opt->max_gid = lst->space_gid) : 0;
-	lst->space_size = ft_check_cols(lst->size);
-	(lst->space_size > opt->max_size && (!(!opt->a && lst->name[0] == '.'))) ? (opt->max_size = lst->space_size) : 0;
+	if (S_ISCHR(lst->mode) || S_ISBLK(lst->mode))
+	{
+		lst->major = major(bufstat.st_rdev);
+		lst->minor = minor(bufstat.st_rdev);
+	}
+	else
+	{
+		lst->major = 0;
+		lst->minor = (int)bufstat.st_size;
+	}
+	lst->space_minor = ft_check_cols(lst->minor);
+	(lst->space_minor > opt->max_minor && (!(!opt->a && lst->name[0] == '.'))) ? (opt->max_minor = lst->space_minor) : 0;
+	lst->space_major = ft_check_cols(lst->major);
+	(lst->space_major > opt->max_major && (!(!opt->a && lst->name[0] == '.'))) ? (opt->max_major = lst->space_major) : 0;
 	return (lst);
 }
 

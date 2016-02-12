@@ -32,7 +32,8 @@ typedef struct			s_options
 	int					max_lnk;
 	int					max_uid;
 	int					max_gid;
-	int					max_size;
+	int					max_major;
+	int					max_minor;
 	char				**files;
 	char				*tmp;
 	int					total;
@@ -48,16 +49,20 @@ typedef struct			s_lstdir
 	mode_t				mode;
 	char				*pwname;
 	char				*grpname;
-	int					size;
 	int					space_lnk;
 	int					space_uid;
 	int					space_gid;
 	int					space_size;
+	int					space_major;
+	int					space_minor;
+	int					major;
+	int					minor;
 	char				*mtime;
 	int					isdir;
 	struct s_lstdir		*next;
 }						t_lstdir;
 
+void					ft_illegal_opt(char c);
 void					ft_error(char *str, int error);
 void					ft_error_nofile(char *file);
 void					ft_process(char *dir, t_options *opt);

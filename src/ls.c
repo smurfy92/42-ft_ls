@@ -67,7 +67,8 @@ void	ft_process(char *dir, t_options *opt)
 	opt->max_lnk = 0;
 	opt->max_uid = 0;
 	opt->max_gid = 0;
-	opt->max_size = 0;
+	opt->max_minor = 0;
+	opt->max_major = 0;
 	if ((lst = ft_read_dir(dir, opt)) != NULL)
 	{
 		if (opt->t)
