@@ -77,7 +77,7 @@ int						ft_compare_date(char *s1, char *s2);
 t_lstdir				*ft_add_stats(t_lstdir *lst, struct stat bufstat, t_options *opt);
 t_lstdir				*ft_add_lst(t_lstdir *tmp, t_lstdir *lst);
 t_lstdir				*ft_add_lst_by_date(t_lstdir *tmp, t_lstdir *lst);
-t_lstdir				*ft_create_lst(struct dirent *buf, t_options *opt);
+t_lstdir				*ft_create_lst(char *buf, t_options *opt);
 t_lstdir				*ft_ls_t(t_lstdir *lst);
 t_lstdir				*ft_ls_r(t_lstdir *lst);
 t_lstdir				*ft_read_dir(char *dir, t_options *opt);

@@ -19,6 +19,7 @@ t_lstdir		*ft_add_lst_by_date(t_lstdir *tmp, t_lstdir *lst)
 
 	if (!lst)
 		return (tmp);
+	tmp->next = NULL;
 	if (!(ft_compare_date(tmp->mdate, lst->mdate)))
 	{
 		tmp->next = lst;
@@ -75,20 +76,21 @@ t_lstdir		*ft_add_stats(t_lstdir *lst, struct stat bufstat, t_options *opt)
 	{
 		lst->major = major(bufstat.st_rdev);
 		lst->minor = minor(bufstat.st_rdev);
+		lst->space_major = ft_check_cols(lst->major);
 	}
 	else
 	{
 		lst->major = 0;
 		lst->minor = (int)bufstat.st_size;
+		lst->space_major = 0;
 	}
 	lst->space_minor = ft_check_cols(lst->minor);
 	(lst->space_minor > opt->max_minor && (!(!opt->a && lst->name[0] == '.'))) ? (opt->max_minor = lst->space_minor) : 0;
-	lst->space_major = ft_check_cols(lst->major);
 	(lst->space_major > opt->max_major && (!(!opt->a && lst->name[0] == '.'))) ? (opt->max_major = lst->space_major) : 0;
 	return (lst);
 }
 
-t_lstdir		*ft_create_lst(struct dirent *buf, t_options *opt)
+t_lstdir		*ft_create_lst(char *buf, t_options *opt)
 {
 	t_lstdir		*lst;
 	char			*tmpstat;
@@ -96,11 +98,11 @@ t_lstdir		*ft_create_lst(struct dirent *buf, t_options *opt)
 
 	lst = NULL;
 	if (opt->tmp[ft_strlen(opt->tmp) - 1] == '/')
-		tmpstat = ft_strdup(ft_strjoin(opt->tmp, buf->d_name));
+		tmpstat = ft_strdup(ft_strjoin(opt->tmp, buf));
 	else
 	{
 		tmpstat = ft_strdup(ft_strjoin(opt->tmp, "/"));
-		tmpstat = ft_strdup(ft_strjoin(tmpstat, buf->d_name));
+		tmpstat = ft_strdup(ft_strjoin(tmpstat, buf));
 	}
 	if (lstat(tmpstat, &bufstat) == -1)
 	{
@@ -108,7 +110,7 @@ t_lstdir		*ft_create_lst(struct dirent *buf, t_options *opt)
 		//ft_error(tmpstat, 2);
 	}
 	lst = (t_lstdir*)malloc(sizeof(t_lstdir));
-	lst->name = ft_strdup(buf->d_name);
+	lst->name = ft_strdup(buf);
 	if (!(!opt->a && lst->name[0] == '.'))
 		opt->total += bufstat.st_blocks;
 	lst = ft_add_stats(lst, bufstat, opt);
@@ -129,7 +131,7 @@ t_lstdir		*ft_read_dir(char *dir, t_options *opt)
 		return (NULL);
 	opt->total = 0;
 	while ((buf = readdir(dirp)))
-		lst = ft_add_lst(ft_create_lst(buf, opt), lst);
+		lst = ft_add_lst(ft_create_lst(buf->d_name, opt), lst);
 	closedir(dirp);
 	return (lst);
 }

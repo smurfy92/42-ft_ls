@@ -56,8 +56,9 @@ void		ft_print_links_usr_grp(t_lstdir *lst, t_options *opt)
 	while (i++ <= opt->max_gid)
 		ft_putchar(' ');
 	i = lst->space_major;
-	while (i++ <= opt->max_major + 1)
-		ft_putchar(' ');
+	if (opt->max_major)
+		while (i++ <= opt->max_major + 1)
+			ft_putchar(' ');
 	if (S_ISCHR(lst->mode) || S_ISBLK(lst->mode))
 	{
 		ft_putnbr(lst->major);
@@ -70,8 +71,12 @@ void		ft_print_links_usr_grp(t_lstdir *lst, t_options *opt)
 	else
 	{
 		i = lst->space_minor;
-		while (i++ <= opt->max_minor + 2)
-			ft_putchar(' ');
+		if (opt->max_major)
+			while (i++ <= opt->max_minor + 2)
+				ft_putchar(' ');
+		else
+			while (i++ <= opt->max_minor)
+				ft_putchar(' ');
 		ft_putnbr(lst->minor);
 	}
 	ft_putchar(' ');
