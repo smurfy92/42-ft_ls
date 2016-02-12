@@ -20,13 +20,13 @@ t_lstdir		*ft_add_lst_by_date(t_lstdir *tmp, t_lstdir *lst)
 	if (!lst)
 		return (tmp);
 	tmp->next = NULL;
-	if (!(ft_compare_date(tmp->mdate, lst->mdate)))
+	if (tmp->mdateint - lst->mdateint > 0)
 	{
 		tmp->next = lst;
 		return (tmp);
 	}
 	tmp2 = lst;
-	while (lst->next && ft_compare_date(tmp->mdate, (lst->next)->mdate))
+	while (lst->next && (tmp->mdateint - (lst->next)->mdateint) <= 0)
 		lst = lst->next;
 	if (lst->next)
 		tmp->next = lst->next;
@@ -57,6 +57,7 @@ t_lstdir		*ft_add_lst(t_lstdir *tmp, t_lstdir *lst)
 t_lstdir		*ft_add_stats(t_lstdir *lst, struct stat bufstat, t_options *opt)
 {
 	lst->mdate = ft_strdup(ctime(&bufstat.st_mtime));
+	lst->mdateint = bufstat.st_mtime;
 	lst->links = bufstat.st_nlink;
 	lst->mode = bufstat.st_mode;
 	lst->pwname = getpwuid(bufstat.st_uid)->pw_name;

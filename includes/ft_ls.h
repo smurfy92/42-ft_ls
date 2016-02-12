@@ -45,6 +45,7 @@ typedef struct			s_lstdir
 {
 	char 				*name;
 	char				*mdate;
+	time_t				mdateint;
 	nlink_t				links;
 	mode_t				mode;
 	char				*pwname;

@@ -35,7 +35,9 @@ int			ft_compare_date(char *s1, char *s2)
 {
 	if (ft_strncmp((s1 + 20), (s2 + 20), 4) > 0)
 		return (0);
-	if (ft_strncmp((s1 + 9), (s2 + 9), 10) > 0)
+	(s1[9] == ' ') ? s1++ : 0;
+	(s2[9] == ' ') ? s2++ : 0;
+	if (ft_strncmp((s1 + 8), (s2 + 8), 10) < 0)
 		return (0);
 	return (1);
 }
