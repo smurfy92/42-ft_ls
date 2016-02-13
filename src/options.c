@@ -62,6 +62,7 @@ t_lstdir		*ft_ls_r(t_lstdir *lst)
 
 t_options		*ft_init_opt(t_options *opt)
 {
+
 	opt = (t_options*)malloc(sizeof(t_options));
 	opt->l = 0;
 	opt->r = 0;
@@ -75,6 +76,7 @@ t_options		*ft_init_opt(t_options *opt)
 	opt->max_minor = 0;
 	opt->total = 0;
 	opt->nbfile = 0;
+	opt->actualtime = time(0);
 	opt->actual = -1;
 	opt->tmp = NULL;
 	opt->files = NULL;
@@ -117,36 +119,6 @@ t_options		*ft_order(t_options *opt)
 	return (opt);
 }
 
-t_options		*ft_apply_opt(t_options *opt)
-{
-	char		*tmp;
-	int 		i;
-
-	i = -1;
-	if (opt->r)
-	{
-		if (opt->nbfile % 2)
-		{
-			while (++i < ((opt->nbfile / 2) + 1))
-			{
-				tmp = ft_strdup(opt->files[i]);
-				opt->files[i] = opt->files[opt->nbfile - 1 - i];
-				opt->files[opt->nbfile - 1 - i] = tmp;
-			}
-		}
-		else
-		{
-			while (++i < (opt->nbfile / 2))
-			{
-				tmp = ft_strdup(opt->files[i]);
-				opt->files[i] = opt->files[opt->nbfile - 1 - i];
-				opt->files[opt->nbfile - 1 - i] = tmp;
-			}
-		}
-	}
-	return (opt);
-}
-
 t_options		*ft_parse_options(int argc, char **argv, t_options *opt)
 {
 	int i;
@@ -173,6 +145,6 @@ t_options		*ft_parse_options(int argc, char **argv, t_options *opt)
 			files++;
 		}
 	}
-	opt = ft_apply_opt(ft_order(opt));
+	opt = ft_order(opt);
 	return (opt);
 }

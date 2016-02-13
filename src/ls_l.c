@@ -93,24 +93,34 @@ void		ft_print_links_usr_grp(t_lstdir *lst, t_options *opt)
 	ft_putchar(' ');
 }
 
-void		ft_print_time(char *str)
+void		ft_print_time(t_lstdir *lst, t_options *opt)
 {
-	int i;
-	int space;
+	char *tmp;
+	char *tmp2;
 
-	i = 0;
-	space = 0;
-	while (42)
+	if (opt->actualtime - lst->mdateint <= 15724800)
 	{
-		if (*str == ':' && i == 1)
-			break ;
-		else if (*str == ':' && i == 0)
-			i++;
-		if (space != 0)
-			ft_putchar(*str);
-		if (*str == ' ')
-			space++;
-		str++;
+		tmp = ft_strsub(lst->mdate, 4, 12);
+		ft_putstr(tmp);
+		/*while (42)
+		{
+			if (*str == ':' && i == 1)
+				break ;
+			else if (*str == ':' && i == 0)
+				i++;
+			if (space != 0)
+				ft_putchar(*str);
+			if (*str == ' ')
+				space++;
+			str++;
+		}*/
+	}
+	else
+	{
+		tmp = ft_strsub(lst->mdate, 4, 7);
+		tmp2 = ft_strsub(lst->mdate, 19, 5);
+		ft_putstr(tmp);
+		ft_putstr(tmp2);
 	}
 	ft_putchar(' ');
 }
@@ -119,21 +129,22 @@ void		ft_ls_l(t_lstdir *lst, t_options *opt)
 {
 	char		*buf;
 	char 		*tmp;
-
+	int 		end;
 
 	if (!opt->a && lst->name[0] == '.')
 		return ;
 	ft_print_rights(lst, opt);
 	ft_print_links_usr_grp(lst, opt);
-	ft_print_time(lst->mtime);
+	ft_print_time(lst, opt);
 	ft_putstr(lst->name);
 	if (S_ISLNK(lst->mode))
 	{
-		buf = (char *)malloc(sizeof(char) * 100);
+		buf = (char *)malloc(sizeof(char) * (lst->minor + 1));
 		ft_putstr(" -> ");
 		tmp = ft_strjoin(opt->tmp, "/");
 		tmp = ft_strjoin(tmp, lst->name);
-		readlink(tmp, buf, 100);
+		end = readlink(tmp, buf, lst->minor + 1);
+		buf[end] = '\0';
 		ft_putstr(buf);
 		free(tmp);
 		free(buf);

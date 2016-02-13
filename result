@@ -1,0 +1,135 @@
+68281c68281
+< -rw-r--r--   1 root  wheel   2885 Aug 15  2015 2005-MacPorts-Only-Don-t-build-x86_64h-slice-of-compiler-.patch
+---
+> -rw-r--r--   1 root  wheel   2885 Aug 15 18:00 2005-MacPorts-Only-Don-t-build-x86_64h-slice-of-compiler-.patch
+125863c125863
+< -rwxr-xr-x    1 root  admin  14362932 Oct 23 11:05 emacs-24.5
+---
+> -rwxr-xr-t    1 root  admin  14362932 Oct 23 11:05 emacs-24.5
+137293c137293
+< total 26296
+---
+> total 40928
+137299,137307c137299,137307
+< -rw-r--r--    1 jtranchi  2015_paris  6786196 Feb 13 15:38 test2
+< -rw-r--r--    1 jtranchi  2015_paris     6209 Feb 13 18:03 result
+< drwxr-xr-x   14 jtranchi  2015_paris      476 Feb 13 18:05 src
+< drwxr-xr-x  122 jtranchi  2015_paris     4148 Feb 13 18:05 libft
+< drwxr-xr-x    3 jtranchi  2015_paris      102 Feb 13 18:05 ft_ls.dSYM
+< -rwxr-xr-x    1 jtranchi  2015_paris    21952 Feb 13 18:05 ft_ls
+< drwxr-xr-x   15 jtranchi  2015_paris      510 Feb 13 18:05 .git
+< drwxr-xr-x   14 jtranchi  2015_paris      476 Feb 13 18:05 .
+< -rw-r--r--    1 jtranchi  2015_paris  6633523 Feb 13 18:05 test1
+---
+> -rw-r--r--    1 jtranchi  2015_paris  7498454 Feb 13 15:37 result
+> drwxr-xr-x   14 jtranchi  2015_paris      476 Feb 13 15:38 src
+> drwxr-xr-x  122 jtranchi  2015_paris     4148 Feb 13 15:38 libft
+> drwxr-xr-x    3 jtranchi  2015_paris      102 Feb 13 15:38 ft_ls.dSYM
+> -rwxr-xr-x    1 jtranchi  2015_paris    21856 Feb 13 15:38 ft_ls
+> drwxr-xr-x   14 jtranchi  2015_paris      476 Feb 13 15:38 .
+> -rw-r--r--    1 jtranchi  2015_paris  6788587 Feb 13 15:38 test1
+> drwxr-xr-x   15 jtranchi  2015_paris      510 Feb 13 15:38 .git
+> -rw-r--r--    1 jtranchi  2015_paris  6631424 Feb 13  2016 test2
+137312,137313c137312,137313
+< -rw-r--r--   1 jtranchi  2015_paris  2945 Feb 13 17:54 ft_ls.h
+< drwxr-xr-x  14 jtranchi  2015_paris   476 Feb 13 18:05 ..
+---
+> -rw-r--r--   1 jtranchi  2015_paris  2888 Feb 13 05:33 ft_ls.h
+> drwxr-xr-x  14 jtranchi  2015_paris   476 Feb 13 15:38 ..
+137316c137316
+< total 112
+---
+> total 104
+137319a137320,137323
+> -rw-r--r--   1 jtranchi  2015_paris  4192 Feb 12 21:39 openread.c
+> -rw-r--r--   1 jtranchi  2015_paris  3326 Feb 13 15:33 options.c
+> -rw-r--r--   1 jtranchi  2015_paris  2920 Feb 13 15:34 options.o
+> -rw-r--r--   1 jtranchi  2015_paris  3848 Feb 13 15:34 openread.o
+137321,137330c137325,137330
+< -rw-r--r--   1 jtranchi  2015_paris  4190 Feb 13 17:33 openread.c
+< -rw-r--r--   1 jtranchi  2015_paris  3848 Feb 13 17:33 openread.o
+< -rw-r--r--   1 jtranchi  2015_paris  3355 Feb 13 17:46 options.c
+< -rw-r--r--   1 jtranchi  2015_paris  2968 Feb 13 17:48 options.o
+< -rwxr-xr-x   1 jtranchi  2015_paris  3380 Feb 13 17:54 ls.c
+< -rw-r--r--   1 jtranchi  2015_paris  3708 Feb 13 17:54 ls.o
+< -rw-r--r--   1 jtranchi  2015_paris  4143 Feb 13 18:05 ls_l.c
+< -rw-r--r--   1 jtranchi  2015_paris  3996 Feb 13 18:05 ls_l.o
+< drwxr-xr-x  14 jtranchi  2015_paris   476 Feb 13 18:05 ..
+< drwxr-xr-x  14 jtranchi  2015_paris   476 Feb 13 18:05 .
+---
+> -rw-r--r--   1 jtranchi  2015_paris  3827 Feb 13 15:36 ls_l.c
+> -rw-r--r--   1 jtranchi  2015_paris  3908 Feb 13 15:36 ls_l.o
+> -rwxr-xr-x   1 jtranchi  2015_paris  3382 Feb 13 15:38 ls.c
+> -rw-r--r--   1 jtranchi  2015_paris  3708 Feb 13 15:38 ls.o
+> drwxr-xr-x  14 jtranchi  2015_paris   476 Feb 13 15:38 ..
+> drwxr-xr-x  14 jtranchi  2015_paris   476 Feb 13 15:38 .
+137453,137455c137453,137455
+< -rw-r--r--    1 jtranchi  2015_paris  52520 Feb 13 18:05 libft.a
+< drwxr-xr-x   14 jtranchi  2015_paris    476 Feb 13 18:05 ..
+< drwxr-xr-x  122 jtranchi  2015_paris   4148 Feb 13 18:05 .
+---
+> -rw-r--r--    1 jtranchi  2015_paris  52520 Feb 13 15:38 libft.a
+> drwxr-xr-x   14 jtranchi  2015_paris    476 Feb 13 15:38 ..
+> drwxr-xr-x  122 jtranchi  2015_paris   4148 Feb 13 15:38 .
+137461c137461
+< drwxr-xr-x  122 jtranchi  2015_paris  4148 Feb 13 18:05 ..
+---
+> drwxr-xr-x  122 jtranchi  2015_paris  4148 Feb 13 15:38 ..
+137477c137477
+< drwxr-xr-x  122 jtranchi  2015_paris  4148 Feb 13 18:05 ..
+---
+> drwxr-xr-x  122 jtranchi  2015_paris  4148 Feb 13 15:38 ..
+137986,137987c137986,137987
+< drwxr-xr-x  14 jtranchi  2015_paris  476 Feb 13 18:05 ..
+< drwxr-xr-x   3 jtranchi  2015_paris  102 Feb 13 18:05 .
+---
+> drwxr-xr-x  14 jtranchi  2015_paris  476 Feb 13 15:38 ..
+> drwxr-xr-x   3 jtranchi  2015_paris  102 Feb 13 15:38 .
+137993,137994c137993,137994
+< -rw-r--r--  1 jtranchi  2015_paris  634 Feb 13 18:05 Info.plist
+< drwxr-xr-x  3 jtranchi  2015_paris  102 Feb 13 18:05 ..
+---
+> -rw-r--r--  1 jtranchi  2015_paris  634 Feb 13 15:38 Info.plist
+> drwxr-xr-x  3 jtranchi  2015_paris  102 Feb 13 15:38 ..
+138000c138000
+< drwxr-xr-x  3 jtranchi  2015_paris  102 Feb 13 18:05 DWARF
+---
+> drwxr-xr-x  3 jtranchi  2015_paris  102 Feb 13 15:38 DWARF
+138005,138006c138005,138006
+< -rw-r--r--  1 jtranchi  2015_paris  27949 Feb 13 18:05 ft_ls
+< drwxr-xr-x  3 jtranchi  2015_paris    102 Feb 13 18:05 .
+---
+> -rw-r--r--  1 jtranchi  2015_paris  27778 Feb 13 15:38 ft_ls
+> drwxr-xr-x  3 jtranchi  2015_paris    102 Feb 13 15:38 .
+138022,138024c138022,138024
+< -rw-r--r--    1 jtranchi  2015_paris  6499 Feb 13 18:05 index
+< drwxr-xr-x   14 jtranchi  2015_paris   476 Feb 13 18:05 ..
+< drwxr-xr-x   15 jtranchi  2015_paris   510 Feb 13 18:05 .
+---
+> drwxr-xr-x   14 jtranchi  2015_paris   476 Feb 13 15:38 ..
+> -rw-r--r--    1 jtranchi  2015_paris  6499 Feb 13 15:38 index
+> drwxr-xr-x   15 jtranchi  2015_paris   510 Feb 13 15:38 .
+138030c138030
+< drwxr-xr-x  15 jtranchi  2015_paris  510 Feb 13 18:05 ..
+---
+> drwxr-xr-x  15 jtranchi  2015_paris  510 Feb 13 15:38 ..
+138044c138044
+< drwxr-xr-x  15 jtranchi  2015_paris   510 Feb 13 18:05 ..
+---
+> drwxr-xr-x  15 jtranchi  2015_paris   510 Feb 13 15:38 ..
+138049c138049
+< drwxr-xr-x  15 jtranchi  2015_paris  510 Feb 13 18:05 ..
+---
+> drwxr-xr-x  15 jtranchi  2015_paris  510 Feb 13 15:38 ..
+138056c138056
+< drwxr-xr-x  15 jtranchi  2015_paris   510 Feb 13 18:05 ..
+---
+> drwxr-xr-x  15 jtranchi  2015_paris   510 Feb 13 15:38 ..
+138089c138089
+< drwxr-xr-x  15 jtranchi  2015_paris  510 Feb 13 18:05 ..
+---
+> drwxr-xr-x  15 jtranchi  2015_paris  510 Feb 13 15:38 ..
+138361c138361
+< drwxr-xr-x   15 jtranchi  2015_paris   510 Feb 13 18:05 ..
+---
+> drwxr-xr-x   15 jtranchi  2015_paris   510 Feb 13 15:38 ..

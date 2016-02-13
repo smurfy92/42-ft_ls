@@ -36,6 +36,7 @@ typedef struct			s_options
 	int					max_gid;
 	int					max_major;
 	int					max_minor;
+	time_t				actualtime;
 	char				**files;
 	char				*tmp;
 	int					total;
@@ -58,6 +59,7 @@ typedef struct			s_lstdir
 	int					space_size;
 	int					space_major;
 	int					space_minor;
+	int					old;
 	int					major;
 	int					minor;
 	char				*mtime;
@@ -75,7 +77,7 @@ void					ft_ls_l(t_lstdir *lst, t_options *opt);
 void					ft_print_rights(t_lstdir *lst, t_options *opt);
 void					ft_print_links_usr_grp(t_lstdir *lst, t_options *opt);
 void					ft_print_size(t_lstdir *lst);
-void					ft_print_time(char *str);
+void					ft_print_time(t_lstdir *lst, t_options *opt);
 int						ft_check_cols(int tmp);
 int						ft_compare_date(char *s1, char *s2);
 t_lstdir				*ft_add_stats(t_lstdir *lst, struct stat bufstat, t_options *opt);
