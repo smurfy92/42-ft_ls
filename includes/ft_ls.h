@@ -21,6 +21,8 @@
 #include <pwd.h>
 #include <grp.h>
 #include <time.h>
+#include <sys/xattr.h>
+#include <sys/acl.h>
 
 typedef struct			s_options
 {
@@ -63,13 +65,14 @@ typedef struct			s_lstdir
 	struct s_lstdir		*next;
 }						t_lstdir;
 
+int						ft_is_dir(char *dir);
 void					ft_illegal_opt(char c);
 void					ft_error(char *str, int error);
 void					ft_error_nofile(char *file);
 void					ft_process(char *dir, t_options *opt);
 void					ft_error_message(char *str);
 void					ft_ls_l(t_lstdir *lst, t_options *opt);
-void					ft_print_rights(t_lstdir *lst);
+void					ft_print_rights(t_lstdir *lst, t_options *opt);
 void					ft_print_links_usr_grp(t_lstdir *lst, t_options *opt);
 void					ft_print_size(t_lstdir *lst);
 void					ft_print_time(char *str);

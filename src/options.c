@@ -98,6 +98,55 @@ t_options		*ft_add_option(char c, t_options *opt)
 	return (opt);
 }
 
+t_options		*ft_order(t_options *opt)
+{
+	int 		i;
+	char 		*tmp;
+
+	i = 0;
+	while (++i < opt->nbfile)
+	{
+		if (ft_strcmp(opt->files[i], opt->files[i - 1]) > 0)
+		{
+			tmp = opt->files[i];
+			opt->files[i] = opt->files[i - 1];
+			opt->files[i - 1] = tmp;
+			i = 0;
+		}
+	}
+	return (opt);
+}
+
+t_options		*ft_apply_opt(t_options *opt)
+{
+	char		*tmp;
+	int 		i;
+
+	i = -1;
+	if (opt->r)
+	{
+		if (opt->nbfile % 2)
+		{
+			while (++i < ((opt->nbfile / 2) + 1))
+			{
+				tmp = ft_strdup(opt->files[i]);
+				opt->files[i] = opt->files[opt->nbfile - 1 - i];
+				opt->files[opt->nbfile - 1 - i] = tmp;
+			}
+		}
+		else
+		{
+			while (++i < (opt->nbfile / 2))
+			{
+				tmp = ft_strdup(opt->files[i]);
+				opt->files[i] = opt->files[opt->nbfile - 1 - i];
+				opt->files[opt->nbfile - 1 - i] = tmp;
+			}
+		}
+	}
+	return (opt);
+}
+
 t_options		*ft_parse_options(int argc, char **argv, t_options *opt)
 {
 	int i;
@@ -124,5 +173,6 @@ t_options		*ft_parse_options(int argc, char **argv, t_options *opt)
 			files++;
 		}
 	}
+	opt = ft_apply_opt(ft_order(opt));
 	return (opt);
 }

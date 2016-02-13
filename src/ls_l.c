@@ -12,9 +12,13 @@
 
 #include "../includes/ft_ls.h"
 
-void		ft_print_rights(t_lstdir *lst)
+void		ft_print_rights(t_lstdir *lst, t_options *opt)
 {
 	mode_t val;
+	char *test = NULL;
+	char *tmp = NULL;
+	ssize_t buflen;
+	acl_t a;
 
 	(S_ISCHR(lst->mode)) ? ft_putchar('c') : 0;
 	(S_ISLNK(lst->mode)) ? ft_putchar('l') : 0;
@@ -23,7 +27,6 @@ void		ft_print_rights(t_lstdir *lst)
 	(S_ISFIFO(lst->mode)) ? ft_putchar('p') : 0;
 	(S_ISBLK(lst->mode)) ? ft_putchar('b') : 0;
 	(S_ISSOCK(lst->mode)) ? ft_putchar('s') : 0;
-
 	val = (lst->mode & ~S_IFMT);
 	(val & S_IRUSR) ? ft_putchar('r') : ft_putchar('-');
 	(val & S_IWUSR) ? ft_putchar('w') : ft_putchar('-');
@@ -34,7 +37,15 @@ void		ft_print_rights(t_lstdir *lst)
 	(val & S_IROTH) ? ft_putchar('r') : ft_putchar('-');
 	(val & S_IWOTH) ? ft_putchar('w') : ft_putchar('-');
 	(val & S_IXOTH) ? ft_putchar('x') : ft_putchar('-');
-	ft_putchar(' ');
+	tmp = ft_strjoin(opt->tmp, "/");
+	buflen = listxattr(ft_strjoin(tmp,lst->name), test, 0, 0);
+	a = acl_get_file(ft_strjoin(tmp,lst->name), ACL_TYPE_EXTENDED);
+	if (buflen > 0)
+		ft_putchar('@');
+	else if (a)
+		ft_putchar('+');
+	else
+		ft_putchar(' ');
 }
 
 void		ft_print_links_usr_grp(t_lstdir *lst, t_options *opt)
@@ -72,7 +83,7 @@ void		ft_print_links_usr_grp(t_lstdir *lst, t_options *opt)
 	{
 		i = lst->space_minor;
 		if (opt->max_major)
-			while (i++ <= opt->max_minor + 2)
+			while (i++ <= opt->max_minor + 1)
 				ft_putchar(' ');
 		else
 			while (i++ <= opt->max_minor)
@@ -109,22 +120,22 @@ void		ft_ls_l(t_lstdir *lst, t_options *opt)
 	char		*buf;
 	char 		*tmp;
 
-	buf = (char *)malloc(sizeof(char) * 100);
 
 	if (!opt->a && lst->name[0] == '.')
 		return ;
-	ft_print_rights(lst);
+	ft_print_rights(lst, opt);
 	ft_print_links_usr_grp(lst, opt);
 	ft_print_time(lst->mtime);
 	ft_putstr(lst->name);
 	if (S_ISLNK(lst->mode))
 	{
+		buf = (char *)malloc(sizeof(char) * 100);
 		ft_putstr(" -> ");
 		tmp = ft_strjoin(opt->tmp, "/");
 		tmp = ft_strjoin(tmp, lst->name);
 		readlink(tmp, buf, 100);
-		free(tmp);
 		ft_putstr(buf);
+		free(tmp);
 		free(buf);
 	}
 	ft_putchar('\n');
