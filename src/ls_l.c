@@ -36,7 +36,10 @@ void		ft_print_rights(t_lstdir *lst, t_options *opt)
 	(val & S_IXGRP) ? ft_putchar('x') : ft_putchar('-');
 	(val & S_IROTH) ? ft_putchar('r') : ft_putchar('-');
 	(val & S_IWOTH) ? ft_putchar('w') : ft_putchar('-');
-	(val & S_IXOTH) ? ft_putchar('x') : ft_putchar('-');
+	if ((val & S_ISVTX))
+		ft_putchar('t');
+	else
+		(val & S_IXOTH) ? ft_putchar('x') : ft_putchar('-');
 	tmp = ft_strjoin(opt->tmp, "/");
 	buflen = listxattr(ft_strjoin(tmp,lst->name), test, 0, 0);
 	a = acl_get_file(ft_strjoin(tmp,lst->name), ACL_TYPE_EXTENDED);
@@ -75,7 +78,7 @@ void		ft_print_links_usr_grp(t_lstdir *lst, t_options *opt)
 		ft_putnbr(lst->major);
 		ft_putstr(",");
 		i = lst->space_minor;
-		while (i++ <= opt->max_minor)
+		while (i++ < opt->max_minor)
 			ft_putchar(' ');
 		ft_putnbr(lst->minor);
 	}
@@ -83,7 +86,7 @@ void		ft_print_links_usr_grp(t_lstdir *lst, t_options *opt)
 	{
 		i = lst->space_minor;
 		if (opt->max_major)
-			while (i++ <= opt->max_minor + 1)
+			while (i++ <= opt->max_minor)
 				ft_putchar(' ');
 		else
 			while (i++ <= opt->max_minor)
@@ -102,18 +105,6 @@ void		ft_print_time(t_lstdir *lst, t_options *opt)
 	{
 		tmp = ft_strsub(lst->mdate, 4, 12);
 		ft_putstr(tmp);
-		/*while (42)
-		{
-			if (*str == ':' && i == 1)
-				break ;
-			else if (*str == ':' && i == 0)
-				i++;
-			if (space != 0)
-				ft_putchar(*str);
-			if (*str == ' ')
-				space++;
-			str++;
-		}*/
 	}
 	else
 	{
@@ -139,11 +130,11 @@ void		ft_ls_l(t_lstdir *lst, t_options *opt)
 	ft_putstr(lst->name);
 	if (S_ISLNK(lst->mode))
 	{
-		buf = (char *)malloc(sizeof(char) * (lst->minor + 1));
+		buf = (char *)malloc(sizeof(char) * 255);
 		ft_putstr(" -> ");
 		tmp = ft_strjoin(opt->tmp, "/");
 		tmp = ft_strjoin(tmp, lst->name);
-		end = readlink(tmp, buf, lst->minor + 1);
+		end = readlink(tmp, buf, 255);
 		buf[end] = '\0';
 		ft_putstr(buf);
 		free(tmp);

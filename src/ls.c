@@ -20,8 +20,13 @@ void	ft_ls_rec(t_lstdir *lst, t_options *opt, char *dir)
 	{
 		if (lst->isdir && (!(!opt->a && lst->name[0] == '.')) && ft_strcmp(lst->name, ".") != 0 && ft_strcmp(lst->name, "..") != 0)
 		{
-			tmp = ft_strjoin(dir, "/");
-			tmp = ft_strjoin(tmp, lst->name);
+			if (ft_strcmp(dir, "/") != 0)
+			{
+				tmp = ft_strjoin(dir, "/");
+				tmp = ft_strjoin(tmp, lst->name);
+			}
+			else
+				tmp = ft_strjoin(dir, lst->name);
 			opt->tmp = ft_strdup(tmp);
 			ft_putchar('\n');
 			ft_putstr(opt->tmp);
