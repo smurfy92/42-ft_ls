@@ -6,17 +6,17 @@
 #    By: jtranchi <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/01/28 14:03:26 by jtranchi          #+#    #+#              #
-#    Updated: 2016/02/06 08:13:47 by jtranchi         ###   ########.fr        #
+#    Updated: 2016/02/03 00:09:48 by jtranchi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = ft_ls
 LIB = libft/libft.a
-SRC =	src/ls.c \
-		src/errors.c \
-		src/openread.c \
-		src/ls_l.c \
-		src/options.c
+SRC =	srcs/ls.c \
+		srcs/errors.c \
+		srcs/ls_l.c \
+		srcs/options.c \
+		srcs/openread.c
 OBJ = $(SRC:.c=.o)
 FLAG = -Wall -Werror -Wextra
 CG = \033[92m
@@ -24,47 +24,53 @@ CY =  \033[93m
 CE = \033[0m
 CB = \033[34m
 
-all: $(NAME)
+all: start $(NAME)
 
 $(NAME): $(OBJ)
 	@echo "$(CY)[FT_LS] :$(CE) $(CG)Creating Library$(CE)";
 	-@make -C libft nohd
 	@echo "$(CY)[FT_LS] :$(CE) $(CG)Compiling ft_ls ...$(CE)";
-	@gcc -g -o $(NAME) $(FLAG) $(SRC) $(LIB)
+	@gcc -o $(NAME) $(FLAG) $(SRC) $(LIB)
 
 %.o: %.c
-	@if [ "src/ls.o" = "$@" ]; then make start; fi
 	@echo "$(CY)[FT_LS] :$(CE) $(CG)Compiling $<$(CE)";
 	@gcc $(FLAG) -c $< -o $@
 
 start:
 	@echo "\n\n"
-	@echo "						$(CG)		           ¶¶¶¶¶¶¶¶¶¶¶              $(CE)";
-	@echo "						$(CG)		         ¶¶           ¶¶            $(CE)";
-	@echo "						$(CG)		       ¶¶               ¶¶          $(CE)";
-	@echo "						$(CG)		     ¶¶      $(CY)¶¶$(CE)    $(CY)¶¶$(CE)     $(CG)¶¶        $(CE)";
-	@echo "						$(CG)		   ¶¶       $(CY)¶¶$(CE)    $(CY)¶¶$(CE)        $(CG)¶¶      $(CE)";
-	@echo "						$(CG)		 ¶¶          $(CY)¶¶$(CE)    $(CY)¶¶$(CE)         $(CG)¶¶    $(CE)";
-	@echo "						$(CG)		¶¶                             ¶¶   $(CE)";
-	@echo "						$(CG)		¶¶                             ¶¶ $(CE)";
-	@echo "						$(CG)		¶¶     $(CY)¶¶$(CE)              $(CY)¶¶$(CE)      $(CG)¶¶ $(CE)";
-	@echo "						$(CG)		¶¶      $(CY)¶¶$(CE)            $(CY)¶¶$(CE)       $(CG)¶¶ $(CE)";
-	@echo "						$(CG)		¶¶       $(CY)¶¶$(CE)         $(CY)¶¶$(CE)         $(CG)¶¶   $(CE)";
-	@echo "						$(CG)		 ¶¶         $(CY)¶¶¶¶¶¶¶$(CE)           $(CG)¶¶    $(CE)";
-	@echo "						$(CG)		   ¶¶                        ¶¶     $(CE)";
-	@echo "						$(CG)		     ¶¶                    ¶¶       $(CE)";
-	@echo "						$(CG)		       ¶¶                ¶¶         $(CE)";
-	@echo "						$(CG)		         ¶¶            ¶¶           $(CE)";
-	@echo "						$(CG)		           ¶¶¶¶¶¶¶¶¶¶¶¶             $(CE)";
+	@echo "					$(CG)                          00000000000000000000$(CE)";
+	@echo "					$(CG)                       00000000000000000000000000$(CE)";
+	@echo "					$(CG)                    000000000000000000000000000000000         00   0000$(CE)";
+	@echo "					$(CG)    000000        00000000000000000000000000000000000000       000000000$(CE)";
+	@echo "					$(CG) 00 000000      0000000000    0000000000000    0000000000       0000000$(CE)";
+	@echo "					$(CG) 000000000     0000000000      00000000000      00000000000    0000000$(CE)";
+	@echo "					$(CG)   0000000    00000000000      00000000000      0000000000000000000000$(CE)";
+	@echo "					$(CG)   00000000000000000000000    0000000000000    00000000000000  00000$(CE)";
+	@echo "					$(CG)    000000000000000000000000000000000000000000000000000000000     000$(CE)";
+	@echo "					$(CG)     000   000000000000000000000000000000000000000000000000000     0000$(CE)";
+	@echo "					$(CG)    0000   000000000000000000000000000000000000000000000000000       000$(CE)";
+	@echo "					$(CG)    000    0000000000000000000000000000000000000000000000 0000000000000000$(CE)";
+	@echo "					$(CG)   0000000000000  0000000000000000000000000000000000000   00000000000000000$(CE)";
+	@echo "					$(CG)   0000000000000   0000000000000000000000000000000000     00000000000$(CE)";
+	@echo "					$(CG)  0000       0000    000000000000000000000000000000      000$(CE)";
+	@echo "					$(CG)             00000     0000000000000000000000000         00$(CE)";
+	@echo "					$(CG)               0000          000000000000000           000$(CE)";
+	@echo "					$(CG)                00000                                0000$(CE)";
+	@echo "					$(CG)                 000000      00000000000000        0000$(CE)";
+	@echo "					$(CG)                   00000000     0000000000000   000000$(CE)";
+	@echo "					$(CG)                      00000000000  0000000000000000$(CE)";
+	@echo "					$(CG)                         000000000000000000000$(CE)";
+	@echo "					$(CG)                                 00000000000000$(CE)";
+	@echo "					$(CG)                                     00000000000$(CE)";
+	@echo "					$(CG)                                      0000000000$(CE)";
+	@echo "					$(CG)                                       0000000$(CE)";
 	@echo "\n\n"
-	@echo "							$(CY) - - - - - - - - - - - - - - - - - - - - - -$(CE)";
-	@echo "							$(CY)|$(CE)$(CG)     ______ _______     _       _____      $(CE)$(CY)|$(CE)";
-	@echo "							$(CY)|$(CE)$(CG)    |  ____|__   __|   | |     / ____|     $(CE)$(CY)|$(CE)";
-	@echo "							$(CY)|$(CE)$(CG)    | |__     | |      | |    | (___       $(CE)$(CY)|$(CE)";
-	@echo "							$(CY)|$(CE)$(CG)    |  __|    | |      | |     \___ \      $(CE)$(CY)|$(CE)";
-	@echo "							$(CY)|$(CE)$(CG)    | |       | |      | |____ ____) |     $(CE)$(CY)|$(CE)";
-	@echo "							$(CY)|$(CE)$(CG)    |_|       |_|      |______|_____/      $(CE)$(CY)|$(CE)";
-	@echo "							$(CY) - - - - - - - - - - - - - - - - - - - - - -$(CE)";
+	@echo "							$(CG)     ______ _______     _       _____      $(CE)";
+	@echo "							$(CG)    |  ____|__   __|   | |     / ____|     $(CE)";
+	@echo "							$(CG)    | |__     | |      | |    | (___       $(CE)";
+	@echo "							$(CG)    |  __|    | |      | |     \___ \      $(CE)";
+	@echo "							$(CG)    | |       | |      | |____ ____) |     $(CE)";
+	@echo "							$(CG)    |_|       |_|      |______|_____/      $(CE)";
 
 clean: start
 	@echo "$(CY)[FT_LS] :$(CE) $(CG)Cleaning Library ...$(CE)";
@@ -78,6 +84,6 @@ fclean: start clean
 	@echo "$(CY)[FT_LS] :$(CE) $(CG)Cleaning ft_ls ...$(CE)";
 	@/bin/rm -f $(NAME)
 
-re: start fclean all
+re: fclean all
 
 .PHONY: all clean fclean re
