@@ -89,7 +89,7 @@ void	ft_process(char *dir, t_options *opt)
 		}
 		while (lst)
 		{
-			if (opt->l && (!(!opt->a && lst->name[0] == '.')))
+			if ((opt->l || opt->o || opt->p) && (!(!opt->a && lst->name[0] == '.')))
 				ft_ls_l(lst, opt);
 			else
 				if (!(!opt->a && lst->name[0] == '.'))

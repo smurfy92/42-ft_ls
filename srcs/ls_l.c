@@ -63,12 +63,16 @@ void		ft_print_links_usr_grp(t_lstdir *lst, t_options *opt)
 	ft_putstr(lst->pwname);
 	ft_putchar(' ');
 	i = lst->space_uid;
+	(opt->o) ? i++ : 0;
 	while (i++ <= opt->max_uid)
 		ft_putchar(' ');
-	ft_putstr(lst->grpname);
-	i = lst->space_gid;
-	while (i++ <= opt->max_gid)
-		ft_putchar(' ');
+	if (!opt->o)
+	{
+		ft_putstr(lst->grpname);
+		i = lst->space_gid;
+		while (i++ <= opt->max_gid)
+			ft_putchar(' ');
+	}
 	i = lst->space_major;
 	if (opt->max_major)
 		while (i++ <= opt->max_major + 1)
@@ -128,6 +132,7 @@ void		ft_ls_l(t_lstdir *lst, t_options *opt)
 	ft_print_links_usr_grp(lst, opt);
 	ft_print_time(lst, opt);
 	ft_putstr(lst->name);
+	(lst->isdir && opt->p) ? ft_putchar('/') : 0;
 	if (S_ISLNK(lst->mode))
 	{
 		buf = (char *)malloc(sizeof(char) * 255);
