@@ -55,11 +55,10 @@ int			ft_check_cols(int tmp)
 	return (i);
 }
 
-
 void		ft_illegal_opt(char c)
 {
 	ft_putstr("ft_ls: illegal option -- ");
 	ft_putchar(c);
 	ft_putchar('\n');
-	ft_error_message("usage: ft_ls [-lartRo] [file ...]");
+	ft_error_message("usage: ft_ls [-lartRopg] [file ...]");
 }

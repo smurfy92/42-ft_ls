@@ -12,13 +12,14 @@
 
 #include "../includes/ft_ls.h"
 
-void	ft_ls_rec(t_lstdir *lst, t_options *opt, char *dir)
+void		ft_ls_rec(t_lstdir *lst, t_options *opt, char *dir)
 {
-	char 			*tmp;
+	char		*tmp;
 
 	while (lst)
 	{
-		if (lst->isdir && (!(!opt->a && lst->name[0] == '.')) && ft_strcmp(lst->name, ".") != 0 && ft_strcmp(lst->name, "..") != 0)
+		if (lst->isdir && (!(!opt->a && lst->name[0] == '.')) &&
+		ft_strcmp(lst->name, ".") != 0 && ft_strcmp(lst->name, "..") != 0)
 		{
 			if (ft_strcmp(dir, "/") != 0)
 			{
@@ -37,9 +38,9 @@ void	ft_ls_rec(t_lstdir *lst, t_options *opt, char *dir)
 	}
 }
 
-void	ft_print_dir(char *dir, t_options *opt)
+void		ft_print_dir(char *dir, t_options *opt)
 {
-	struct stat 	bufstat;
+	struct stat		bufstat;
 	t_lstdir		*lst;
 
 	if (!dir)
@@ -47,106 +48,85 @@ void	ft_print_dir(char *dir, t_options *opt)
 	if (opt->a == 0 && dir[0] == '.')
 		return ;
 	if (stat(dir, &bufstat) == -1)
-	{
-		//perror("stat");
-		//ft_putstr("ls -r");
-	}
+		ft_error(dir, 2);
 	if (opt->l)
 	{
 		lst = (t_lstdir*)malloc(sizeof(t_lstdir));
 		lst->name = ft_strdup(dir);
 		lst->next = NULL;
 		lst = ft_add_stats(lst, bufstat, opt);
-		ft_print_rights(lst, opt);
+		ft_print_rights(lst);
 		ft_print_links_usr_grp(lst, opt);
 		ft_print_time(lst, opt);
 	}
 	ft_putendl(dir);
 }
 
-void	ft_process(char *dir, t_options *opt)
+void		ft_process(char *dir, t_options *opt)
 {
 	t_lstdir *lst;
 	t_lstdir *tmp;
 
-	opt->max_lnk = 0;
-	opt->max_uid = 0;
-	opt->max_gid = 0;
-	opt->max_minor = 0;
-	opt->max_major = 0;
+	opt = ft_refresh_opt(opt);
 	if ((lst = ft_read_dir(dir, opt)) != NULL)
 	{
-		if (opt->t)
-			lst = ft_ls_t(lst);
-		if (opt->r)
-			lst = ft_ls_r(lst);
+		(opt->t) ? lst = ft_ls_t(lst) : 0;
+		(opt->r) ? lst = ft_ls_r(lst) : 0;
 		tmp = lst;
-		if (opt->l)
-		{
-			ft_putstr("total ");
-			ft_putnbr(opt->total);
-			ft_putchar('\n');
-		}
+		(opt->l) ? ft_print_total(opt->total) : 0;
 		while (lst)
 		{
-			if ((opt->l || opt->o || opt->p) && (!(!opt->a && lst->name[0] == '.')))
+			if ((opt->l || opt->o || opt->p || opt->g) &&
+			(!(!opt->a && lst->name[0] == '.')))
 				ft_ls_l(lst, opt);
 			else
-				if (!(!opt->a && lst->name[0] == '.'))
-					ft_putendl(lst->name);
+				(!(!opt->a && lst->name[0] == '.')) ?
+				ft_putendl(lst->name) : 0;
 			lst = lst->next;
 		}
-		if (opt->R)
-			ft_ls_rec(tmp, opt, dir);
+		(opt->rec) ? ft_ls_rec(tmp, opt, dir) : 0;
 	}
 	else
-		if (!opt->R)
-			ft_print_dir(dir, opt);
+		(!opt->rec) ? ft_print_dir(dir, opt) : 0;
 }
 
-int		ft_is_dir(char *dir)
+int			ft_is_dir(char *dir)
 {
-	struct stat 	bufstat;
+	struct stat		bufstat;
 
 	if (stat(dir, &bufstat) == -1)
 		return (0);
 	else
+	{
 		if (S_IFDIR & bufstat.st_mode)
 			return (1);
+	}
 	return (0);
 }
 
-int		main(int argc, char **argv)
+int			main(int argc, char **argv)
 {
 	t_options	*opt;
 
 	opt = NULL;
 	opt = ft_init_opt(opt);
-	if (argc == 1)
+	opt = ft_parse_options(argc, argv, opt);
+	if (opt->nbfile == 0)
 	{
 		opt->tmp = ft_strdup(".");
 		ft_process(".", opt);
 	}
-	else
+	while (++opt->actual < opt->nbfile)
 	{
-		opt = ft_parse_options(argc, argv, opt);
-		if (opt->nbfile == 0)
+		opt->tmp = ft_strdup(opt->files[opt->actual]);
+		(opt->actual != 0 && ft_is_dir(opt->files[opt->actual]))
+		? ft_putchar('\n') : 0;
+		if (opt->nbfile > 1)
 		{
-			opt->tmp = ft_strdup(".");
-			ft_process(".", opt);
+			ft_putstr(opt->files[opt->actual]);
+			ft_putstr(":\n");
 		}
-		while (++opt->actual < opt->nbfile)
-		{
-			opt->tmp = ft_strdup(opt->files[opt->actual]);
-			if (opt->actual != 0 && ft_is_dir(opt->files[opt->actual]))
-				ft_putchar('\n');
-			if (opt->nbfile > 1)
-			{
-				ft_putstr(opt->files[opt->actual]);
-				ft_putstr(":\n");
-			}
-			ft_process(opt->files[opt->actual], opt);
-		}
+		ft_process(opt->files[opt->actual], opt);
 	}
 	return (0);
 }

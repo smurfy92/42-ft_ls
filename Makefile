@@ -16,7 +16,9 @@ SRC =	srcs/ls.c \
 		srcs/errors.c \
 		srcs/ls_l.c \
 		srcs/options.c \
-		srcs/openread.c
+		srcs/openread.c \
+		srcs/bonus.c \
+		srcs/rights.c
 OBJ = $(SRC:.c=.o)
 FLAG = -Wall -Werror -Wextra
 CG = \033[92m
