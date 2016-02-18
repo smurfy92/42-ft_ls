@@ -122,11 +122,10 @@ int			main(int argc, char **argv)
 	}
 	while (++opt->actual < opt->nbfile)
 	{
-		while ()
 		opt->tmp = ft_strdup(opt->files[opt->actual]);
 		(opt->actual != 0 && ft_is_dir(opt->files[opt->actual]))
 		? ft_putchar('\n') : 0;
-		if (opt->nbfile > 1)
+		if (opt->nbfile > 1 && ft_is_dir(opt->files[opt->actual]))
 		{
 			ft_putstr(opt->files[opt->actual]);
 			ft_putstr(":\n");

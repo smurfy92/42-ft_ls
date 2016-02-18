@@ -118,7 +118,7 @@ t_options		*ft_parse_options(int argc, char **argv, t_options *opt)
 	while (++i < argc)
 	{
 		j = 0;
-		if (argv[i][0] == '-' && files == 0)
+		if (argv[i][0] == '-' && files == 0 && !ft_is_dir(argv[i]))
 		{
 			(!argv[i][1]) ? ft_error(argv[i], 2) : 0;
 			while (argv[i][++j])
