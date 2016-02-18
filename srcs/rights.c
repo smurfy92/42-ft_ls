@@ -12,7 +12,60 @@
 
 #include "../includes/ft_ls.h"
 
-void		ft_print_rights(t_lstdir *lst)
+int				ft_check_cols(int tmp)
+{
+	int i;
+
+	i = 1;
+	while (tmp > 9)
+	{
+		tmp /= 10;
+		i++;
+	}
+	return (i);
+}
+
+t_options		*ft_order_by_date(t_options *opt)
+{
+	int 			i;
+	struct stat		bufstat1;
+	struct stat		bufstat2;
+	char			*tmp;
+
+	i = 0;
+	while (++i < opt->nbfile)
+	{
+		lstat(opt->files[i - 1], &bufstat1);
+		lstat(opt->files[i], &bufstat2);
+		if (bufstat1.st_mtime < bufstat2.st_mtime)
+		{
+			tmp = ft_strdup(opt->files[i]);
+			opt->files[i] = opt->files[i - 1];
+			opt->files[i - 1] = ft_strdup(tmp);
+			i = 0;
+		}
+
+	}
+	return (opt);
+}
+
+t_options		*ft_order_reverse(t_options *opt)
+{
+	int				i;
+	char			*tmp;
+
+	i = -1;
+	while (++i < opt->nbfile / 2)
+	{
+		tmp = opt->files[i];
+		opt->files[i] = opt->files[opt->nbfile - 1 - i];
+		opt->files[opt->nbfile - 1 - i] = tmp;
+	}
+	return (opt);
+
+}
+
+void			ft_print_rights(t_lstdir *lst)
 {
 	mode_t val;
 
@@ -26,10 +79,16 @@ void		ft_print_rights(t_lstdir *lst)
 	val = (lst->mode & ~S_IFMT);
 	(val & S_IRUSR) ? ft_putchar('r') : ft_putchar('-');
 	(val & S_IWUSR) ? ft_putchar('w') : ft_putchar('-');
-	(val & S_IXUSR) ? ft_putchar('x') : ft_putchar('-');
+	if (val & S_ISUID)
+		ft_putchar('s');
+	else
+		(val & S_IXUSR) ? ft_putchar('x') : ft_putchar('-');
 	(val & S_IRGRP) ? ft_putchar('r') : ft_putchar('-');
 	(val & S_IWGRP) ? ft_putchar('w') : ft_putchar('-');
-	(val & S_IXGRP) ? ft_putchar('x') : ft_putchar('-');
+	if (val & S_ISGID)
+		ft_putchar('s');
+	else
+		(val & S_IXGRP) ? ft_putchar('x') : ft_putchar('-');
 	(val & S_IROTH) ? ft_putchar('r') : ft_putchar('-');
 	(val & S_IWOTH) ? ft_putchar('w') : ft_putchar('-');
 }

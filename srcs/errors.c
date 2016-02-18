@@ -31,6 +31,19 @@ void		ft_error(char *str, int error)
 	}
 }
 
+void		ft_error_noend(char *str, int error)
+{
+	if (error == 20)
+		return ;
+	else
+	{
+		ft_putstr("ls: ");
+		ft_putstr(str);
+		ft_putstr(": ");
+		ft_putendl(strerror(error));
+	}
+}
+
 int			ft_compare_date(char *s1, char *s2)
 {
 	if (ft_strncmp((s1 + 20), (s2 + 20), 4) > 0)
@@ -40,19 +53,6 @@ int			ft_compare_date(char *s1, char *s2)
 	if (ft_strncmp((s1 + 8), (s2 + 8), 10) < 0)
 		return (0);
 	return (1);
-}
-
-int			ft_check_cols(int tmp)
-{
-	int i;
-
-	i = 1;
-	while (tmp > 9)
-	{
-		tmp /= 10;
-		i++;
-	}
-	return (i);
 }
 
 void		ft_illegal_opt(char c)

@@ -101,6 +101,8 @@ t_options		*ft_order(t_options *opt)
 			i = 0;
 		}
 	}
+	(opt->t) ? (opt = ft_order_by_date(opt)) : 0;
+	(opt->r) ? (opt = ft_order_reverse(opt)) : 0;
 	return (opt);
 }
 

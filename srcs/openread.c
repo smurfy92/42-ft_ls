@@ -87,6 +87,7 @@ t_lstdir		*ft_create_lst(char *buf, t_options *opt)
 	t_lstdir		*lst;
 	char			*tmpstat;
 	struct stat		bufstat;
+	int				err;
 
 	lst = NULL;
 	if (opt->tmp[ft_strlen(opt->tmp) - 1] == '/')
@@ -97,7 +98,10 @@ t_lstdir		*ft_create_lst(char *buf, t_options *opt)
 		tmpstat = ft_strdup(ft_strjoin(tmpstat, buf));
 	}
 	if (lstat(tmpstat, &bufstat) == -1)
-		ft_error(tmpstat, 2);
+	{
+		err = errno;
+		ft_error(tmpstat, err);
+	}
 	lst = (t_lstdir*)malloc(sizeof(t_lstdir));
 	lst->name = ft_strdup(buf);
 	if (!(!opt->a && lst->name[0] == '.'))

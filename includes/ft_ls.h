@@ -76,6 +76,7 @@ typedef struct			s_lstdir
 int						ft_check_cols(int tmp);
 int						ft_compare_date(char *s1, char *s2);
 int						ft_is_dir(char *dir);
+void					ft_error_noend(char *str, int error);
 void					ft_print_total(int total);
 void					ft_illegal_opt(char c);
 void					ft_error(char *str, int error);
@@ -98,6 +99,8 @@ t_lstdir				*ft_create_lst(char *buf, t_options *opt);
 t_lstdir				*ft_ls_t(t_lstdir *lst);
 t_lstdir				*ft_ls_r(t_lstdir *lst);
 t_lstdir				*ft_read_dir(char *dir, t_options *opt);
+t_options				*ft_order_reverse(t_options *opt);
+t_options				*ft_order_by_date(t_options *opt);
 t_options				*ft_refresh_opt(t_options *opt);
 t_options				*ft_parse_options(int argc, char **argv,
 t_options *opt);

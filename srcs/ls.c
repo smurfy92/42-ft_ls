@@ -42,13 +42,17 @@ void		ft_print_dir(char *dir, t_options *opt)
 {
 	struct stat		bufstat;
 	t_lstdir		*lst;
+	int				err;
 
 	if (!dir)
 		return ;
 	if (opt->a == 0 && dir[0] == '.')
 		return ;
 	if (stat(dir, &bufstat) == -1)
-		ft_error(dir, 2);
+	{
+		err = errno;
+		ft_error(dir, err);
+	}
 	if (opt->l)
 	{
 		lst = (t_lstdir*)malloc(sizeof(t_lstdir));
@@ -118,6 +122,7 @@ int			main(int argc, char **argv)
 	}
 	while (++opt->actual < opt->nbfile)
 	{
+		while ()
 		opt->tmp = ft_strdup(opt->files[opt->actual]);
 		(opt->actual != 0 && ft_is_dir(opt->files[opt->actual]))
 		? ft_putchar('\n') : 0;

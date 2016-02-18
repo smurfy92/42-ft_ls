@@ -77,7 +77,7 @@ void		ft_print_sizes(t_lstdir *lst, t_options *opt)
 	if (S_ISCHR(lst->mode) || S_ISBLK(lst->mode))
 	{
 		ft_putnbr(lst->major);
-		ft_putstr(", ");
+		ft_putstr(",");
 		while (i++ < opt->max_minor)
 			ft_putchar(' ');
 		ft_putnbr(lst->minor);
@@ -123,6 +123,7 @@ void		ft_ls_l(t_lstdir *lst, t_options *opt)
 	if (!opt->a && lst->name[0] == '.')
 		return ;
 	ft_print_rights(lst);
+	ft_print_acl(lst, opt);
 	ft_print_links_usr_grp(lst, opt);
 	ft_print_time(lst, opt);
 	ft_putstr(lst->name);
