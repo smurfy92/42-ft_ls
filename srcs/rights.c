@@ -12,6 +12,34 @@
 
 #include "../includes/ft_ls.h"
 
+t_options		*ft_parse(t_options *opt, int i, char **argv)
+{
+	int				j;
+	struct stat		bufstat;
+	int				files;
+
+	files = 0;
+	j = 0;
+	if (argv[i][0] == '-' && files == 0 && !ft_is_dir(argv[i]))
+	{
+		(!argv[i][1]) ? ft_error(argv[i], 2) : 0;
+		while (argv[i][++j])
+			opt = ft_add_option(argv[i][j], opt);
+	}
+	else
+	{
+		if (lstat(argv[i], &bufstat) != -1)
+		{
+			opt->files[files] = ft_strdup(argv[i]);
+			opt->nbfile = ++files;
+		}
+		else
+			perror(argv[i]);
+		opt->errors++;
+	}
+	return (opt);
+}
+
 int				ft_check_cols(int tmp)
 {
 	int i;

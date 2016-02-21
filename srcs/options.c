@@ -44,6 +44,7 @@ t_options		*ft_init_opt(t_options *opt)
 	opt->r = 0;
 	opt->a = 0;
 	opt->rec = 0;
+	opt->errors = 0;
 	opt->t = 0;
 	opt->o = 0;
 	opt->p = 0;
@@ -109,33 +110,11 @@ t_options		*ft_order(t_options *opt)
 t_options		*ft_parse_options(int argc, char **argv, t_options *opt)
 {
 	int i;
-	int j;
-	int	files;
-	struct stat		bufstat;
 
 	opt->files = (char**)malloc(sizeof(char*) * 1000);
 	i = 0;
-	files = 0;
 	while (++i < argc)
-	{
-		j = 0;
-		if (argv[i][0] == '-' && files == 0 && !ft_is_dir(argv[i]))
-		{
-			(!argv[i][1]) ? ft_error(argv[i], 2) : 0;
-			while (argv[i][++j])
-				opt = ft_add_option(argv[i][j], opt);
-		}
-		else
-		{
-			if (lstat(argv[i], &bufstat) != -1)
-			{
-				(opt->files[files] = ft_strdup(argv[i]));
-				opt->nbfile = ++files;
-			}
-			else
-				perror(argv[i]);
-		}
-	}
+		opt = ft_parse(opt, i, argv);
 	opt = ft_order(opt);
 	return (opt);
 }

@@ -111,7 +111,7 @@ int			main(int argc, char **argv)
 	opt = NULL;
 	opt = ft_init_opt(opt);
 	opt = ft_parse_options(argc, argv, opt);
-	if (opt->nbfile == 0)
+	if (opt->nbfile == 0 && opt->errors == 0)
 	{
 		opt->tmp = ft_strdup(".");
 		ft_process(".", opt);

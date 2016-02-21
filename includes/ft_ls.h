@@ -47,6 +47,7 @@ typedef struct			s_options
 	char				*tmp;
 	int					total;
 	int					nbfile;
+	int					errors;
 	int					actual;
 }						t_options;
 
@@ -100,6 +101,8 @@ t_lstdir				*ft_create_lst(char *buf, t_options *opt);
 t_lstdir				*ft_ls_t(t_lstdir *lst);
 t_lstdir				*ft_ls_r(t_lstdir *lst);
 t_lstdir				*ft_read_dir(char *dir, t_options *opt);
+t_options				*ft_add_option(char c, t_options *opt);
+t_options				*ft_parse(t_options *opt, int i, char **argv);
 t_options				*ft_order_reverse(t_options *opt);
 t_options				*ft_order_by_date(t_options *opt);
 t_options				*ft_refresh_opt(t_options *opt);
