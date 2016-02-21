@@ -42,24 +42,20 @@ void		ft_print_dir(char *dir, t_options *opt)
 {
 	struct stat		bufstat;
 	t_lstdir		*lst;
-	int				err;
 
 	if (!dir)
 		return ;
 	if (opt->a == 0 && dir[0] == '.')
 		return ;
 	if (stat(dir, &bufstat) == -1)
-	{
-		err = errno;
-		ft_error(dir, err);
-	}
+		perror(dir);
 	if (opt->l)
 	{
 		lst = (t_lstdir*)malloc(sizeof(t_lstdir));
 		lst->name = ft_strdup(dir);
 		lst->next = NULL;
 		lst = ft_add_stats(lst, bufstat, opt);
-		ft_print_rights(lst);
+		ft_print_rights(lst, opt);
 		ft_print_links_usr_grp(lst, opt);
 		ft_print_time(lst, opt);
 	}

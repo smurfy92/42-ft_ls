@@ -34,6 +34,7 @@ void		ft_print_acl(t_lstdir *lst, t_options *opt)
 		ft_putchar('+');
 	else
 		ft_putchar(' ');
+	ft_print_links_usr_grp(lst, opt);
 }
 
 void		ft_print_links_usr_grp(t_lstdir *lst, t_options *opt)
@@ -112,6 +113,7 @@ void		ft_print_time(t_lstdir *lst, t_options *opt)
 		ft_putstr(tmp2);
 	}
 	ft_putchar(' ');
+	ft_putstr(lst->name);
 }
 
 void		ft_ls_l(t_lstdir *lst, t_options *opt)
@@ -122,18 +124,17 @@ void		ft_ls_l(t_lstdir *lst, t_options *opt)
 
 	if (!opt->a && lst->name[0] == '.')
 		return ;
-	ft_print_rights(lst);
-	ft_print_acl(lst, opt);
-	ft_print_links_usr_grp(lst, opt);
+	tmp = ft_strjoin(opt->tmp, "/");
+	tmp = ft_strjoin(tmp, lst->name);
+	((access(tmp, R_OK) == -1) && (access(tmp, W_OK) == -1) &&\
+	(access(tmp, X_OK) == -1) && ft_is_dir(tmp)) ? perror(lst->name) : 0;
+	ft_print_rights(lst, opt);
 	ft_print_time(lst, opt);
-	ft_putstr(lst->name);
 	(lst->isdir && opt->p) ? ft_putchar('/') : 0;
 	if (S_ISLNK(lst->mode))
 	{
 		buf = (char *)malloc(sizeof(char) * 255);
 		ft_putstr(" -> ");
-		tmp = ft_strjoin(opt->tmp, "/");
-		tmp = ft_strjoin(tmp, lst->name);
 		end = readlink(tmp, buf, 255);
 		buf[end] = '\0';
 		ft_putstr(buf);

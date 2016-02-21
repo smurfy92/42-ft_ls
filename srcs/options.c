@@ -111,6 +111,7 @@ t_options		*ft_parse_options(int argc, char **argv, t_options *opt)
 	int i;
 	int j;
 	int	files;
+	struct stat		bufstat;
 
 	opt->files = (char**)malloc(sizeof(char*) * 1000);
 	i = 0;
@@ -126,9 +127,13 @@ t_options		*ft_parse_options(int argc, char **argv, t_options *opt)
 		}
 		else
 		{
-			opt->files[files] = ft_strdup(argv[i]);
-			opt->nbfile = files + 1;
-			files++;
+			if (lstat(argv[i], &bufstat) != -1)
+			{
+				(opt->files[files] = ft_strdup(argv[i]));
+				opt->nbfile = ++files;
+			}
+			else
+				perror(argv[i]);
 		}
 	}
 	opt = ft_order(opt);

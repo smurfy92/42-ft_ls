@@ -84,10 +84,11 @@ void					ft_error_nofile(char *file);
 void					ft_process(char *dir, t_options *opt);
 void					ft_error_message(char *str);
 void					ft_ls_l(t_lstdir *lst, t_options *opt);
-void					ft_print_rights(t_lstdir *lst);
+void					ft_print_rights(t_lstdir *lst, t_options *opt);
 void					ft_print_links_usr_grp(t_lstdir *lst, t_options *opt);
 void					ft_print_sizes(t_lstdir *lst, t_options *opt);
 void					ft_print_time(t_lstdir *lst, t_options *opt);
+void					ft_print_acl(t_lstdir *lst, t_options *opt);
 t_lstdir				*ft_ls_t_init(t_lstdir *lst);
 t_lstdir				*ft_add_stats(t_lstdir *lst,
 struct stat bufstat, t_options *opt);

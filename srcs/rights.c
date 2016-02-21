@@ -27,7 +27,7 @@ int				ft_check_cols(int tmp)
 
 t_options		*ft_order_by_date(t_options *opt)
 {
-	int 			i;
+	int				i;
 	struct stat		bufstat1;
 	struct stat		bufstat2;
 	char			*tmp;
@@ -44,7 +44,6 @@ t_options		*ft_order_by_date(t_options *opt)
 			opt->files[i - 1] = ft_strdup(tmp);
 			i = 0;
 		}
-
 	}
 	return (opt);
 }
@@ -62,10 +61,9 @@ t_options		*ft_order_reverse(t_options *opt)
 		opt->files[opt->nbfile - 1 - i] = tmp;
 	}
 	return (opt);
-
 }
 
-void			ft_print_rights(t_lstdir *lst)
+void			ft_print_rights(t_lstdir *lst, t_options *opt)
 {
 	mode_t val;
 
@@ -91,4 +89,5 @@ void			ft_print_rights(t_lstdir *lst)
 		(val & S_IXGRP) ? ft_putchar('x') : ft_putchar('-');
 	(val & S_IROTH) ? ft_putchar('r') : ft_putchar('-');
 	(val & S_IWOTH) ? ft_putchar('w') : ft_putchar('-');
+	ft_print_acl(lst, opt);
 }
