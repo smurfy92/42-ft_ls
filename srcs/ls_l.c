@@ -27,7 +27,10 @@ void		ft_print_acl(t_lstdir *lst, t_options *opt)
 		(val & S_IXOTH) ? ft_putchar('x') : ft_putchar('-');
 	tmp = ft_strjoin(opt->tmp, "/");
 	buflen = listxattr(ft_strjoin(tmp, lst->name), (char*)NULL, 0, 0);
-	a = acl_get_file(ft_strjoin(tmp, lst->name), ACL_TYPE_EXTENDED);
+	if (S_ISLNK(lst->mode))
+		a = acl_get_link_np(ft_strjoin(tmp, lst->name), ACL_TYPE_EXTENDED);
+	else
+		a = acl_get_file(ft_strjoin(tmp, lst->name), ACL_TYPE_EXTENDED);
 	if (buflen > 0)
 		ft_putchar('@');
 	else if (a)
@@ -72,7 +75,7 @@ void		ft_print_sizes(t_lstdir *lst, t_options *opt)
 
 	i = lst->space_major;
 	if (opt->max_major)
-		while (i++ <= opt->max_major + 1)
+		while (i++ <= opt->max_major + 2)
 			ft_putchar(' ');
 	i = lst->space_minor;
 	if (S_ISCHR(lst->mode) || S_ISBLK(lst->mode))
