@@ -14,23 +14,22 @@
 
 void		ft_print_acl(t_lstdir *lst, t_options *opt)
 {
-	mode_t	val;
 	ssize_t	buflen;
 	char	*tmp;
 	acl_t	a;
 
 	tmp = NULL;
-	val = (lst->mode & ~S_IFMT);
-	if ((val & S_ISVTX))
+	if (((lst->mode & ~S_IFMT) & S_ISVTX))
 		ft_putchar('t');
 	else
-		(val & S_IXOTH) ? ft_putchar('x') : ft_putchar('-');
+		((lst->mode & ~S_IFMT) & S_IXOTH) ? ft_putchar('x') : ft_putchar('-');
 	tmp = ft_strjoin(opt->tmp, "/");
-	buflen = listxattr(ft_strjoin(tmp, lst->name), (char*)NULL, 0, 0);
-	if (S_ISLNK(lst->mode))
-		a = acl_get_link_np(ft_strjoin(tmp, lst->name), ACL_TYPE_EXTENDED);
-	else
-		a = acl_get_file(ft_strjoin(tmp, lst->name), ACL_TYPE_EXTENDED);
+	(S_ISLNK(lst->mode)) ? (buflen = listxattr(ft_strjoin(tmp, lst->name),\
+	(char*)NULL, 0, XATTR_NOFOLLOW)) : (buflen = listxattr(ft_strjoin(tmp,\
+	lst->name), (char*)NULL, 0, 0));
+	(S_ISLNK(lst->mode)) ? (a = acl_get_link_np(ft_strjoin(tmp, lst->name),\
+	ACL_TYPE_EXTENDED)) : (a = acl_get_file(ft_strjoin(tmp, lst->name),\
+	ACL_TYPE_EXTENDED));
 	if (buflen > 0)
 		ft_putchar('@');
 	else if (a)

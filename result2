@@ -1,8 +1,0 @@
-9,11c9,11
-< lrwxr-xr-x    1 root    wheel     11 Nov  8 17:52 tmp -> private/tmp
-< lrwxr-xr-x    1 root    wheel     11 Nov  8 17:52 etc -> private/etc
-< lrwxr-xr-x    1 root    wheel     11 Nov  8 17:52 var -> private/var
----
-> lrwxr-xr-x@   1 root    wheel     11 Nov  8 17:52 tmp -> private/tmp
-> lrwxr-xr-x@   1 root    wheel     11 Nov  8 17:52 etc -> private/etc
-> lrwxr-xr-x@   1 root    wheel     11 Nov  8 17:52 var -> private/var
