@@ -1,0 +1,32 @@
+total 69
+drwxr-xr-x    2 root    admin     68 May  1  2015 .PKInstallSandboxManager
+drwx------    5 root    wheel    170 Aug  5  2015 .Spotlight-V100
+-rw-r--r--@   1 root    wheel    313 Aug 23  2015 installer.failurerequests
+d-wx-wx-wt    2 root    wheel     68 Sep  3  2015 .Trashes
+----------    1 root    admin      0 Sep 16 05:00 .file
+drwxr-xr-x@  39 root    wheel   1326 Oct 18 01:47 bin
+drwxr-xr-x@   4 root    wheel    136 Nov  8 17:48 System
+lrwxr-xr-x    1 root    wheel     11 Nov  8 17:52 tmp -> private/tmp
+lrwxr-xr-x    1 root    wheel     11 Nov  8 17:52 etc -> private/etc
+lrwxr-xr-x    1 root    wheel     11 Nov  8 17:52 var -> private/var
+drwxr-xr-x@  59 root    wheel   2006 Nov  8 17:52 sbin
+drwxr-xr-x@   6 root    wheel    204 Nov  8 17:53 private
+drwxrwxr-t@   2 root    admin     68 Nov  8 17:53 cores
+drwxr-xr-x    5 root    admin    170 Nov  8 17:53 Users
+drwxr-xr-x@   2 root    wheel     68 Nov  8 17:53 Network
+drwxr-xr-x@   2 root    wheel     68 Nov  8 17:53 .vol
+drwxr-xr-x    3 root    wheel    102 Nov 13 16:43 Developer
+drwxr-xr-x    4 root    wheel    136 Dec 11 11:24 opt
+drwxr-xr-x@  13 root    wheel    442 Dec 11 11:29 usr
+drwxr-xr-x+   3 root    wheel    102 Jan 27 10:24 .MobileBackups
+drwxr-xr-x   33 root    wheel   1190 Jan 27 10:25 ..
+drwxr-xr-x   33 root    wheel   1190 Jan 27 10:25 .
+drwxr-xr-x+  62 root    wheel   2108 Feb 21 21:42 Library
+dr-xr-xr-x    3 root    wheel   4220 Mar  1 16:08 dev
+d--x--x--x    9 root    wheel    306 Mar  1 16:08 .DocumentRevisions-V100
+drwxrwxr-x+  66 root    admin   2244 Mar  2 17:41 Applications
+-rw-r--r--    1 Smurfy  admin   8196 Mar  8 10:42 .DS_Store
+dr-xr-xr-x    2 root    wheel      1 Mar  8 10:47 net
+dr-xr-xr-x    2 root    wheel      1 Mar  8 10:47 home
+drwxrwxrwt@   4 root    admin    136 Mar 14 09:03 Volumes
+drwx------  381 root    wheel  12954 Mar 14 09:07 .fseventsd

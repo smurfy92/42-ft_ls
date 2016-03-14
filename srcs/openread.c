@@ -44,6 +44,7 @@ t_options *opt)
 	(lst->grpname = getgrgid(bufstat.st_gid)->gr_name) :
 	(lst->grpname = ft_strdup("101"));
 	lst->mtime = ft_strdup(ctime(&bufstat.st_mtime));
+	lst->nano = bufstat.st_mtimespec.tv_nsec;
 	lst->isdir = S_ISDIR(bufstat.st_mode);
 	lst->space_lnk = ft_check_cols(lst->links);
 	(lst->space_lnk > opt->max_lnk &&

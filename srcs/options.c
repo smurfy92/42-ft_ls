@@ -20,6 +20,7 @@ t_lstdir		*ft_ls_t_init(t_lstdir *lst)
 	tmp2->name = ft_strdup(lst->name);
 	tmp2->mdate = ft_strdup(lst->mdate);
 	tmp2->mdateint = lst->mdateint;
+	tmp2->nano = lst->nano;
 	tmp2->links = lst->links;
 	tmp2->mode = lst->mode;
 	tmp2->pwname = ft_strdup(lst->pwname);

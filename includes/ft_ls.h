@@ -58,6 +58,7 @@ typedef struct			s_lstdir
 	time_t				mdateint;
 	nlink_t				links;
 	mode_t				mode;
+	long				nano;
 	char				*pwname;
 	char				*grpname;
 	int					space_lnk;

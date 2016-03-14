@@ -1,0 +1,48 @@
+41c41
+< -rw-------   1 Smurfy  staff   104099 Mar 14 09:16 .zsh_history
+---
+> -rw-------   1 Smurfy  staff   104134 Mar 14 09:16 .zsh_history
+38167,38169c38167,38169
+< lrwxr-xr-x   1 Smurfy  staff       32 Mar  7 11:00 SingletonLock -> MacBook-Pro-de-Smurfy.local-9875
+< lrwxr-xr-x   1 Smurfy  staff       20 Mar  7 11:00 SingletonCookie -> 16639984052021379285
+< lrwxr-xr-x   1 Smurfy  staff       13 Mar  7 11:00 RunningChromeVersion -> 48.0.2564.116
+---
+> lrwxr-xr-x@  1 Smurfy  staff       32 Mar  7 11:00 SingletonLock -> MacBook-Pro-de-Smurfy.local-9875
+> lrwxr-xr-x@  1 Smurfy  staff       20 Mar  7 11:00 SingletonCookie -> 16639984052021379285
+> lrwxr-xr-x@  1 Smurfy  staff       13 Mar  7 11:00 RunningChromeVersion -> 48.0.2564.116
+49887c49887
+< -rw-r--r--   1 Smurfy  staff  316354 Mar 14 09:16 000071.log
+---
+> -rw-r--r--   1 Smurfy  staff  316437 Mar 14  2016 000071.log
+78735c78735
+< lrwxr-xr-x@  1 Smurfy  staff   124 Dec 18 20:59 com.apple.iWork.Pages.savedState -> /Users/Smurfy/Library/Containers/com.apple.iWork.Pages/Data/Library/Saved Application State/com.apple.iWork.Pages.savedState
+---
+> lrwxr-xr-x   1 Smurfy  staff   124 Dec 18 20:59 com.apple.iWork.Pages.savedState -> /Users/Smurfy/Library/Containers/com.apple.iWork.Pages/Data/Library/Saved Application State/com.apple.iWork.Pages.savedState
+79796,79801c79796,79801
+< drwxr-xr-x  3 Smurfy  staff        102 Mar  7 11:32 ..
+< -rw-------  1 Smurfy  staff       7868 Mar  8 11:36 widonws10.vbox-prev
+< drwx------  6 Smurfy  staff        204 Mar  8 16:08 Logs
+< -rw-------  1 Smurfy  staff  649068544 Mar  8 16:25 widonws10.vdi
+< -rw-------  1 Smurfy  staff       7868 Mar  8 18:46 widonws10.vbox
+< drwxr-xr-x  6 Smurfy  staff        204 Mar  8 18:46 .
+---
+> drwxr-xr-x  3 Smurfy  staff          102 Mar  7 11:32 ..
+> -rw-------  1 Smurfy  staff         7868 Mar  8 11:36 widonws10.vbox-prev
+> drwx------  6 Smurfy  staff          204 Mar  8 16:08 Logs
+> -rw-------  1 Smurfy  staff  13533970432 Mar  8 16:25 widonws10.vdi
+> -rw-------  1 Smurfy  staff         7868 Mar  8 18:46 widonws10.vbox
+> drwxr-xr-x  6 Smurfy  staff          204 Mar  8 18:46 .
+85460c85460
+< total 11512
+---
+> total 23056
+85468d85467
+< -rw-r--r--    1 Smurfy  staff     2624 Mar 14 09:16 test2
+85470d85468
+< drwxr-xr-x   15 Smurfy  staff      510 Mar 14 09:16 .git
+85472c85470,85472
+< -rw-r--r--    1 Smurfy  staff  5845668 Mar 14 09:16 test1
+---
+> -rw-r--r--    1 Smurfy  staff  5918351 Mar 14 09:16 test1
+> drwxr-xr-x   15 Smurfy  staff      510 Mar 14 09:16 .git
+> -rw-r--r--    1 Smurfy  staff  5844992 Mar 14  2016 test2
