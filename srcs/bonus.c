@@ -56,7 +56,9 @@ t_lstdir		*ft_add_lst_by_date(t_lstdir *tmp, t_lstdir *lst)
 		return (tmp);
 	}
 	tmp2 = lst;
-	while (lst->next && (tmp->mdateint - (lst->next)->mdateint) <= 0)
+	while (lst->next && (tmp->mdateint - (lst->next)->mdateint) < 0)
+		lst = lst->next;
+	while (lst->next && (tmp->mdateint - (lst->next)->mdateint) == 0 && (tmp->nano - (lst->next)->nano) <= 0)
 		lst = lst->next;
 	if (lst->next)
 		tmp->next = lst->next;
