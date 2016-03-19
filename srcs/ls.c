@@ -73,7 +73,7 @@ void		ft_process(char *dir, t_options *opt)
 		(opt->t) ? lst = ft_ls_t(lst) : 0;
 		(opt->r) ? lst = ft_ls_r(lst) : 0;
 		tmp = lst;
-		(opt->l) ? ft_print_total(opt->total) : 0;
+		(opt->l && opt->total) ? ft_print_total(opt->total) : 0;
 		while (lst)
 		{
 			if ((opt->l || opt->o || opt->p || opt->g) &&

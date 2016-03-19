@@ -50,6 +50,7 @@ t_options		*ft_init_opt(t_options *opt)
 	opt->o = 0;
 	opt->p = 0;
 	opt->g = 0;
+	opt->bigt = 0;
 	opt->max_lnk = 0;
 	opt->max_uid = 0;
 	opt->max_gid = 0;
@@ -82,6 +83,8 @@ t_options		*ft_add_option(char c, t_options *opt)
 		opt->p = 1;
 	else if (c == 'g')
 		opt->g = 1;
+	else if (c == 'T')
+		opt->bigt = 1;
 	else
 		ft_illegal_opt(c);
 	return (opt);

@@ -102,11 +102,10 @@ void		ft_print_time(t_lstdir *lst, t_options *opt)
 	char *tmp;
 	char *tmp2;
 
-	if (opt->actualtime - lst->mdateint <= 15724800)
-	{
-		tmp = ft_strsub(lst->mdate, 4, 12);
-		ft_putstr(tmp);
-	}
+	if (opt->bigt)
+		ft_putstr(ft_strsub(lst->mdate, 4, 20));
+	else if (opt->actualtime - lst->mdateint <= 15724800)
+		ft_putstr(ft_strsub(lst->mdate, 4, 12));
 	else
 	{
 		tmp = ft_strsub(lst->mdate, 4, 7);
