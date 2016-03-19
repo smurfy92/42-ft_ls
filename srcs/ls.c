@@ -76,6 +76,7 @@ void		ft_process(char *dir, t_options *opt)
 		(opt->l && opt->total) ? ft_print_total(opt->total) : 0;
 		while (lst)
 		{
+			ft_print_ino(lst, opt);
 			if ((opt->l || opt->o || opt->p || opt->g) &&
 			(!(!opt->a && lst->name[0] == '.')))
 				ft_ls_l(lst, opt);

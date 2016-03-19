@@ -38,6 +38,7 @@ t_options *opt)
 	lst->mdate = ft_strdup(ctime(&bufstat.st_mtime));
 	lst->mdateint = bufstat.st_mtime;
 	lst->nano = bufstat.st_mtimespec.tv_nsec;
+	lst->ino = bufstat.st_ino;
 	lst->links = bufstat.st_nlink;
 	lst->mode = bufstat.st_mode;
 	lst->pwname = getpwuid(bufstat.st_uid)->pw_name;

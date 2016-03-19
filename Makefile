@@ -18,7 +18,8 @@ SRC =	srcs/ls.c \
 		srcs/options.c \
 		srcs/openread.c \
 		srcs/bonus.c \
-		srcs/rights.c
+		srcs/rights.c \
+		srcs/opt.c
 OBJ = $(SRC:.c=.o)
 FLAG = -Wall -Werror -Wextra
 CG = \033[92m

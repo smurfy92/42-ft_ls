@@ -37,6 +37,7 @@ typedef struct			s_options
 	int					o;
 	int					p;
 	int					g;
+	int					i;
 	int					bigt;
 	int					max_lnk;
 	int					max_uid;
@@ -58,6 +59,7 @@ typedef struct			s_lstdir
 	char				*mdate;
 	time_t				mdateint;
 	long				nano;
+	int					ino;
 	nlink_t				links;
 	mode_t				mode;
 	char				*pwname;
@@ -79,6 +81,7 @@ typedef struct			s_lstdir
 int						ft_check_cols(int tmp);
 int						ft_compare_date(char *s1, char *s2);
 int						ft_is_dir(char *dir);
+void					ft_print_ino(t_lstdir *lst, t_options *opt);
 void					ft_error_noend(char *str, int error);
 void					ft_print_total(int total);
 void					ft_illegal_opt(char c);
