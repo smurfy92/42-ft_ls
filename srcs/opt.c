@@ -12,7 +12,6 @@
 
 #include "../includes/ft_ls.h"
 
-
 void		ft_print_ino(t_lstdir *lst, t_options *opt)
 {
 	if (!(!opt->a && lst->name[0] == '.') && opt->i)
