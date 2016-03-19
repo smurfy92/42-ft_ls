@@ -95,7 +95,7 @@ t_options		*ft_order(t_options *opt)
 	i = 0;
 	while (++i < opt->nbfile)
 	{
-		if (ft_strcmp(opt->files[i], opt->files[i - 1]) > 0)
+		if (ft_strcmp(opt->files[i], opt->files[i - 1]) < 0)
 		{
 			tmp = opt->files[i];
 			opt->files[i] = opt->files[i - 1];

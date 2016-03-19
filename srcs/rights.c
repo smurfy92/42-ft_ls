@@ -16,11 +16,9 @@ t_options		*ft_parse(t_options *opt, int i, char **argv)
 {
 	int				j;
 	struct stat		bufstat;
-	int				files;
 
-	files = 0;
 	j = 0;
-	if (argv[i][0] == '-' && files == 0 && !ft_is_dir(argv[i]))
+	if (argv[i][0] == '-' && opt->nbfile == 0 && !ft_is_dir(argv[i]))
 	{
 		(!argv[i][1]) ? ft_error(argv[i], 2) : 0;
 		while (argv[i][++j])
@@ -29,10 +27,7 @@ t_options		*ft_parse(t_options *opt, int i, char **argv)
 	else
 	{
 		if (lstat(argv[i], &bufstat) != -1)
-		{
-			opt->files[files] = ft_strdup(argv[i]);
-			opt->nbfile = ++files;
-		}
+			opt->files[opt->nbfile++] = ft_strdup(argv[i]);
 		else
 			perror(argv[i]);
 		opt->errors++;
