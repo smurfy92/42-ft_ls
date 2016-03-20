@@ -41,8 +41,8 @@ t_options *opt)
 	lst->ino = bufstat.st_ino;
 	lst->links = bufstat.st_nlink;
 	lst->mode = bufstat.st_mode;
-	(getpwuid(bufstat.st_uid)) ? 
-	(lst->pwname = getpwuid(bufstat.st_uid)->pw_name) : 
+	(getpwuid(bufstat.st_uid)) ?
+	(lst->pwname = getpwuid(bufstat.st_uid)->pw_name) :
 	(lst->pwname = ft_strdup(ft_itoa(bufstat.st_uid)));
 	(getgrgid(bufstat.st_gid)) ?
 	(lst->grpname = getgrgid(bufstat.st_gid)->gr_name) :
