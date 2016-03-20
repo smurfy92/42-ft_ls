@@ -74,6 +74,7 @@ void		ft_process(char *dir, t_options *opt)
 		(opt->r) ? lst = ft_ls_r(lst) : 0;
 		tmp = lst;
 		(opt->l) ? ft_print_total(opt->total) : 0;
+
 		while (lst)
 		{
 			ft_print_ino(lst, opt);
