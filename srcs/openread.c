@@ -41,10 +41,12 @@ t_options *opt)
 	lst->ino = bufstat.st_ino;
 	lst->links = bufstat.st_nlink;
 	lst->mode = bufstat.st_mode;
-	lst->pwname = getpwuid(bufstat.st_uid)->pw_name;
+	(getpwuid(bufstat.st_uid)->pw_name) ? 
+	(lst->pwname = getpwuid(bufstat.st_uid)->pw_name) : 
+	(lst->pwname = ft_strdup("1000"));
 	(getgrgid(bufstat.st_gid)) ?
 	(lst->grpname = getgrgid(bufstat.st_gid)->gr_name) :
-	(lst->grpname = ft_strdup("101"));
+	(lst->grpname = ft_strdup("1000"));
 	lst->mtime = ft_strdup(ctime(&bufstat.st_mtime));
 	lst->isdir = S_ISDIR(bufstat.st_mode);
 	lst->space_lnk = ft_check_cols(lst->links);
