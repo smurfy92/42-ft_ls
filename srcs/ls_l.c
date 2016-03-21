@@ -74,7 +74,7 @@ void		ft_print_sizes(t_lstdir *lst, t_options *opt)
 
 	i = lst->space_major;
 	if (opt->max_major)
-		while (i++ <= opt->max_major + 2)
+		while (i++ <= opt->max_major + 1)
 			ft_putchar(' ');
 	i = lst->space_minor;
 	if (S_ISCHR(lst->mode) || S_ISBLK(lst->mode))
