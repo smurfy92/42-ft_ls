@@ -55,11 +55,13 @@ void		ft_print_dir(char *dir, t_options *opt)
 		lst->name = ft_strdup(dir);
 		lst->next = NULL;
 		lst = ft_add_stats(lst, bufstat, opt);
-		ft_print_rights(lst, opt);
-		ft_print_links_usr_grp(lst, opt);
-		ft_print_time(lst, opt);
+		ft_ls_l(lst, opt);
+		//ft_print_rights(lst, opt);
+		//ft_print_links_usr_grp(lst, opt);
+		//ft_print_time(lst, opt);
 	}
-	ft_putendl(dir);
+	else
+		ft_putendl(dir);
 }
 
 void		ft_process(char *dir, t_options *opt)
