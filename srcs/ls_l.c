@@ -87,12 +87,8 @@ void		ft_print_sizes(t_lstdir *lst, t_options *opt)
 	}
 	else
 	{
-		if (opt->max_major)
-			while (i++ <= opt->max_minor)
-				ft_putchar(' ');
-		else
-			while (i++ <= opt->max_minor)
-				ft_putchar(' ');
+		while (i++ <= opt->max_minor)
+			ft_putchar(' ');
 		ft_putnbr(lst->minor);
 	}
 }

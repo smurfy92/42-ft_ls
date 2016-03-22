@@ -56,9 +56,6 @@ void		ft_print_dir(char *dir, t_options *opt)
 		lst->next = NULL;
 		lst = ft_add_stats(lst, bufstat, opt);
 		ft_ls_l(lst, opt);
-		//ft_print_rights(lst, opt);
-		//ft_print_links_usr_grp(lst, opt);
-		//ft_print_time(lst, opt);
 	}
 	else
 		ft_putendl(dir);
