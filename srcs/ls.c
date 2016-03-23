@@ -32,7 +32,10 @@ void		ft_ls_rec(t_lstdir *lst, t_options *opt, char *dir)
 			ft_putchar('\n');
 			ft_putstr(opt->tmp);
 			ft_putendl(":");
-			ft_process(tmp, opt);
+			if (access(opt->tmp, R_OK) != -1)		
+				ft_process(tmp, opt);
+			else
+				ft_error_noend(opt->tmp, errno);
 		}
 		lst = lst->next;
 	}
@@ -66,7 +69,7 @@ void		ft_process(char *dir, t_options *opt)
 	t_lstdir *lst;
 	t_lstdir *tmp;
 
-	opt = ft_refresh_opt(opt);
+	(ft_is_dir(opt->files[opt->actual])) ?opt = ft_refresh_opt(opt) : 0;
 	if ((lst = ft_read_dir(dir, opt)) != NULL)
 	{
 		(opt->t) ? lst = ft_ls_t(lst) : 0;
@@ -126,7 +129,7 @@ int			main(int argc, char **argv)
 			ft_putstr(opt->files[opt->actual]);
 			ft_putstr(":\n");
 		}
-		ft_process(opt->files[opt->actual], opt);
+		(!access(opt->files[opt->actual], R_OK)) ? (ft_process(opt->files[opt->actual], opt)) : (ft_error_noend(opt->files[opt->actual], errno));
 	}
 	return (0);
 }

@@ -60,12 +60,15 @@ t_options		*ft_order_by_date(t_options *opt)
 	{
 		lstat(opt->files[i - 1], &bufstat1);
 		lstat(opt->files[i], &bufstat2);
-		if (bufstat1.st_mtime < bufstat2.st_mtime)
+		if (!(!S_ISDIR(bufstat1.st_mode) && S_ISDIR(bufstat2.st_mode)))
 		{
-			tmp = ft_strdup(opt->files[i]);
-			opt->files[i] = opt->files[i - 1];
-			opt->files[i - 1] = ft_strdup(tmp);
-			i = 0;
+			if (bufstat1.st_mtime < bufstat2.st_mtime)
+			{
+				tmp = ft_strdup(opt->files[i]);
+				opt->files[i] = opt->files[i - 1];
+				opt->files[i - 1] = ft_strdup(tmp);
+				i = 0;
+			}
 		}
 	}
 	return (opt);
@@ -75,20 +78,28 @@ t_options		*ft_order_reverse(t_options *opt)
 {
 	int				i;
 	char			*tmp;
+	struct stat		bufstat1;
+	struct stat		bufstat2;
 
 	i = -1;
 	while (++i < opt->nbfile / 2)
 	{
-		tmp = opt->files[i];
-		opt->files[i] = opt->files[opt->nbfile - 1 - i];
-		opt->files[opt->nbfile - 1 - i] = tmp;
+		lstat(opt->files[i], &bufstat1);
+		lstat(opt->files[i + 1], &bufstat2);
+		if (S_ISDIR(bufstat1.st_mode) && S_ISDIR(bufstat2.st_mode))
+		{
+			tmp = opt->files[i];
+			opt->files[i] = opt->files[opt->nbfile - 1 - i];
+			opt->files[opt->nbfile - 1 - i] = tmp;
+		}
 	}
 	return (opt);
 }
 
 void			ft_print_rights(t_lstdir *lst, t_options *opt)
 {
-	mode_t val;
+	mode_t			val;
+	char			*tmp = NULL;
 
 	(S_ISCHR(lst->mode)) ? ft_putchar('c') : 0;
 	(S_ISLNK(lst->mode)) ? ft_putchar('l') : 0;
@@ -98,16 +109,18 @@ void			ft_print_rights(t_lstdir *lst, t_options *opt)
 	(S_ISBLK(lst->mode)) ? ft_putchar('b') : 0;
 	(S_ISSOCK(lst->mode)) ? ft_putchar('s') : 0;
 	val = (lst->mode & ~S_IFMT);
+	tmp = ft_strjoin(opt->tmp, "/");
+	tmp = ft_strjoin(tmp, lst->name);
 	(val & S_IRUSR) ? ft_putchar('r') : ft_putchar('-');
 	(val & S_IWUSR) ? ft_putchar('w') : ft_putchar('-');
 	if (val & S_ISUID)
-		ft_putchar('s');
+		(access(tmp, X_OK) == -1) ? ft_putchar('S') : ft_putchar('s');
 	else
 		(val & S_IXUSR) ? ft_putchar('x') : ft_putchar('-');
 	(val & S_IRGRP) ? ft_putchar('r') : ft_putchar('-');
 	(val & S_IWGRP) ? ft_putchar('w') : ft_putchar('-');
 	if (val & S_ISGID)
-		ft_putchar('s');
+		(access(tmp, X_OK) == -1) ? ft_putchar('S') : ft_putchar('s');
 	else
 		(val & S_IXGRP) ? ft_putchar('x') : ft_putchar('-');
 	(val & S_IROTH) ? ft_putchar('r') : ft_putchar('-');

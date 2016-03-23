@@ -18,11 +18,13 @@ void		ft_print_acl(t_lstdir *lst, t_options *opt)
 	char	*tmp;
 	acl_t	a;
 
-	tmp = NULL;
+	tmp = ft_strjoin(opt->tmp, "/");
+	tmp = ft_strjoin(tmp, lst->name);
 	if (((lst->mode & ~S_IFMT) & S_ISVTX))
-		ft_putchar('t');
+		(access(tmp, X_OK) == -1) ? ft_putchar('T') : ft_putchar('t');
 	else
 		((lst->mode & ~S_IFMT) & S_IXOTH) ? ft_putchar('x') : ft_putchar('-');
+	tmp = NULL;
 	tmp = ft_strjoin(opt->tmp, "/");
 	(S_ISLNK(lst->mode)) ? (buflen = listxattr(ft_strjoin(tmp, lst->name),\
 	(char*)NULL, 0, XATTR_NOFOLLOW)) : (buflen = listxattr(ft_strjoin(tmp,\
@@ -123,8 +125,8 @@ void		ft_ls_l(t_lstdir *lst, t_options *opt)
 		return ;
 	tmp = ft_strjoin(opt->tmp, "/");
 	tmp = ft_strjoin(tmp, lst->name);
-	((access(tmp, R_OK) == -1) && (access(tmp, W_OK) == -1) &&\
-	(access(tmp, X_OK) == -1) && ft_is_dir(tmp)) ? perror(lst->name) : 0;
+	//((access(tmp, R_OK) == -1) && (access(tmp, W_OK) == -1) &&\
+	//(access(tmp, X_OK) == -1) && ft_is_dir(tmp)) ? ft_error_noend(lst->name, errno) : 0;
 	ft_print_rights(lst, opt);
 	ft_print_time(lst, opt);
 	(lst->isdir && opt->p) ? ft_putchar('/') : 0;
