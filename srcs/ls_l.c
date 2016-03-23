@@ -125,8 +125,6 @@ void		ft_ls_l(t_lstdir *lst, t_options *opt)
 		return ;
 	tmp = ft_strjoin(opt->tmp, "/");
 	tmp = ft_strjoin(tmp, lst->name);
-	//((access(tmp, R_OK) == -1) && (access(tmp, W_OK) == -1) &&\
-	//(access(tmp, X_OK) == -1) && ft_is_dir(tmp)) ? ft_error_noend(lst->name, errno) : 0;
 	ft_print_rights(lst, opt);
 	ft_print_time(lst, opt);
 	(lst->isdir && opt->p) ? ft_putchar('/') : 0;

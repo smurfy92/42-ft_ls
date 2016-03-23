@@ -81,6 +81,7 @@ typedef struct			s_lstdir
 int						ft_check_cols(int tmp);
 int						ft_compare_date(char *s1, char *s2);
 int						ft_is_dir(char *dir);
+void					ft_print_rights_begin(t_lstdir *lst);
 void					ft_print_ino(t_lstdir *lst, t_options *opt);
 void					ft_error_noend(char *str, int error);
 void					ft_print_total(int total);
