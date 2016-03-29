@@ -79,6 +79,7 @@ t_options		*ft_refresh_opt(t_options *opt)
 	opt->max_lnk = 0;
 	opt->max_uid = 0;
 	opt->max_gid = 0;
+	opt->lstnb = 0;
 	opt->max_minor = 0;
 	opt->max_major = 0;
 	return (opt);

@@ -93,6 +93,7 @@ t_lstdir		*ft_create_lst(char *buf, t_options *opt)
 	struct stat		bufstat;
 
 	lst = NULL;
+	opt->lstnb++;
 	if (opt->tmp[ft_strlen(opt->tmp) - 1] == '/')
 		tmpstat = ft_strdup(ft_strjoin(opt->tmp, buf));
 	else

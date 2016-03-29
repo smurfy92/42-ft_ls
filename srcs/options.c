@@ -49,6 +49,7 @@ t_options		*ft_init_opt(t_options *opt)
 	opt->t = 0;
 	opt->o = 0;
 	opt->p = 0;
+	opt->lstnb = 0;
 	opt->g = 0;
 	opt->i = 0;
 	opt->bigt = 0;

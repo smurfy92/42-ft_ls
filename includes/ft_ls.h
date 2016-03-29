@@ -39,6 +39,7 @@ typedef struct			s_options
 	int					g;
 	int					i;
 	int					bigt;
+	int					lstnb;
 	int					max_lnk;
 	int					max_uid;
 	int					max_gid;
