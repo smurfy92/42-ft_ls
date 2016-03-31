@@ -107,13 +107,13 @@ void			ft_print_rights(t_lstdir *lst, t_options *opt)
 	(val & S_IRUSR) ? ft_putchar('r') : ft_putchar('-');
 	(val & S_IWUSR) ? ft_putchar('w') : ft_putchar('-');
 	if (val & S_ISUID)
-		(access(tmp, X_OK) == -1) ? ft_putchar('S') : ft_putchar('s');
+		(val & S_IXUSR) ? ft_putchar('s') : ft_putchar('S');
 	else
 		(val & S_IXUSR) ? ft_putchar('x') : ft_putchar('-');
 	(val & S_IRGRP) ? ft_putchar('r') : ft_putchar('-');
 	(val & S_IWGRP) ? ft_putchar('w') : ft_putchar('-');
 	if (val & S_ISGID)
-		(access(tmp, X_OK) == -1) ? ft_putchar('S') : ft_putchar('s');
+		(val & S_IXGRP) ? ft_putchar('s') : ft_putchar('S');
 	else
 		(val & S_IXGRP) ? ft_putchar('x') : ft_putchar('-');
 	(val & S_IROTH) ? ft_putchar('r') : ft_putchar('-');

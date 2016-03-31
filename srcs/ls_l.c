@@ -21,7 +21,7 @@ void		ft_print_acl(t_lstdir *lst, t_options *opt)
 	tmp = ft_strjoin(opt->tmp, "/");
 	tmp = ft_strjoin(tmp, lst->name);
 	if (((lst->mode & ~S_IFMT) & S_ISVTX))
-		(access(tmp, X_OK) == -1) ? ft_putchar('T') : ft_putchar('t');
+		((lst->mode & ~S_IFMT) & S_IXOTH) ? ft_putchar('t') : ft_putchar('T');
 	else
 		((lst->mode & ~S_IFMT) & S_IXOTH) ? ft_putchar('x') : ft_putchar('-');
 	tmp = NULL;
