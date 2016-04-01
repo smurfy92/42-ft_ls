@@ -129,8 +129,8 @@ int			main(int argc, char **argv)
 			ft_putstr(opt->files[opt->actual]);
 			ft_putstr(":\n");
 		}
-		(!access(opt->files[opt->actual], R_OK) || !ft_is_dir(opt->files[opt->actual])) ? \
-		(ft_process(opt->files[opt->actual], opt)) :\
+		(!access(opt->files[opt->actual], R_OK) || !ft_is_dir(opt->files[opt->\
+		actual])) ? (ft_process(opt->files[opt->actual], opt)) :\
 		(ft_error_noend(opt->files[opt->actual], errno));
 	}
 	return (0);
