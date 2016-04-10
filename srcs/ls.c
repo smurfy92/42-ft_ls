@@ -51,7 +51,7 @@ void		ft_print_dir(char *dir, t_options *opt)
 	if (opt->a == 0 && dir[0] == '.')
 		return ;
 	if (stat(dir, &bufstat) == -1)
-		perror(dir);
+		ft_error_noend(dir, errno);
 	if (opt->l)
 	{
 		lst = (t_lstdir*)malloc(sizeof(t_lstdir));

@@ -102,7 +102,7 @@ t_lstdir		*ft_create_lst(char *buf, t_options *opt)
 		tmpstat = ft_strdup(ft_strjoin(tmpstat, buf));
 	}
 	if (lstat(tmpstat, &bufstat) == -1)
-		perror(tmpstat);
+		ft_error_noend(tmpstat, errno);
 	lst = (t_lstdir*)malloc(sizeof(t_lstdir));
 	lst->name = ft_strdup(buf);
 	if (!(!opt->a && lst->name[0] == '.'))

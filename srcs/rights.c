@@ -29,7 +29,7 @@ t_options		*ft_parse(t_options *opt, int i, char **argv)
 		if (lstat(argv[i], &bufstat) != -1)
 			opt->files[opt->nbfile++] = ft_strdup(argv[i]);
 		else
-			perror(argv[i]);
+			ft_error_noend(argv[i], errno);
 		opt->errors++;
 	}
 	return (opt);
