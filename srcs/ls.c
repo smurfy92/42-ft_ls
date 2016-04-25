@@ -90,7 +90,8 @@ void		ft_process(char *dir, t_options *opt)
 		(opt->rec) ? ft_ls_rec(tmp, opt, dir) : 0;
 	}
 	else
-		(!opt->rec) ? ft_print_dir(dir, opt) : 0;
+		(!opt->rec || (opt->rec && !ft_is_dir(dir)))\
+		? ft_print_dir(dir, opt) : 0;
 }
 
 int			ft_is_dir(char *dir)
